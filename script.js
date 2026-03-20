@@ -1,7 +1,8 @@
 // Company data registry
 const companies = {
     nike: 'data/nike.json',
-    pinterest: 'data/pinterest.json'
+    pinterest: 'data/pinterest.json',
+    dominos: 'data/dominos.json'
 };
 
 // Initialize page based on URL
