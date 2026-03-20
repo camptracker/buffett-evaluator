@@ -2,6 +2,9 @@
 
 Warren Buffett's investment framework applied to modern companies. Deep-dive analyses using the legendary investor's complete methodology.
 
+**Live Site:** https://camptracker.github.io/buffett-evaluator/  
+**Auto-Deploy:** ✅ Enabled (rebuilds automatically on push to main)
+
 ## Features
 
 - **Complete Buffett Framework**: 13-criteria evaluation (business quality, management, financials, valuation)
@@ -20,11 +23,25 @@ Warren Buffett's investment framework applied to modern companies. Deep-dive ana
 - **Margin of Safety**: -28% (overvalued)
 
 ### Pinterest (PINS)
-- **Verdict**: MAYBE / WATCH
-- **Score**: 91/130 (70%)
-- **Current Price**: $37
-- **Intrinsic Value**: $59.51
-- **Margin of Safety**: +38% (undervalued)
+- **Verdict**: BUY / WATCH
+- **Score**: 88/130 (68%)
+- **Current Price**: $18.66
+- **Intrinsic Value**: $29.80
+- **Margin of Safety**: +37% (undervalued)
+
+### Domino's Pizza (DPZ)
+- **Verdict**: HOLD / WATCH
+- **Score**: 95/130 (73%)
+- **Current Price**: $377.79
+- **Intrinsic Value**: $425
+- **Margin of Safety**: +11% (fair value)
+
+### Novartis (NVS)
+- **Verdict**: HOLD / FAIR VALUE
+- **Score**: 98/130 (75%)
+- **Current Price**: $148.19
+- **Intrinsic Value**: $165
+- **Margin of Safety**: +10% (fair value)
 
 ## Methodology
 
