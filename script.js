@@ -2,7 +2,8 @@
 const companies = {
     nike: 'data/nike.json',
     pinterest: 'data/pinterest.json',
-    dominos: 'data/dominos.json'
+    dominos: 'data/dominos.json',
+    novartis: 'data/novartis.json'
 };
 
 // Initialize page based on URL
