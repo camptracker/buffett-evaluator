@@ -1,0 +1,247 @@
+{
+  "name": "Pinterest",
+  "ticker": "PINS",
+  "industry": "Digital Advertising / Social Media",
+  "analysisDate": "March 20, 2026",
+  "currentPrice": 37.00,
+  "intrinsicValue": 59.51,
+  "marginOfSafety": "+38%",
+  "verdict": "MAYBE / WATCH",
+  "score": 91,
+  "oneParagraphSummary": "Pinterest has several characteristics Buffett loves (zero debt, 34% net margins, capital-light software model, disciplined management) and offers a 38% margin of safety at $37/share. However, it fails Buffett's most critical test: lack of consistent operating history (only 5 years profitable vs required 10-20 years) and uncertain competitive moat (user growth stalled at 500M, vulnerable to TikTok and Google Lens).",
+  
+  "financialData": {
+    "eps": {
+      "headers": ["Year", "EPS ($)", "YoY Growth"],
+      "rows": [
+        ["2024", "1.87", "+24.7%"],
+        ["2023", "1.50", "+78.6%"],
+        ["2022", "0.84", "-32.8%"],
+        ["2021", "1.25", "+108.3%"],
+        ["2020", "0.60", "+400%"],
+        ["2019", "0.12", "IPO year"]
+      ]
+    },
+    "fcf": {
+      "headers": ["Year", "FCF ($M)", "YoY Growth"],
+      "rows": [
+        ["2024", "1,425", "+18.3%"],
+        ["2023", "1,204", "+64.1%"],
+        ["2022", "734", "-26.5%"],
+        ["2021", "999", "+128.8%"],
+        ["2020", "437", "+387%"],
+        ["2019", "-90", "Negative"]
+      ]
+    },
+    "roe": {
+      "headers": ["Year", "ROE %"],
+      "rows": [
+        ["2024", "17.2%"],
+        ["2023", "14.8%"],
+        ["2022", "8.3%"],
+        ["2021", "13.7%"],
+        ["2020", "6.9%"]
+      ]
+    },
+    "debt": {
+      "headers": ["Year", "Long-Term Debt ($M)", "Net Income ($M)", "Years to Payoff"],
+      "rows": [
+        ["2024", "0", "1,287", "0 years"],
+        ["2023", "0", "1,016", "0 years"],
+        ["2022", "0", "567", "0 years"],
+        ["2021", "0", "838", "0 years"]
+      ]
+    },
+    "margins": {
+      "headers": ["Year", "Gross %", "Operating %", "Net %"],
+      "rows": [
+        ["2024", "79.5%", "25.8%", "33.9%"],
+        ["2023", "78.2%", "20.7%", "26.7%"],
+        ["2022", "78.9%", "11.4%", "15.0%"],
+        ["2021", "81.2%", "17.6%", "22.1%"]
+      ]
+    }
+  },
+  
+  "qualitativeAnalysis": {
+    "moat": [
+      "Primary Moat: DATA + WEAK NETWORK EFFECTS",
+      "User Base: 500M MAUs (FLAT for 3 years - major concern)",
+      "Unique Positioning: Intent-based discovery (planning purchases vs social browsing)",
+      "Pricing Power: ARPU growing 15%+ annually ($7.60 global, $50+ US)",
+      "Threats: TikTok video discovery, Google Lens visual search, AI disruption",
+      "Verdict: NARROW moat - defensible short-term, vulnerable long-term"
+    ],
+    "management": [
+      "CEO: Bill Ready (joined 2022, former Google Commerce President)",
+      "Capital Allocation: $2.1B buybacks at $18-25 (stock now $37 = great timing)",
+      "Strategic Focus: Shifted from user growth to monetization (realistic)",
+      "Transparency: Admitted MAU plateau, acknowledged TikTok competition",
+      "Performance: Stock +85% under Ready (vs S&P +25%)"
+    ],
+    "industry": [
+      "Digital advertising market growing 10-12% CAGR (slowing from 15-18%)",
+      "Tailwinds: E-commerce growth, mobile dominance, creator economy",
+      "Headwinds: Privacy regulations (GDPR/CCPA), Google/Meta duopoly, TikTok disruption",
+      "Competition: Google (visual search), Instagram (Reels), TikTok (video discovery)"
+    ]
+  },
+  
+  "businessQuality": {
+    "criteria": [
+      {
+        "title": "Simple & Understandable",
+        "description": "Visual discovery platform where users pin images to boards. Revenue from showing ads to high-intent users planning purchases. Software business with near-zero marginal costs.",
+        "rating": "6/10",
+        "verdict": "PASS"
+      },
+      {
+        "title": "Durable Competitive Moat",
+        "description": "Data moat from 500M users and billions of pins. Intent-based advertising is more valuable than social browsing. However, no social graph lock-in and user growth stalled.",
+        "rating": "5/10",
+        "verdict": "PASS"
+      },
+      {
+        "title": "Consistent Operating History",
+        "description": "Only profitable since 2020 (5 consecutive years). Buffett wants 10-20 years. Volatile earnings (2022 EPS dropped 33%). This is a dealbreaker for classic Buffett.",
+        "rating": "3/10",
+        "verdict": "FAIL"
+      },
+      {
+        "title": "Favorable Long-Term Prospects",
+        "description": "Digital advertising will grow, Pinterest's niche (intent-based visual discovery) is valuable. But user growth stalled, Gen Z adoption weak, and AI/TikTok competition intense.",
+        "rating": "5/10",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  
+  "managementQuality": {
+    "criteria": [
+      {
+        "title": "Rational Capital Allocation",
+        "description": "No dividend (appropriate for growth stage). Buybacks executed opportunistically at $18-25 (now $37). No wasteful M&A. Balanced approach: 45% returned, 55% retained.",
+        "rating": "8/10",
+        "verdict": "PASS"
+      },
+      {
+        "title": "Honest & Transparent",
+        "description": "Admitted commerce execution failures, transparent about MAU plateau, acknowledged TikTok competition. CEO transition handled professionally. No accounting scandals.",
+        "rating": "8/10",
+        "verdict": "PASS"
+      },
+      {
+        "title": "Resists Institutional Imperative",
+        "description": "Stopped reporting MAU growth (focused on monetization vs vanity metrics). Resisted pressure to chase Gen Z. Hired commerce expert (contrarian). Better than most tech companies.",
+        "rating": "7/10",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  
+  "financialHealth": {
+    "criteria": [
+      {
+        "title": "Return on Equity >15%",
+        "description": "Average ROE: 12.2% (below threshold). However, trending upward (17.2% in 2024) and achieved with zero debt. Borderline but improving.",
+        "rating": "6/10",
+        "verdict": "PASS"
+      },
+      {
+        "title": "Strong Profit Margins",
+        "description": "Net margin: 34% in 2024 (world-class). Rapidly improving from 2% in 2019. Software economics with minimal marginal costs. Rivals Google (27%) and Meta (36%).",
+        "rating": "10/10",
+        "verdict": "PASS"
+      },
+      {
+        "title": "Low Debt Levels",
+        "description": "Zero long-term debt. Pristine balance sheet. Maximum financial flexibility. This is Buffett's dream scenario.",
+        "rating": "10/10",
+        "verdict": "PASS"
+      },
+      {
+        "title": "Consistent Free Cash Flow",
+        "description": "FCF growing rapidly (72% CAGR since 2019) but volatile (2022 dropped 27%). Short history (only positive since 2020) makes consistency hard to judge.",
+        "rating": "6/10",
+        "verdict": "PASS"
+      },
+      {
+        "title": "Capital Light Business",
+        "description": "CapEx: 15-17% of earnings in recent years (well below Buffett's 25% threshold). Mostly data centers. Software business scales efficiently.",
+        "rating": "9/10",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  
+  "intrinsicValueCalculation": {
+    "inputs": {
+      "headers": ["Input", "Value", "Justification"],
+      "rows": [
+        ["Current FCF", "$1,425M", "FY 2024 actual"],
+        ["Growth Rate (Yrs 1-10)", "12%", "Conservative: ARPU growth despite MAU plateau"],
+        ["Terminal Growth", "3%", "Mature tech, above GDP"],
+        ["Discount Rate", "10%", "Buffett's standard rate"],
+        ["Shares Outstanding", "687M", "Current share count"]
+      ]
+    },
+    "projections": {
+      "headers": ["Year", "FCF ($M)", "Discount Factor", "Present Value ($M)"],
+      "rows": [
+        ["1", "1,596", "÷ 1.10¹", "1,451"],
+        ["2", "1,788", "÷ 1.10²", "1,477"],
+        ["3", "2,002", "÷ 1.10³", "1,504"],
+        ["5", "2,512", "÷ 1.10⁵", "1,560"],
+        ["10", "4,429", "÷ 1.10¹⁰", "1,707"],
+        ["Sum", "", "", "15,758"]
+      ]
+    },
+    "terminalValue": [
+      "Year 10 FCF: $4,429M",
+      "Terminal Value = $4,429M × 1.03 ÷ (0.10 - 0.03) = $65,152M",
+      "Discounted to Present: $65,152M ÷ 1.10¹⁰ = $25,126M"
+    ],
+    "finalValue": [
+      "10-Year Cash Flows (PV): $15,758M",
+      "Terminal Value (PV): $25,126M",
+      "Total Enterprise Value: $40,884M",
+      "Intrinsic Value Per Share: $40,884M ÷ 687M = $59.51"
+    ],
+    "scenarios": {
+      "headers": ["Scenario", "Assumptions", "Intrinsic Value", "Margin of Safety", "Buy?"],
+      "rows": [
+        ["Base Case", "12% growth, 3% terminal", "$59.51", "+38% (undervalued)", "YES"],
+        ["Conservative", "8% growth, 2.5% terminal", "$41.20", "+10% (fair)", "MAYBE"],
+        ["Optimistic", "16% growth, 4% terminal", "$87.35", "+58% (undervalued)", "YES"]
+      ]
+    }
+  },
+  
+  "scorecard": {
+    "scores": {
+      "headers": ["Category", "Criteria", "Score", "Pass/Fail"],
+      "rows": [
+        ["Business Quality", "Simple and understandable", "6/10", "PASS"],
+        ["Business Quality", "Durable competitive moat", "5/10", "PASS"],
+        ["Business Quality", "Consistent operating history", "3/10", "FAIL"],
+        ["Business Quality", "Favorable long-term prospects", "5/10", "PASS"],
+        ["Management", "Rational capital allocation", "8/10", "PASS"],
+        ["Management", "Honest and transparent", "8/10", "PASS"],
+        ["Management", "Resists institutional imperative", "7/10", "PASS"],
+        ["Financial Health", "ROE >15%", "6/10", "PASS"],
+        ["Financial Health", "Strong profit margins", "10/10", "PASS"],
+        ["Financial Health", "Low debt levels", "10/10", "PASS"],
+        ["Financial Health", "Consistent FCF", "6/10", "PASS"],
+        ["Financial Health", "Capital light business", "9/10", "PASS"],
+        ["Valuation", "Margin of safety >30%", "8/10", "PASS"],
+        ["**TOTAL**", "", "**91/130**", "70%"]
+      ]
+    }
+  },
+  
+  "finalVerdict": {
+    "summary": "The evolved Buffett who bought Apple might consider Pinterest given its strong financials and reasonable valuation, but classic Buffett would pass due to insufficient operating history, tech complexity outside his circle of competence, and uncertain long-term durability in a rapidly changing industry. If forced to choose between Nike and Pinterest today, Buffett would likely pick neither—Nike is overvalued with a weakening moat, Pinterest is undervalued but too young and risky.",
+    "biggestRisk": "User growth permanently stalled + TikTok/AI kills Pinterest's relevance. If MAUs remain flat at 500M (or decline) and Gen Z never adopts the platform, Pinterest becomes a mature, shrinking niche. Even with strong ARPU growth, there's a ceiling to monetization. Meanwhile, TikTok's video-first discovery and Google Lens's superior visual search could make Pinterest obsolete. If AI chatbots replace search and browse behavior, Pinterest's traffic could crater.",
+    "comparable": "Pinterest is closest to Apple (AAPL) within Buffett's portfolio: tech company (historically outside Buffett's circle), high margins (Apple 25%, Pinterest 34%), capital-light model, strong balance sheet (Apple net cash, Pinterest zero debt), loyal customer base. Key differences: Apple has 1.5B active devices with ecosystem lock-in and 20+ years of profitability when Buffett bought; Pinterest has 500M users with minimal lock-in and only 5 years profitable. Pinterest is 'Apple at 1/100th the scale and 1/4th the track record.'"
+  }
+}

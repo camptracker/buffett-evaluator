@@ -1,0 +1,246 @@
+{
+  "name": "Nike",
+  "ticker": "NKE",
+  "industry": "Athletic Footwear & Apparel",
+  "analysisDate": "March 20, 2026",
+  "currentPrice": 78.00,
+  "intrinsicValue": 55.83,
+  "marginOfSafety": "-28%",
+  "verdict": "WATCH / AVOID",
+  "score": 84,
+  "oneParagraphSummary": "Nike is a high-quality business with exceptional brand strength, dominant market position, and fortress balance sheet, but the competitive moat is narrowing as newer brands steal share, management returns 91% of FCF to shareholders instead of investing in innovation, and at $78/share the stock trades 28% above intrinsic value with no margin of safety.",
+  
+  "financialData": {
+    "eps": {
+      "headers": ["Year", "EPS ($)", "YoY Growth"],
+      "rows": [
+        ["2024", "3.56", "-15.4%"],
+        ["2023", "4.21", "+23.2%"],
+        ["2022", "3.42", "+25.9%"],
+        ["2021", "2.72", "+124.8%"],
+        ["2020", "1.21", "-57.3%"],
+        ["2019", "2.83", "+12.3%"],
+        ["2018", "2.52", "+15.1%"],
+        ["2017", "2.19", "+17.2%"],
+        ["2016", "1.87", "+23.8%"],
+        ["2015", "1.51", "+19.8%"]
+      ]
+    },
+    "fcf": {
+      "headers": ["Year", "FCF ($M)", "YoY Growth"],
+      "rows": [
+        ["2024", "5,623", "-12.8%"],
+        ["2023", "6,451", "+2.5%"],
+        ["2022", "6,296", "+14.6%"],
+        ["2021", "5,494", "+48.5%"],
+        ["2020", "3,700", "-42.9%"]
+      ]
+    },
+    "roe": {
+      "headers": ["Year", "ROE %"],
+      "rows": [
+        ["2024", "31.5%"],
+        ["2023", "36.3%"],
+        ["2022", "35.7%"],
+        ["2021", "33.2%"],
+        ["2020", "14.9%"]
+      ]
+    },
+    "debt": {
+      "headers": ["Year", "Long-Term Debt ($M)", "Net Income ($M)", "Years to Payoff"],
+      "rows": [
+        ["2024", "9,033", "5,705", "1.6 years"],
+        ["2023", "8,929", "5,074", "1.8 years"],
+        ["2022", "8,894", "6,047", "1.5 years"]
+      ]
+    },
+    "margins": {
+      "headers": ["Year", "Gross %", "Operating %", "Net %"],
+      "rows": [
+        ["2024", "44.6%", "13.8%", "11.2%"],
+        ["2023", "43.5%", "13.8%", "9.9%"],
+        ["2022", "46.0%", "16.1%", "12.4%"]
+      ]
+    }
+  },
+  
+  "qualitativeAnalysis": {
+    "moat": [
+      "Primary Moat: BRAND (with 50+ years of heritage)",
+      "Market Position: #1 global athletic footwear (32% share, down from 35%)",
+      "Pricing Power: 20-40% premium vs generic brands",
+      "Erosion Signs: Lululemon, On Running, Hoka gaining in key segments",
+      "Verdict: Narrow to Wide moat, but showing competitive pressure"
+    ],
+    "management": [
+      "CEO: John Donahoe (tech executive, not Nike lifer - controversial)",
+      "Capital Allocation: Returned $46.9B to shareholders (91% of FCF) over 10 years",
+      "Transparency: Admitted digital transformation issues, inventory mismanagement",
+      "Red Flag: CEO paid $32.8M despite stock down 5% while S&P up 50%"
+    ],
+    "industry": [
+      "Global athletic footwear/apparel market growing 6-8% CAGR",
+      "Tailwinds: Athleisure trend, health/wellness focus, emerging markets",
+      "Headwinds: Market saturation, retail disruption, sustainability pressure",
+      "Competition: Adidas (#2), Lululemon (premium), On/Hoka (performance running)"
+    ]
+  },
+  
+  "businessQuality": {
+    "criteria": [
+      {
+        "title": "Simple & Understandable",
+        "description": "Design athletic footwear/apparel, outsource manufacturing, sell through wholesale + DTC. Brand premium drives profitability.",
+        "rating": "9/10",
+        "verdict": "PASS"
+      },
+      {
+        "title": "Durable Competitive Moat",
+        "description": "Brand moat built over 50 years with athlete endorsements and massive marketing spend. However, market share declining and premium competitors gaining.",
+        "rating": "6/10",
+        "verdict": "PASS"
+      },
+      {
+        "title": "Consistent Operating History",
+        "description": "Profitable for 10+ years but cyclical. Hit by 2009 recession (-63% EPS) and COVID (-57% EPS). 2024 decline (-15%) without crisis is concerning.",
+        "rating": "6/10",
+        "verdict": "PASS"
+      },
+      {
+        "title": "Favorable Long-Term Prospects",
+        "description": "Brand will survive but uncertain if it will be stronger. Market fragmentation and Gen Z preference for niche brands threaten dominance.",
+        "rating": "5/10",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  
+  "managementQuality": {
+    "criteria": [
+      {
+        "title": "Rational Capital Allocation",
+        "description": "91% FCF payout (dividends + buybacks) leaves minimal cushion. Bought back shares at peak valuations (2021-2022). Should retain more for innovation.",
+        "rating": "6/10",
+        "verdict": "PASS"
+      },
+      {
+        "title": "Honest & Transparent",
+        "description": "Management transparent about challenges (digital transformation lag, inventory issues, China weakness). No accounting scandals.",
+        "rating": "8/10",
+        "verdict": "PASS"
+      },
+      {
+        "title": "Resists Institutional Imperative",
+        "description": "Bold DTC pivot in 2017 (exited wholesale), then reversed in 2024. Shows experimentation but also strategic confusion.",
+        "rating": "5/10",
+        "verdict": "WARNING"
+      }
+    ]
+  },
+  
+  "financialHealth": {
+    "criteria": [
+      {
+        "title": "Return on Equity >15%",
+        "description": "Average ROE: 33.2% over 10 years. Well above Buffett's 15% threshold. Achieved without excessive debt.",
+        "rating": "10/10",
+        "verdict": "PASS"
+      },
+      {
+        "title": "Strong Profit Margins",
+        "description": "Average net margin: 10.3%. Stable but with volatility. Mid-pack vs competitors (Lululemon 14.6%, Adidas 7.2%).",
+        "rating": "8/10",
+        "verdict": "PASS"
+      },
+      {
+        "title": "Low Debt Levels",
+        "description": "Debt: 1.6 years of earnings (well below Buffett's 4-year threshold). Conservative balance sheet.",
+        "rating": "10/10",
+        "verdict": "PASS"
+      },
+      {
+        "title": "Consistent Free Cash Flow",
+        "description": "FCF growth erratic (4.5% CAGR) with high volatility. Recent decline (-13% in 2024) is concerning.",
+        "rating": "5/10",
+        "verdict": "WARNING"
+      },
+      {
+        "title": "Capital Light Business",
+        "description": "Average CapEx: 28.4% of earnings (above Buffett's 25% threshold). Improving recently (19% in 2021-2024).",
+        "rating": "6/10",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  
+  "intrinsicValueCalculation": {
+    "inputs": {
+      "headers": ["Input", "Value", "Justification"],
+      "rows": [
+        ["Current FCF", "$5,623M", "FY 2024 actual"],
+        ["Growth Rate (Yrs 1-10)", "3.5%", "Conservative: competitive pressure"],
+        ["Terminal Growth", "2.5%", "Mature company, GDP-level"],
+        ["Discount Rate", "10%", "Buffett's standard rate"],
+        ["Shares Outstanding", "1,480M", "Current share count"]
+      ]
+    },
+    "projections": {
+      "headers": ["Year", "FCF ($M)", "Discount Factor", "Present Value ($M)"],
+      "rows": [
+        ["1", "5,820", "÷ 1.10¹", "5,291"],
+        ["2", "6,024", "÷ 1.10²", "4,978"],
+        ["3", "6,235", "÷ 1.10³", "4,682"],
+        ["5", "6,679", "÷ 1.10⁵", "4,147"],
+        ["10", "7,932", "÷ 1.10¹⁰", "3,048"],
+        ["Sum", "", "", "40,813"]
+      ]
+    },
+    "terminalValue": [
+      "Year 10 FCF: $7,932M",
+      "Terminal Value = $7,932M × 1.025 ÷ (0.10 - 0.025) = $108,462M",
+      "Discounted to Present: $108,462M ÷ 1.10¹⁰ = $41,820M"
+    ],
+    "finalValue": [
+      "10-Year Cash Flows (PV): $40,813M",
+      "Terminal Value (PV): $41,820M",
+      "Total Enterprise Value: $82,633M",
+      "Intrinsic Value Per Share: $82,633M ÷ 1,480M = $55.83"
+    ],
+    "scenarios": {
+      "headers": ["Scenario", "Assumptions", "Intrinsic Value", "Margin of Safety", "Buy?"],
+      "rows": [
+        ["Base Case", "3.5% growth, 2.5% terminal", "$55.83", "-28% (overvalued)", "NO"],
+        ["Conservative", "2.0% growth, 2.0% terminal", "$42.15", "-46% (overvalued)", "NO"],
+        ["Optimistic", "5.0% growth, 3.0% terminal", "$78.22", "+0.3% (fair)", "NO"]
+      ]
+    }
+  },
+  
+  "scorecard": {
+    "scores": {
+      "headers": ["Category", "Criteria", "Score", "Pass/Fail"],
+      "rows": [
+        ["Business Quality", "Simple and understandable", "9/10", "PASS"],
+        ["Business Quality", "Durable competitive moat", "6/10", "PASS"],
+        ["Business Quality", "Consistent operating history", "6/10", "PASS"],
+        ["Business Quality", "Favorable long-term prospects", "5/10", "PASS"],
+        ["Management", "Rational capital allocation", "6/10", "PASS"],
+        ["Management", "Honest and transparent", "8/10", "PASS"],
+        ["Management", "Resists institutional imperative", "5/10", "PASS"],
+        ["Financial Health", "ROE >15%", "10/10", "PASS"],
+        ["Financial Health", "Strong profit margins", "8/10", "PASS"],
+        ["Financial Health", "Low debt levels", "10/10", "PASS"],
+        ["Financial Health", "Consistent FCF", "5/10", "PASS"],
+        ["Financial Health", "Capital light business", "6/10", "PASS"],
+        ["Valuation", "Margin of safety >30%", "0/10", "FAIL"],
+        ["**TOTAL**", "", "**84/130**", "65%"]
+      ]
+    }
+  },
+  
+  "finalVerdict": {
+    "summary": "Nike possesses many characteristics Buffett admires (simple business, strong financials, recognizable brand), but the combination of intensifying competition, slowing growth, and excessive valuation make this a PASS at current levels. Buffett would likely wait for a significant price decline (to ~$40-50 range) or clear evidence that Nike has reversed its market share losses before considering investment.",
+    "biggestRisk": "Nike successfully executes a brand refresh and recaptures market share from upstart competitors. If management can reignite innovation (particularly in running) and leverage its massive marketing budget to rebuild brand heat among younger consumers, Nike could return to 6-8% revenue growth and restore margin expansion.",
+    "comparable": "Nike most resembles Coca-Cola (KO) from Buffett's portfolio: global consumer brand with 50+ year heritage, high ROE (30%+), low debt, outsourced manufacturing. However, Coca-Cola has maintained dominance for 100+ years while Nike is showing market share erosion and brand weakness, especially with younger demographics. Buffett would wait for a crisis and a better price."
+  }
+}
