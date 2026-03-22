@@ -1,0 +1,117 @@
+{
+  "agentId": "5",
+  "agentName": "Valuation Calculator",
+  "timestamp": "2026-03-22T06:45:00Z",
+  "data": {
+    "intrinsicValueCalculation": {
+      "inputs": {
+        "headers": ["Input", "Value", "Source/Justification"],
+        "rows": [
+          ["Current FCF", "$1,251.9M", "10K-2025.htm, Cash Flow Statement — Operating CF $1,284.3M - CapEx $32.4M = $1,251.9M FCF"],
+          ["Historical FCF CAGR", "13.8%", "2021-2025 CAGR: (1251.9/743.9)^(1/4) - 1 = 13.8%. Used 2021 as base (2020 base of $11.4M is distorted/near-zero). Source: Agent 1 FCF data"],
+          ["Growth Rate (Yrs 1-10)", "5%", "Conservative bracket applied: Business Quality 24/40 < 25 threshold → use CAGR × 0.60, max 5%. Calculation: 13.8% × 0.60 = 8.28% → capped at 5% maximum per framework rule. Financial Health 35/50 (moderate) supports conservative cap."],
+          ["Terminal Growth", "3%", "Conservative GDP-level growth. Pinterest is a growing digital ad platform (justifies 3% vs 2%), but 100% ad revenue dependency and uncertain long-term competitive position prevents higher rate. Ceiling rule: never >5%."],
+          ["Discount Rate", "10%", "Standard rate. Total quality score: Business Quality 24/40 + Management Quality 17/30 + Financial Health 35/50 = 76/120 — equivalent to standard business range (70-100/130). Buffett standard 10% applied."],
+          ["Shares Outstanding", "665.1M", "10K-2025.htm, Balance Sheet — Class A: 585,458,698 + Class B: 79,679,925 = 665,138,623 total shares"]
+        ]
+      },
+      "projections": {
+        "headers": ["Year", "FCF ($M)", "Calculation", "Discount Factor", "PV ($M)"],
+        "rows": [
+          ["1", "1,314.5", "1,251.9 × 1.05¹", "÷ 1.10¹ = 0.9091", "1,195.0"],
+          ["2", "1,380.2", "1,251.9 × 1.05²", "÷ 1.10² = 0.8264", "1,140.7"],
+          ["3", "1,449.2", "1,251.9 × 1.05³", "÷ 1.10³ = 0.7513", "1,088.1"],
+          ["4", "1,521.7", "1,251.9 × 1.05⁴", "÷ 1.10⁴ = 0.6830", "1,039.3"],
+          ["5", "1,597.8", "1,251.9 × 1.05⁵", "÷ 1.10⁵ = 0.6209", "992.0"],
+          ["6", "1,677.7", "1,251.9 × 1.05⁶", "÷ 1.10⁶ = 0.5645", "946.9"],
+          ["7", "1,761.5", "1,251.9 × 1.05⁷", "÷ 1.10⁷ = 0.5131", "904.3"],
+          ["8", "1,849.6", "1,251.9 × 1.05⁸", "÷ 1.10⁸ = 0.4665", "863.1"],
+          ["9", "1,942.1", "1,251.9 × 1.05⁹", "÷ 1.10⁹ = 0.4241", "823.5"],
+          ["10", "2,039.2", "1,251.9 × 1.05¹⁰", "÷ 1.10¹⁰ = 0.3855", "785.9"],
+          ["Sum", "", "", "", "9,778.8"]
+        ]
+      },
+      "terminalValue": [
+        "Year 10 FCF: $2,039.2M (1,251.9 × 1.05¹⁰ = 1,251.9 × 1.6289 = $2,039.2M)",
+        "Terminal Value = $2,039.2M × 1.03 / (0.10 - 0.03) = $2,100.4M / 0.07 = $30,005.7M",
+        "PV of Terminal Value = $30,005.7M / 1.10¹⁰ = $30,005.7M / 2.5937 = $11,567.7M"
+      ],
+      "finalValue": [
+        "10-Year Cash Flows (PV): $9,778.8M",
+        "Terminal Value (PV): $11,567.7M",
+        "Total Enterprise Value: $9,778.8M + $11,567.7M = $21,346.5M",
+        "Intrinsic Value Per Share: $21,346.5M / 665.1M shares = $32.09"
+      ],
+      "scenarioInputsNote": "Scenarios vary growth rate ±2 percentage points from base. Discount rate (10%) and terminal growth (3%) held constant across all scenarios.",
+      "scenarios": {
+        "headers": ["Scenario", "Growth Rate", "10-Yr PV ($M)", "TV PV ($M)", "Total EV ($M)", "IV Per Share", "Current Price", "MoS", "Buffett Buy?"],
+        "rows": [
+          ["Conservative", "3%", "8,876.6", "9,545.4", "18,422.0", "$27.70", "N/A (price unavailable)", "N/A", "N/A"],
+          ["Base Case", "5%", "9,778.8", "11,567.7", "21,346.5", "$32.09", "N/A (price unavailable)", "N/A", "N/A"],
+          ["Optimistic", "7%", "10,786.4", "13,970.1", "24,756.5", "$37.22", "N/A (price unavailable)", "N/A", "N/A"]
+        ],
+        "scenarioCalculationDetails": {
+          "conservative_3pct": {
+            "yearByYear": [
+              ["1", "1,289.5", "1,251.9 × 1.03¹", "÷ 1.10¹", "1,172.2"],
+              ["2", "1,328.2", "1,251.9 × 1.03²", "÷ 1.10²", "1,097.7"],
+              ["3", "1,368.0", "1,251.9 × 1.03³", "÷ 1.10³", "1,027.8"],
+              ["4", "1,409.0", "1,251.9 × 1.03⁴", "÷ 1.10⁴", "962.4"],
+              ["5", "1,451.3", "1,251.9 × 1.03⁵", "÷ 1.10⁵", "901.2"],
+              ["6", "1,494.8", "1,251.9 × 1.03⁶", "÷ 1.10⁶", "843.9"],
+              ["7", "1,539.7", "1,251.9 × 1.03⁷", "÷ 1.10⁷", "790.1"],
+              ["8", "1,585.9", "1,251.9 × 1.03⁸", "÷ 1.10⁸", "739.8"],
+              ["9", "1,633.5", "1,251.9 × 1.03⁹", "÷ 1.10⁹", "692.8"],
+              ["10", "1,682.5", "1,251.9 × 1.03¹⁰", "÷ 1.10¹⁰", "648.7"],
+              ["Sum", "", "", "", "8,876.6"]
+            ],
+            "terminalValue": "1,682.5 × 1.03 / 0.07 = $24,757.1M; PV = 24,757.1 / 2.5937 = $9,545.4M",
+            "totalEV": "$8,876.6M + $9,545.4M = $18,422.0M",
+            "ivPerShare": "$18,422.0M / 665.1M = $27.70"
+          },
+          "optimistic_7pct": {
+            "yearByYear": [
+              ["1", "1,339.5", "1,251.9 × 1.07¹", "÷ 1.10¹", "1,217.7"],
+              ["2", "1,433.3", "1,251.9 × 1.07²", "÷ 1.10²", "1,184.5"],
+              ["3", "1,533.6", "1,251.9 × 1.07³", "÷ 1.10³", "1,152.2"],
+              ["4", "1,640.9", "1,251.9 × 1.07⁴", "÷ 1.10⁴", "1,120.8"],
+              ["5", "1,755.8", "1,251.9 × 1.07⁵", "÷ 1.10⁵", "1,090.2"],
+              ["6", "1,878.7", "1,251.9 × 1.07⁶", "÷ 1.10⁶", "1,060.5"],
+              ["7", "2,010.2", "1,251.9 × 1.07⁷", "÷ 1.10⁷", "1,031.5"],
+              ["8", "2,150.9", "1,251.9 × 1.07⁸", "÷ 1.10⁸", "1,003.4"],
+              ["9", "2,301.5", "1,251.9 × 1.07⁹", "÷ 1.10⁹", "976.1"],
+              ["10", "2,462.6", "1,251.9 × 1.07¹⁰", "÷ 1.10¹⁰", "949.5"],
+              ["Sum", "", "", "", "10,786.4"]
+            ],
+            "terminalValue": "2,462.6 × 1.03 / 0.07 = $36,235.7M; PV = 36,235.7 / 2.5937 = $13,970.1M",
+            "totalEV": "$10,786.4M + $13,970.1M = $24,756.5M",
+            "ivPerShare": "$24,756.5M / 665.1M = $37.22"
+          }
+        }
+      }
+    },
+    "valuation": {
+      "intrinsicValue": 32.09,
+      "intrinsicValueRange": {
+        "conservative": 27.70,
+        "base": 32.09,
+        "optimistic": 37.22
+      },
+      "currentPrice": null,
+      "currentPriceSource": "Not available — no 8-K earnings files present in local filings directory; currentPrice field is null in merged-prev.json",
+      "marginOfSafety": "N/A — current market price unavailable from SEC filings. Supply current PINS market price to complete margin of safety analysis.",
+      "verdict": "INCOMPLETE — current price required for buy/hold/avoid determination. Base case intrinsic value is $32.09/share on $21.3B enterprise value.",
+      "score": null,
+      "maxScore": 10,
+      "reasoning": "Intrinsic value calculation is complete based solely on SEC 10-K data (2020-2025). Base case IV = $32.09/share (Enterprise Value $21,346.5M). Conservative IV = $27.70/share; Optimistic IV = $37.22/share. Growth rate set at 5% (maximum allowed under conservative bracket — Business Quality 24/40 falls below 25-point threshold, triggering CAGR × 0.60 rule capped at 5%). Key strengths reflected: exceptional FCF growth ($11.4M → $1,252M in 5 years), zero debt, asset-light model (CapEx 2.5% of OCF). Key risks discounted: volatile EPS history, thin operating margins (avg 6.9%), 100% ad revenue dependency, intense competition from Meta/TikTok/Google. A margin of safety buy signal (>30% MoS) would require PINS trading below approximately $22.46 (base case × 0.70). Buffett would PASS unless stock price is significantly below intrinsic value.",
+      "qualityScoreContext": {
+        "businessQuality": "24/40",
+        "managementQuality": "17/30",
+        "financialHealth": "35/50",
+        "totalQualityScore": "76/120",
+        "growthRateBracket": "Conservative (Business Quality <25/40 threshold)",
+        "discountRateBracket": "Standard (76/120 in 70-100 range)"
+      }
+    }
+  }
+}

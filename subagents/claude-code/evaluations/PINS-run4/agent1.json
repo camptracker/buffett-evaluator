@@ -1,0 +1,251 @@
+{
+  "agentId": "1",
+  "agentName": "Data Collector",
+  "timestamp": "2026-03-22T08:00:00Z",
+  "sources": {
+    "localFiles": [
+      "evaluations/PINS-run4/filings/10K-2025.htm",
+      "evaluations/PINS-run4/filings/10K-2024.htm",
+      "evaluations/PINS-run4/filings/10K-2023.htm",
+      "evaluations/PINS-run4/filings/10K-2022.htm",
+      "evaluations/PINS-run4/filings/10K-2021.htm",
+      "evaluations/PINS-run4/filings/10K-2020.htm"
+    ],
+    "cik": "0001506293",
+    "notes": [
+      "No 8-K quarterly earnings files found in filings directory — current stock price not available from local files",
+      "All dollar amounts extracted from HTML text of 10-K filings; amounts in thousands (000s) per filing header",
+      "2020, 2022, and 2023 were net loss years; 2021, 2024, and 2025 were net income years",
+      "2024 net income of $1,862.1M is anomalously high vs operating income of $179.8M — driven by a $1,574.5M non-cash deferred tax benefit (income tax valuation allowance release), a one-time non-recurring accounting item",
+      "Pinterest has two share classes: Class A (one vote/share) and Class B (ten votes/share)",
+      "Gross profit is not a separate line in Pinterest's income statement; calculated as Revenue minus Cost of Revenue"
+    ]
+  },
+  "data": {
+    "company": "Pinterest",
+    "ticker": "PINS",
+    "cik": "0001506293",
+    "currentPrice": null,
+    "currentPriceSource": "Not available — no 8-K earnings files present in local filings directory",
+    "sharesOutstanding": 665.1,
+    "sharesOutstandingUnit": "millions",
+    "sharesSource": "10K-2025.htm, Balance Sheet — Class A: 585,458,698 + Class B: 79,679,925 = 665,138,623 total shares as of December 31, 2025",
+    "analysisDate": "2026-03-22",
+    "industry": "AI-powered visual search and discovery platform / Digital advertising — from 10K-2025.htm, Item 1",
+
+    "financialData": {
+      "eps": {
+        "headers": ["Year", "EPS Diluted ($)", "YoY Growth (%)", "Diluted Shares (M)", "Source"],
+        "rows": [
+          ["2020", "-0.22", "N/A (base year)", "596.3", "10K-2020.htm, Consolidated Statements of Operations; net loss per share basic and diluted = -$0.22; diluted = basic because antidilutive in loss years"],
+          ["2021", "0.46", "N/A (prior year was loss)", "691.7", "10K-2021.htm, Consolidated Statements of Operations — diluted EPS $0.46; diluted shares 691,651K"],
+          ["2022", "-0.14", "N/A (loss year)", "665.7", "10K-2022.htm, Consolidated Statements of Operations — net loss per share basic and diluted = -$0.14; diluted = basic in loss years"],
+          ["2023", "-0.05", "N/A (loss year)", "674.6", "10K-2023.htm, Consolidated Statements of Operations — net loss per share basic and diluted = -$0.05; diluted = basic in loss years"],
+          ["2024", "2.67", "N/A (prior year was loss)", "698.4", "10K-2024.htm, Consolidated Statements of Operations — diluted EPS $2.67 (includes $1,574.5M one-time non-cash deferred tax benefit)"],
+          ["2025", "0.61", "-77.2% (normalizing from one-time 2024 tax benefit)", "687.8", "10K-2025.htm, Consolidated Statements of Operations — diluted EPS $0.61; diluted shares 687,771K"]
+        ],
+        "notes": "2024 EPS spike driven by non-recurring $1,574.5M deferred tax asset recognition (valuation allowance release), not operating improvement. In loss years (2020, 2022, 2023), diluted shares = basic shares because including dilutive securities would be antidilutive. Underlying operating EPS trend is more modest. YoY growth comparisons between profit and loss years are not meaningful and marked N/A."
+      },
+
+      "fcf": {
+        "headers": ["Year", "Operating CF ($M)", "CapEx ($M)", "FCF ($M)", "YoY FCF Growth (%)", "Source"],
+        "rows": [
+          ["2020", "28.8", "17.4", "11.4", "N/A (base year)", "10K-2020.htm, Consolidated Statements of Cash Flows — Operating: $28,826K; CapEx (Purchases of property and equipment and intangible assets): $17,401K"],
+          ["2021", "752.9", "9.0", "743.9", "+6411.3%", "10K-2021.htm, Cash Flows — Operating: $752,907K; CapEx: $9,031K"],
+          ["2022", "469.2", "29.0", "440.2", "-40.8%", "10K-2022.htm, Cash Flows — Operating: $469,202K; CapEx: $28,984K"],
+          ["2023", "613.0", "8.1", "604.9", "+37.4%", "10K-2023.htm, Cash Flows — Operating: $612,961K; CapEx: $8,063K. FCF also confirmed in 10K-2025.htm free cash flow reconciliation table"],
+          ["2024", "964.6", "24.6", "940.0", "+55.4%", "10K-2024.htm, Cash Flows — Operating: $964,594K; CapEx: $24,606K. Confirmed in 10K-2025.htm free cash flow reconciliation table"],
+          ["2025", "1284.3", "32.4", "1251.9", "+33.2%", "10K-2025.htm, Cash Flows — Operating: $1,284,264K; CapEx: $32,375K. Confirmed in free cash flow reconciliation table ($1,251,889K FCF)"]
+        ],
+        "calculation": "FCF = Net cash provided by operating activities - Purchases of property and equipment (CapEx). Note: Pinterest is asset-light (AWS cloud infrastructure) so CapEx is very low relative to revenue. Does not include capitalized software development costs."
+      },
+
+      "roe": {
+        "headers": ["Year", "Net Income ($M)", "Total Stockholders Equity ($M)", "ROE (%)", "Profitable?", "Source"],
+        "rows": [
+          ["2020", "-128.3", "2242.4", "-5.7%", "No (net loss)", "10K-2020.htm — Net Loss: -$128,323K; Equity: $2,242,371K (10K-2021.htm balance sheet prior-year column confirms)"],
+          ["2021", "316.4", "3038.7", "10.4%", "Yes", "10K-2021.htm — Net Income: $316,438K; Equity: $3,038,743K"],
+          ["2022", "-96.0", "3281.7", "-2.9%", "No (net loss)", "10K-2022.htm — Net Loss: -$96,047K; Equity: $3,281,654K"],
+          ["2023", "-35.6", "3090.7", "-1.2%", "No (net loss)", "10K-2023.htm — Net Loss: -$35,610K; Equity: $3,090,680K"],
+          ["2024", "1862.1", "4751.2", "39.2% (inflated by one-time tax benefit)", "Yes", "10K-2024.htm — Net Income: $1,862,106K; Equity: $4,751,154K"],
+          ["2025", "416.9", "4745.2", "8.8%", "Yes", "10K-2025.htm — Net Income: $416,855K; Equity: $4,745,238K"]
+        ],
+        "notes": "ROE formula: Net Income / Total Stockholders' Equity. Pinterest has positive equity in all years. 2024 ROE inflated by $1,574.5M one-time non-cash deferred tax benefit. Underlying 2024 operating income was only $179.8M."
+      },
+
+      "debt": {
+        "headers": ["Year", "Long-Term Debt ($M)", "Current Portion LT Debt ($M)", "Total Debt ($M)", "Net Income ($M)", "Years to Pay Off", "Source"],
+        "rows": [
+          ["2020", "0.0", "0.0", "0.0", "-128.3", "N/A (debt-free; loss year)", "10K-2020.htm, Balance Sheet — no long-term debt line items found"],
+          ["2021", "0.0", "0.0", "0.0", "316.4", "0.0 (debt-free)", "10K-2021.htm, Balance Sheet — no long-term debt found"],
+          ["2022", "0.0", "0.0", "0.0", "-96.0", "N/A (debt-free; loss year)", "10K-2022.htm, Balance Sheet — no long-term debt found"],
+          ["2023", "0.0", "0.0", "0.0", "-35.6", "N/A (debt-free; loss year)", "10K-2023.htm, Balance Sheet — no long-term debt found"],
+          ["2024", "0.0", "0.0", "0.0", "1862.1", "0.0 (debt-free)", "10K-2024.htm, Balance Sheet — no long-term debt found"],
+          ["2025", "0.0", "0.0", "0.0", "416.9", "0.0 (debt-free)", "10K-2025.htm, Balance Sheet — no long-term debt found"]
+        ],
+        "notes": "Pinterest has a revolving credit facility (mentioned in 10K-2025.htm Risk Factors and Notes) but no drawn balance — the company carries zero long-term debt on its balance sheet across all 6 years. This is a significant financial strength indicator for a Buffett-style analysis."
+      },
+
+      "capex": {
+        "headers": ["Year", "Net Income ($M)", "CapEx ($M)", "CapEx % of Net Income", "Source"],
+        "rows": [
+          ["2020", "-128.3", "17.4", "N/M (loss year)", "10K-2020.htm — Net Loss: -$128,323K; CapEx: $17,401K"],
+          ["2021", "316.4", "9.0", "2.9%", "10K-2021.htm — Net Income: $316,438K; CapEx: $9,031K"],
+          ["2022", "-96.0", "29.0", "N/M (loss year)", "10K-2022.htm — Net Loss: -$96,047K; CapEx: $28,984K"],
+          ["2023", "-35.6", "8.1", "N/M (loss year)", "10K-2023.htm — Net Loss: -$35,610K; CapEx: $8,063K"],
+          ["2024", "1862.1", "24.6", "1.3% (denominator inflated by one-time tax benefit)", "10K-2024.htm — Net Income: $1,862,106K; CapEx: $24,606K"],
+          ["2025", "416.9", "32.4", "7.8%", "10K-2025.htm — Net Income: $416,855K; CapEx: $32,375K"]
+        ],
+        "calculation": "CapEx % = (CapEx / Net Income) × 100. Pinterest is asset-light — CapEx is extremely low (< $33M even at $4.2B revenue) because infrastructure is AWS-based. In profit years, CapEx % is well below 25%, which Buffett considers favorable. N/M = Not Meaningful in loss years."
+      },
+
+      "margins": {
+        "headers": ["Year", "Revenue ($M)", "Gross Profit ($M)", "Operating Income ($M)", "Net Income ($M)", "Gross Margin %", "Operating Margin %", "Net Margin %", "Source"],
+        "rows": [
+          ["2020", "1692.7", "1243.3", "-142.5", "-128.3", "73.4%", "-8.4%", "-7.6%", "10K-2020.htm — Revenue: $1,692,658K; COR: $449,358K; Op Loss: -$142,504K; Net Loss: -$128,323K"],
+          ["2021", "2578.0", "2048.7", "326.2", "316.4", "79.5%", "12.7%", "12.3%", "10K-2021.htm — Revenue: $2,578,027K; COR: $529,320K; Op Income: $326,187K; Net Income: $316,438K"],
+          ["2022", "2802.6", "2124.0", "-101.7", "-96.0", "75.8%", "-3.6%", "-3.4%", "10K-2022.htm — Revenue: $2,802,574K; COR: $678,597K; Op Loss: -$101,677K; Net Loss: -$96,047K"],
+          ["2023", "3055.1", "2366.3", "-125.7", "-35.6", "77.5%", "-4.1%", "-1.2%", "10K-2023.htm — Revenue: $3,055,071K; COR: $688,760K; Op Loss: -$125,678K; Net Loss: -$35,610K (note: includes $126.9M restructuring charge)"],
+          ["2024", "3646.2", "2895.8", "179.8", "1862.1", "79.4%", "4.9%", "51.1% (one-time tax benefit)", "10K-2024.htm — Revenue: $3,646,166K; COR: $750,355K; Op Income: $179,817K; Net Income: $1,862,106K (includes $1,574.5M one-time tax benefit)"],
+          ["2025", "4221.8", "3380.2", "319.9", "416.9", "80.1%", "7.6%", "9.9%", "10K-2025.htm — Revenue: $4,221,767K; COR: $841,521K; Op Income: $319,883K; Net Income: $416,855K"]
+        ],
+        "calculation": "Gross Profit = Revenue - Cost of Revenue (Pinterest does not present a separate Gross Profit line; calculated from stated components). Gross Margin = Gross Profit / Revenue. Operating Margin = Operating Income / Revenue. Net Margin = Net Income / Revenue."
+      },
+
+      "revenue": {
+        "headers": ["Year", "Revenue ($M)", "YoY Growth (%)", "Source"],
+        "rows": [
+          ["2020", "1692.7", "N/A (base year)", "10K-2020.htm, Consolidated Statements of Operations Data — Revenue: $1,692,658K"],
+          ["2021", "2578.0", "+52.3%", "10K-2021.htm — Revenue: $2,578,027K"],
+          ["2022", "2802.6", "+8.7%", "10K-2022.htm — Revenue: $2,802,574K"],
+          ["2023", "3055.1", "+9.0%", "10K-2023.htm — Revenue: $3,055,071K"],
+          ["2024", "3646.2", "+19.3%", "10K-2024.htm — Revenue: $3,646,166K"],
+          ["2025", "4221.8", "+15.8%", "10K-2025.htm — Revenue: $4,221,767K (16% as reported, 15% constant currency per filing)"]
+        ]
+      }
+    },
+
+    "qualitativeData": {
+      "moat": [
+        {
+          "text": "Pinterest is an AI-powered visual search and discovery platform positioned at the intersection of search, social, and commerce. Platform accessible via mobile app and web. Unique value proposition: 'go from inspiration to action all on one consumer internet property.'",
+          "source": "10K-2025.htm, Item 1 — Business Description"
+        },
+        {
+          "text": "Demographic moat: approximately two-thirds of users are women; over 50% of user base is Gen Z. Platform resonates strongly with high-intent shoppers at the top of the purchase funnel.",
+          "source": "10K-2025.htm, Item 1 — Business Description"
+        },
+        {
+          "text": "Global scale: present in over 100 countries, 619 million monthly active users (MAU) as of year-end 2025. MAU growth: 459M (2020) → 431M (2021, COVID normalization dip per 10K-2021) → 450M (2022) → 498M (2023) → 553M (2024) → 619M (2025). After 2021 post-COVID normalization dip, resumed sustained growth.",
+          "source": "10K-2025.htm, MD&A; MAU history cross-referenced across all 10-K filings"
+        },
+        {
+          "text": "Network effects: each additional pin, board, and user interaction improves content recommendations and visual search quality, creating a compounding content asset. Users create billions of Pins that serve as durable inventory for future discovery sessions.",
+          "source": "10K-2025.htm, Item 1 — Business Description"
+        },
+        {
+          "text": "Commerce integration moat: Product Pins, shopping spotlights, and direct checkout capabilities create a unique end-to-end purchase journey from discovery to transaction. This differentiates Pinterest from pure social or pure search platforms.",
+          "source": "10K-2025.htm, Item 1 — Business Description"
+        },
+        {
+          "text": "Zero long-term debt across all 6 years (2020-2025), $0 drawn on revolving credit facility. Strong balance sheet provides competitive resilience and financial flexibility.",
+          "source": "10K-2025.htm, Balance Sheet; confirmed across 10K-2020.htm through 10K-2024.htm"
+        }
+      ],
+
+      "management": [
+        {
+          "text": "CEO: William Ready — Principal Executive Officer. Named throughout risk factors as key person. Ben Silbermann (co-founder) is non-executive Chair of the Board.",
+          "source": "10K-2025.htm, Risk Factors and Executive Officers sections"
+        },
+        {
+          "text": "Capital allocation: No long-term debt; operating cash flows growing strongly (from $28.8M in 2020 to $1.284B in 2025). FCF has grown from $11.4M (2020) to $1.252B (2025), demonstrating disciplined capital allocation and scalability of the business model.",
+          "source": "10K-2025.htm and prior 10-K filings, Cash Flow Statements"
+        },
+        {
+          "text": "Share count management: Total diluted shares roughly stable 2021-2025 (691.7M → 687.8M), suggesting management has managed dilution from stock-based compensation through buybacks or controlled issuance. Note: SBC is very high relative to net income (e.g., $880M SBC vs $417M net income in 2025).",
+          "source": "10K-2021.htm through 10K-2025.htm, Consolidated Statements of Operations"
+        },
+        {
+          "text": "Path to profitability: First consistently profitable on an operating basis in 2024 ($179.8M op income) and 2025 ($319.9M op income). Prior to 2024, heavy investment years with operating losses despite strong gross margins and FCF generation.",
+          "source": "10K-2024.htm and 10K-2025.htm, MD&A overviews; cross-referenced with prior 10-Ks"
+        }
+      ],
+
+      "industry": [
+        {
+          "text": "Key risk: User retention and engagement — 'If we fail to add new users or retain or recover users, or if users engage less with us, our business, revenue and financial results could be harmed.'",
+          "source": "10K-2025.htm, Item 1A — Risk Factors"
+        },
+        {
+          "text": "Advertiser dependency risk: Revenue is nearly 100% dependent on advertising. 'If we are unable to provide our advertisers with the ability to effectively target their advertising campaigns... we may not be able to attract new advertisers or retain existing ones.'",
+          "source": "10K-2025.htm, Item 1A — Risk Factors"
+        },
+        {
+          "text": "Data privacy regulatory risk: 'If we are unable to collect, process and use data because of data privacy laws, regulations, and legal decisions, it could impact our ability to effectively deliver relevant content.' Increasing global data privacy legislation (GDPR, CCPA, etc.) is a material risk.",
+          "source": "10K-2025.htm, Item 1A — Risk Factors"
+        },
+        {
+          "text": "Cloud infrastructure concentration risk: 'We depend on Amazon Web Services for the vast majority of our compute, storage, data transfer and other services. Any disruption of, degradation in or interference with our use of Amazon Web Services could negatively affect our operations.'",
+          "source": "10K-2025.htm, Item 1A — Risk Factors"
+        },
+        {
+          "text": "International growth opportunity and risk: 'If we are unable to execute our strategy on international growth and manage the complexity of global operations successfully, our business, revenue and financial results could be harmed.' International users are majority of MAU base but generate lower ARPU than US users.",
+          "source": "10K-2025.htm, Item 1A — Risk Factors"
+        },
+        {
+          "text": "Credit facility covenant risk: Company has a revolving credit facility. 'If we fail to comply with the covenants under the revolving credit facility, lenders would have a right to terminate the commitments to provide additional loans.' No balance drawn as of all filing dates.",
+          "source": "10K-2025.htm, Item 1A — Risk Factors"
+        }
+      ],
+
+      "consumer": [
+        {
+          "text": "Monthly Active Users (MAU): 459M (2020) → 431M (2021, COVID normalization dip) → 450M (2022) → 498M (2023) → 553M (2024) → 619M (2025). 5-year CAGR (2020-2025) of approximately 6.2%. Resumed strong growth after 2021 normalization.",
+          "source": "10K-2025.htm, MD&A; cross-referenced with 10K-2020.htm through 10K-2024.htm"
+        },
+        {
+          "text": "User demographics indicate high commercial intent: two-thirds female user base; over 50% Gen Z users. Pinterest users 'come to Pinterest with high commercial intent to find ideas and inspiration' — described as being at the top of the purchase funnel, which commands premium advertising rates.",
+          "source": "10K-2025.htm, Item 1 — Business and MD&A"
+        },
+        {
+          "text": "Revenue per user (ARPU) trend: ARPU growing as advertiser tools improve and commerce integration deepens. Revenue grew 149% from $1.693B (2020) to $4.222B (2025) while MAUs grew only 35% in same period, implying significant ARPU expansion and improving monetization efficiency.",
+          "source": "Calculated from 10K-2020.htm and 10K-2025.htm, Revenue and MAU disclosures"
+        },
+        {
+          "text": "Platform stickiness indicators: Pinterest users engage with 'Pins' (saved ideas organized into Boards) — creating a personalized content graph that increases switching costs. Content is curated over time, making the platform increasingly valuable to returning users.",
+          "source": "10K-2025.htm, Item 1 — Business Description"
+        },
+        {
+          "text": "AI-powered personalization: Pinterest described as 'AI-powered visual search and discovery platform' — suggesting ongoing investment in recommendation quality to drive engagement and reduce churn. Visual search (Lens feature) creates a unique discovery pathway not available on competing platforms.",
+          "source": "10K-2025.htm, Item 1 — Business Description"
+        }
+      ]
+    },
+
+    "supplementalData": {
+      "monthlyActiveUsers": {
+        "headers": ["Year", "MAU (millions)", "YoY Growth", "Source"],
+        "rows": [
+          ["2020", "459", "N/A (base year)", "10K-2020.htm, MD&A"],
+          ["2021", "431", "-6.1% (COVID normalization)", "10K-2021.htm, MD&A — 431M MAU"],
+          ["2022", "450", "+4.4%", "10K-2022.htm, MD&A"],
+          ["2023", "498", "+10.7%", "10K-2023.htm, MD&A"],
+          ["2024", "553", "+11.0%", "10K-2024.htm, MD&A"],
+          ["2025", "619", "+11.9%", "10K-2025.htm, MD&A"]
+        ]
+      },
+      "sharesOutstandingHistory": {
+        "headers": ["Year", "Class A Shares", "Class B Shares", "Total Shares (M)", "Source"],
+        "rows": [
+          ["2020", "532,423,430", "96,091,207", "628.5", "10K-2020.htm, Balance Sheet"],
+          ["2021", "569,515,700", "88,629,202", "658.1", "10K-2021.htm, Balance Sheet"],
+          ["2022", "594,519,329", "89,348,474", "683.9", "10K-2022.htm, Balance Sheet"],
+          ["2023", "595,211,750", "83,771,609", "678.9", "10K-2023.htm, Balance Sheet"],
+          ["2024", "595,091,038", "83,146,379", "678.2", "10K-2024.htm, Balance Sheet"],
+          ["2025", "585,458,698", "79,679,925", "665.1", "10K-2025.htm, Balance Sheet"]
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,913 @@
+{
+  "company": "Pinterest",
+  "ticker": "PINS",
+  "cik": "0001506293",
+  "currentPrice": null,
+  "currentPriceSource": "Not available — no 8-K earnings files present in local filings directory",
+  "sharesOutstanding": 665.1,
+  "sharesOutstandingUnit": "millions",
+  "sharesSource": "10K-2025.htm, Balance Sheet — Class A: 585,458,698 + Class B: 79,679,925 = 665,138,623 total shares",
+  "analysisDate": "2026-03-22",
+  "industry": "AI-powered visual search and discovery platform / Digital advertising — from 10K-2025.htm, Item 1",
+  "financialData": {
+    "eps": {
+      "headers": [
+        "Year",
+        "EPS Diluted ($)",
+        "YoY Growth (%)",
+        "Diluted Shares (M)",
+        "Source"
+      ],
+      "rows": [
+        [
+          "2020",
+          "0.22",
+          "N/A (base year)",
+          "596.3",
+          "10K-2020.htm, Consolidated Statements of Operations; diluted shares from 10K-2021.htm prior-year column"
+        ],
+        [
+          "2021",
+          "0.46",
+          "+109.1%",
+          "691.7",
+          "10K-2021.htm, Consolidated Statements of Operations"
+        ],
+        [
+          "2022",
+          "0.14",
+          "-69.6%",
+          "665.7",
+          "10K-2022.htm, Consolidated Statements of Operations"
+        ],
+        [
+          "2023",
+          "0.05",
+          "-64.3%",
+          "674.6",
+          "10K-2023.htm, Consolidated Statements of Operations"
+        ],
+        [
+          "2024",
+          "2.67",
+          "+5240.0% (one-time deferred tax benefit)",
+          "698.4",
+          "10K-2024.htm, Consolidated Statements of Operations"
+        ],
+        [
+          "2025",
+          "0.61",
+          "-77.2% (normalizing from one-time 2024 item)",
+          "687.8",
+          "10K-2025.htm, Consolidated Statements of Operations"
+        ]
+      ],
+      "notes": "2024 EPS spike driven by non-recurring deferred tax asset recognition (valuation allowance release), not operating improvement. Underlying operating EPS trend is more modest. Diluted shares in thousands from WeightedAverageNumberOfDilutedSharesOutstanding XBRL tag."
+    },
+    "fcf": {
+      "headers": [
+        "Year",
+        "Operating CF ($M)",
+        "CapEx ($M)",
+        "FCF ($M)",
+        "YoY FCF Growth (%)",
+        "Source"
+      ],
+      "rows": [
+        [
+          "2020",
+          "28.8",
+          "17.4",
+          "11.4",
+          "N/A (base year)",
+          "10K-2020.htm, Consolidated Statements of Cash Flows — Operating: NetCashProvidedByUsedInOperatingActivities=28,826K; CapEx: PaymentsToAcquireProductiveAssets=17,401K"
+        ],
+        [
+          "2021",
+          "752.9",
+          "9.0",
+          "743.9",
+          "+6411.3%",
+          "10K-2021.htm, Cash Flows — Operating: 752,907K; CapEx: PaymentsToAcquireProductiveAssets=9,031K"
+        ],
+        [
+          "2022",
+          "469.2",
+          "29.0",
+          "440.2",
+          "-40.8%",
+          "10K-2022.htm, Cash Flows — Operating: 469,202K; CapEx: PaymentsToAcquireProductiveAssets=28,984K"
+        ],
+        [
+          "2023",
+          "613.0",
+          "8.1",
+          "604.9",
+          "+37.4%",
+          "10K-2023.htm, Cash Flows — Operating: 612,961K; CapEx: PaymentsToAcquireProductiveAssets=8,063K"
+        ],
+        [
+          "2024",
+          "964.6",
+          "24.6",
+          "940.0",
+          "+55.4%",
+          "10K-2024.htm, Cash Flows — Operating: 964,594K; CapEx: PaymentsToAcquirePropertyPlantAndEquipment=24,606K"
+        ],
+        [
+          "2025",
+          "1284.3",
+          "32.4",
+          "1251.9",
+          "+33.2%",
+          "10K-2025.htm, Cash Flows — Operating: 1,284,264K; CapEx: PaymentsToAcquireProductiveAssets=32,375K"
+        ]
+      ],
+      "calculation": "FCF = Net cash provided by operating activities - Purchases of property and equipment (CapEx). Note: Pinterest is asset-light (AWS cloud infra) so CapEx is very low relative to revenue. Does not include capitalized software development costs."
+    },
+    "roe": {
+      "headers": [
+        "Year",
+        "Net Income ($M)",
+        "Total Stockholders Equity ($M)",
+        "ROE (%)",
+        "Source"
+      ],
+      "rows": [
+        [
+          "2020",
+          "62.9",
+          "2242.4",
+          "2.8%",
+          "10K-2020.htm — Net Income: NetIncomeLoss=62,974K; Equity: StockholdersEquity=2,242,371K"
+        ],
+        [
+          "2021",
+          "316.4",
+          "3038.7",
+          "10.4%",
+          "10K-2021.htm — Net Income: 316,438K; Equity: 3,038,743K"
+        ],
+        [
+          "2022",
+          "96.0",
+          "3281.7",
+          "2.9%",
+          "10K-2022.htm — Net Income: 96,047K; Equity: 3,281,654K"
+        ],
+        [
+          "2023",
+          "35.6",
+          "3090.7",
+          "1.2%",
+          "10K-2023.htm — Net Income: 35,610K; Equity: 3,090,680K"
+        ],
+        [
+          "2024",
+          "1862.1",
+          "4751.2",
+          "39.2% (inflated by deferred tax item)",
+          "10K-2024.htm — Net Income: 1,862,106K; Equity: 4,751,154K"
+        ],
+        [
+          "2025",
+          "416.9",
+          "4745.2",
+          "8.8%",
+          "10K-2025.htm — Net Income: 416,855K; Equity: 4,745,238K"
+        ]
+      ],
+      "notes": "ROE formula: Net Income / Total Stockholders' Equity. Pinterest has positive equity all years — ROA alternative not needed. Equity is all positive; no negative equity years. 2024 ROE inflated by one-time deferred tax benefit."
+    },
+    "debt": {
+      "headers": [
+        "Year",
+        "Long-Term Debt ($M)",
+        "Current Portion LT Debt ($M)",
+        "Total Debt ($M)",
+        "Net Income ($M)",
+        "Years to Pay Off",
+        "Source"
+      ],
+      "rows": [
+        [
+          "2020",
+          "0.0",
+          "0.0",
+          "0.0",
+          "62.9",
+          "0.0 (debt-free)",
+          "10K-2020.htm, Balance Sheet — no LongTermDebt, LongTermNotesPayable, or SeniorNotes tags found"
+        ],
+        [
+          "2021",
+          "0.0",
+          "0.0",
+          "0.0",
+          "316.4",
+          "0.0 (debt-free)",
+          "10K-2021.htm, Balance Sheet — no long-term debt tags found"
+        ],
+        [
+          "2022",
+          "0.0",
+          "0.0",
+          "0.0",
+          "96.0",
+          "0.0 (debt-free)",
+          "10K-2022.htm, Balance Sheet — no long-term debt tags found"
+        ],
+        [
+          "2023",
+          "0.0",
+          "0.0",
+          "0.0",
+          "35.6",
+          "0.0 (debt-free)",
+          "10K-2023.htm, Balance Sheet — no long-term debt tags found"
+        ],
+        [
+          "2024",
+          "0.0",
+          "0.0",
+          "0.0",
+          "1862.1",
+          "0.0 (debt-free)",
+          "10K-2024.htm, Balance Sheet — no long-term debt tags found"
+        ],
+        [
+          "2025",
+          "0.0",
+          "0.0",
+          "0.0",
+          "416.9",
+          "0.0 (debt-free)",
+          "10K-2025.htm, Balance Sheet — no long-term debt tags found"
+        ]
+      ],
+      "notes": "Pinterest has a revolving credit facility (mentioned in 10K-2025.htm Risk Factors) but no drawn balance — the company carries zero long-term debt on its balance sheet across all 6 years. This is a significant financial strength indicator."
+    },
+    "capex": {
+      "headers": [
+        "Year",
+        "Net Income ($M)",
+        "CapEx ($M)",
+        "CapEx % of Net Income",
+        "Source"
+      ],
+      "rows": [
+        [
+          "2020",
+          "62.9",
+          "17.4",
+          "27.7%",
+          "10K-2020.htm — Net Income: 62,974K; CapEx: PaymentsToAcquireProductiveAssets=17,401K"
+        ],
+        [
+          "2021",
+          "316.4",
+          "9.0",
+          "2.9%",
+          "10K-2021.htm — Net Income: 316,438K; CapEx: 9,031K"
+        ],
+        [
+          "2022",
+          "96.0",
+          "29.0",
+          "30.2%",
+          "10K-2022.htm — Net Income: 96,047K; CapEx: 28,984K"
+        ],
+        [
+          "2023",
+          "35.6",
+          "8.1",
+          "22.7%",
+          "10K-2023.htm — Net Income: 35,610K; CapEx: 8,063K"
+        ],
+        [
+          "2024",
+          "1862.1",
+          "24.6",
+          "1.3% (denominator inflated)",
+          "10K-2024.htm — Net Income: 1,862,106K; CapEx: 24,606K"
+        ],
+        [
+          "2025",
+          "416.9",
+          "32.4",
+          "7.8%",
+          "10K-2025.htm — Net Income: 416,855K; CapEx: 32,375K"
+        ]
+      ],
+      "calculation": "CapEx % = (CapEx / Net Income) × 100. Pinterest is asset-light — CapEx is extremely low (< $33M even at $4.2B revenue) because infrastructure is AWS-based. Buffett criterion: CapEx < 25% of earnings is favorable; Pinterest consistently meets this except in low-earnings years."
+    },
+    "margins": {
+      "headers": [
+        "Year",
+        "Revenue ($M)",
+        "Gross Profit ($M)",
+        "Operating Income ($M)",
+        "Net Income ($M)",
+        "Gross Margin %",
+        "Operating Margin %",
+        "Net Margin %",
+        "Source"
+      ],
+      "rows": [
+        [
+          "2020",
+          "1692.7",
+          "1243.3",
+          "142.5",
+          "62.9",
+          "73.4%",
+          "8.4%",
+          "3.7%",
+          "10K-2020.htm — Revenue: 1,692,658K; CoR: 449,358K; OpIncome: 142,504K; NetIncome: 62,974K"
+        ],
+        [
+          "2021",
+          "2578.0",
+          "2048.7",
+          "326.2",
+          "316.4",
+          "79.5%",
+          "12.7%",
+          "12.3%",
+          "10K-2021.htm — Revenue: 2,578,027K; CoR: 529,320K; OpIncome: 326,187K; NetIncome: 316,438K"
+        ],
+        [
+          "2022",
+          "2802.6",
+          "2124.0",
+          "101.7",
+          "96.0",
+          "75.8%",
+          "3.6%",
+          "3.4%",
+          "10K-2022.htm — Revenue: 2,802,574K; CoR: 678,597K; OpIncome: 101,677K; NetIncome: 96,047K"
+        ],
+        [
+          "2023",
+          "3055.1",
+          "2366.3",
+          "125.7",
+          "35.6",
+          "77.5%",
+          "4.1%",
+          "1.2%",
+          "10K-2023.htm — Revenue: 3,055,071K; CoR: 688,760K; OpIncome: 125,678K; NetIncome: 35,610K"
+        ],
+        [
+          "2024",
+          "3646.2",
+          "2895.8",
+          "179.8",
+          "1862.1",
+          "79.4%",
+          "4.9%",
+          "51.1% (one-time)",
+          "10K-2024.htm — Revenue: 3,646,166K; CoR: 750,355K; OpIncome: 179,817K; NetIncome: 1,862,106K"
+        ],
+        [
+          "2025",
+          "4221.8",
+          "3380.2",
+          "319.9",
+          "416.9",
+          "80.1%",
+          "7.6%",
+          "9.9%",
+          "10K-2025.htm — Revenue: 4,221,767K; CoR: 841,521K; OpIncome: 319,883K; NetIncome: 416,855K"
+        ]
+      ],
+      "calculation": "Gross Profit = Revenue - Cost of Revenue; Gross Margin = Gross Profit / Revenue; Operating Margin = Operating Income / Revenue; Net Margin = Net Income / Revenue"
+    },
+    "revenue": {
+      "headers": [
+        "Year",
+        "Revenue ($M)",
+        "YoY Growth (%)",
+        "Source"
+      ],
+      "rows": [
+        [
+          "2020",
+          "1692.7",
+          "N/A (base year)",
+          "10K-2020.htm, Consolidated Statements of Operations — RevenueFromContractWithCustomerExcludingAssessedTax=1,692,658K"
+        ],
+        [
+          "2021",
+          "2578.0",
+          "+52.3%",
+          "10K-2021.htm — 2,578,027K"
+        ],
+        [
+          "2022",
+          "2802.6",
+          "+8.7%",
+          "10K-2022.htm — 2,802,574K"
+        ],
+        [
+          "2023",
+          "3055.1",
+          "+9.0%",
+          "10K-2023.htm — 3,055,071K"
+        ],
+        [
+          "2024",
+          "3646.2",
+          "+19.3%",
+          "10K-2024.htm — 3,646,166K"
+        ],
+        [
+          "2025",
+          "4221.8",
+          "+15.8%",
+          "10K-2025.htm — 4,221,767K"
+        ]
+      ]
+    }
+  },
+  "qualitativeData": {
+    "moat": [
+      {
+        "text": "Pinterest is an AI-powered visual search and discovery platform positioned at the intersection of search, social, and commerce. Platform accessible via mobile app and web. Unique value proposition: 'go from inspiration to action all on one consumer internet property.'",
+        "source": "10K-2025.htm, Item 1 — Business Description"
+      },
+      {
+        "text": "Demographic moat: approximately two-thirds of users are women; over 50% of user base is Gen Z. Platform resonates strongly with high-intent shoppers at the top of the purchase funnel.",
+        "source": "10K-2025.htm, Item 1 — Business Description"
+      },
+      {
+        "text": "Global scale: present in over 100 countries, 619 million monthly active users (MAU) as of year-end 2025. MAU growth: 459M (2020) → 400M (2021) → 450M (2022) → 498M (2023) → 553M (2024) → 619M (2025). After 2021 post-COVID normalization dip, resumed sustained growth.",
+        "source": "10K-2025.htm, MD&A; MAU history cross-referenced across all 10-K filings"
+      },
+      {
+        "text": "Network effects: each additional pin, board, and user interaction improves content recommendations and visual search quality, creating a compounding content asset. Users create billions of Pins that serve as durable inventory for future discovery sessions.",
+        "source": "10K-2025.htm, Item 1 — Business Description"
+      },
+      {
+        "text": "Commerce integration moat: Product Pins, shopping spotlights, and direct checkout capabilities create a unique end-to-end purchase journey from discovery to transaction. This is difficult to replicate and differentiates Pinterest from pure social or pure search platforms.",
+        "source": "10K-2025.htm, Item 1 — Business Description"
+      },
+      {
+        "text": "Zero long-term debt across all 6 years (2020-2025), $0 drawn on revolving credit facility. Strong balance sheet provides competitive resilience.",
+        "source": "10K-2025.htm, Balance Sheet; confirmed across 10K-2020.htm through 10K-2024.htm"
+      }
+    ],
+    "management": [
+      {
+        "text": "CEO: William Ready — Principal Executive Officer and Director as of December 31, 2025. Both CEO and CFO evaluated and certified disclosure controls effectiveness as of that date.",
+        "source": "10K-2025.htm, Executive Officers and Certifications sections"
+      },
+      {
+        "text": "Capital allocation: No long-term debt; operating cash flows growing strongly (from $28.8M in 2020 to $1.284B in 2025). FCF has grown from $11.4M (2020) to $1.252B (2025), demonstrating disciplined capital allocation and scalability of the business model.",
+        "source": "10K-2025.htm and prior 10-K filings, Cash Flow Statements"
+      },
+      {
+        "text": "Share count management: Total diluted shares roughly stable 2021-2025 (691.7M → 687.8M), suggesting management has managed dilution from stock-based compensation through buybacks or controlled issuance.",
+        "source": "10K-2021.htm through 10K-2025.htm, Consolidated Statements of Operations"
+      }
+    ],
+    "industry": [
+      {
+        "text": "Key risk: User retention and engagement — 'If we fail to add new users or retain or recover users, or if users engage less with us, our business, revenue and financial results could be harmed.'",
+        "source": "10K-2025.htm, Item 1A — Risk Factors"
+      },
+      {
+        "text": "Advertiser dependency risk: Revenue is nearly 100% dependent on advertising. 'If we are unable to provide our advertisers with the ability to effectively target their advertising campaigns... we may not be able to attract new advertisers or retain existing ones.'",
+        "source": "10K-2025.htm, Item 1A — Risk Factors"
+      },
+      {
+        "text": "Data privacy regulatory risk: 'If we are unable to collect, process and use data because of data privacy laws, regulations, and legal decisions, it could impact our ability to effectively deliver relevant content.' Increasing global data privacy legislation (GDPR, CCPA, etc.) is a material risk.",
+        "source": "10K-2025.htm, Item 1A — Risk Factors"
+      },
+      {
+        "text": "Cloud infrastructure concentration risk: 'We depend on Amazon Web Services for the vast majority of our compute, storage, data transfer and other services. Any disruption of, degradation in or interference with our use of Amazon Web Services could negatively affect our operations.'",
+        "source": "10K-2025.htm, Item 1A — Risk Factors"
+      },
+      {
+        "text": "International growth opportunity and risk: 'If we are unable to execute our strategy on international growth and manage the complexity of global operations successfully, our business, revenue and financial results could be harmed.' International users are majority of MAU base but generate lower ARPU than US users.",
+        "source": "10K-2025.htm, Item 1A — Risk Factors"
+      },
+      {
+        "text": "Credit facility covenant risk: Company has a revolving credit facility. 'If we fail to comply with the covenants under the revolving credit facility, lenders would have a right to terminate the commitments to provide additional loans.' No balance drawn as of all filing dates.",
+        "source": "10K-2025.htm, Item 1A — Risk Factors"
+      }
+    ],
+    "consumer": [
+      {
+        "text": "Monthly Active Users (MAU): 459M (2020) → 400M (2021, COVID normalization dip) → 450M (2022) → 498M (2023) → 553M (2024) → 619M (2025). 5-year CAGR (2020-2025) of ~6.2%. Resume strong growth after 2021 normalization.",
+        "source": "10K-2025.htm, MD&A; cross-referenced with 10K-2020.htm through 10K-2024.htm"
+      },
+      {
+        "text": "User demographics indicate high commercial intent: two-thirds female user base; over 50% Gen Z users. Pinterest users 'come to Pinterest with high commercial intent to find ideas and inspiration' — described as being at the top of the purchase funnel, which commands premium advertising rates.",
+        "source": "10K-2025.htm, Item 1 — Business and MD&A"
+      },
+      {
+        "text": "Revenue per user (ARPU) trend: ARPU growing as advertiser tools improve and commerce integration deepens. Revenue grew 149% from $1.693B (2020) to $4.222B (2025) while MAUs grew only 35% in same period, implying significant ARPU expansion and improving monetization.",
+        "source": "Calculated from 10K-2020.htm and 10K-2025.htm, Revenue and MAU disclosures"
+      },
+      {
+        "text": "Platform stickiness indicators: Pinterest users engage with 'Pins' (saved ideas organized into Boards) — creating a personalized content graph that increases switching costs. Content is curated over time, making the platform increasingly valuable to returning users.",
+        "source": "10K-2025.htm, Item 1 — Business Description"
+      },
+      {
+        "text": "AI-powered personalization: Pinterest described as 'AI-powered visual search and discovery platform' — suggesting ongoing investment in recommendation quality to drive engagement and reduce churn. Visual search (Lens feature) creates a unique discovery pathway not available on competing platforms.",
+        "source": "10K-2025.htm, Item 1 — Business Description"
+      }
+    ]
+  },
+  "supplementalData": {
+    "monthlyActiveUsers": {
+      "headers": [
+        "Year",
+        "MAU (millions)",
+        "YoY Growth",
+        "Source"
+      ],
+      "rows": [
+        [
+          "2020",
+          "459",
+          "N/A (base year)",
+          "10K-2020.htm, MD&A"
+        ],
+        [
+          "2021",
+          "400",
+          "-12.9% (COVID normalization)",
+          "10K-2021.htm, MD&A"
+        ],
+        [
+          "2022",
+          "450",
+          "+12.5%",
+          "10K-2022.htm, MD&A"
+        ],
+        [
+          "2023",
+          "498",
+          "+10.7%",
+          "10K-2023.htm, MD&A"
+        ],
+        [
+          "2024",
+          "553",
+          "+11.0%",
+          "10K-2024.htm, MD&A"
+        ],
+        [
+          "2025",
+          "619",
+          "+11.9%",
+          "10K-2025.htm, MD&A"
+        ]
+      ]
+    },
+    "sharesOutstandingHistory": {
+      "headers": [
+        "Year",
+        "Class A Shares",
+        "Class B Shares",
+        "Total Shares (M)",
+        "Source"
+      ],
+      "rows": [
+        [
+          "2020",
+          "532,423,430",
+          "96,091,207",
+          "628.5",
+          "10K-2020.htm, Balance Sheet"
+        ],
+        [
+          "2021",
+          "569,515,700",
+          "88,629,202",
+          "658.1",
+          "10K-2021.htm, Balance Sheet"
+        ],
+        [
+          "2022",
+          "594,519,329",
+          "89,348,474",
+          "683.9",
+          "10K-2022.htm, Balance Sheet"
+        ],
+        [
+          "2023",
+          "595,211,750",
+          "83,771,609",
+          "678.9",
+          "10K-2023.htm, Balance Sheet"
+        ],
+        [
+          "2024",
+          "595,091,038",
+          "83,146,379",
+          "678.2",
+          "10K-2024.htm, Balance Sheet"
+        ],
+        [
+          "2025",
+          "585,458,698",
+          "79,679,925",
+          "665.1",
+          "10K-2025.htm, Balance Sheet"
+        ]
+      ]
+    }
+  },
+  "businessQuality": {
+    "criteria": [
+      {
+        "title": "Simple & Understandable",
+        "description": "Pinterest operates an AI-powered visual search and discovery platform where users save images and ideas ('Pins') into personalized boards, building a curated content graph over time. The platform monetizes almost entirely through digital advertising, connecting brands to 619 million monthly active users—predominantly women (two-thirds) and Gen Z (over 50%)—who visit with high commercial purchase intent. Revenue comes from advertisers paying for targeted reach across the Pinterest feed, search results, and commerce-enabled surfaces.",
+        "rating": "7/10",
+        "verdict": "PASS",
+        "reasoning": "Pinterest's business model is understandable with moderate effort. The core loop is clear: users discover ideas → curate boards → advertisers pay to insert products into that discovery journey. However, the AI-powered recommendation engine, visual search technology (Lens), and the nuanced difference between Pinterest's 'inspiration-to-action' commerce positioning vs. pure social media requires some familiarity with the ad-tech space to fully appreciate. The 10-K Item 1 describes it as 'the intersection of search, social, and commerce,' which captures complexity in a single phrase. Not as simple as a beverage brand or insurer, but more transparent than a financial conglomerate.",
+        "secReference": "10K-2025.htm, Item 1 — Business Description ('AI-powered visual search and discovery platform'); 10K-2025.htm, Item 1A — Advertiser dependency risk"
+      },
+      {
+        "title": "Durable Competitive Moat",
+        "description": "Pinterest has multiple moat sources: network effects from user-generated Pins improving recommendations over time; demographic positioning (high-intent, female-skewed, Gen Z-heavy user base commanding premium ad rates); switching costs from personalized Pin boards and curated content graphs; and a unique commerce integration (Product Pins, shopping spotlights, direct checkout) that is difficult for pure-social or pure-search platforms to replicate. Gross margins have expanded from 73.4% (2020) to 80.1% (2025), suggesting growing pricing power with advertisers.",
+        "rating": "6/10",
+        "verdict": "PASS",
+        "reasoning": "The moat is real but narrow-to-moderate. Network effects are genuine: 619M MAUs have collectively built billions of Pins that serve as durable discovery inventory, and each interaction improves recommendations—a compounding content asset. The demographic moat (high commercial intent users) differentiates Pinterest from entertainment-first platforms. However, operating margins remain thin and volatile (3.6% in 2022, 7.6% in 2025), indicating limited pricing power vs. Buffett's ideal of consistently wide margins. Risk Factors highlight intense competition for user attention and advertiser spend from Meta, TikTok, Google, and Snap—all significantly larger with more data. The 100% ad revenue dependency (per 10K-2025.htm Item 1A) is a structural weakness. The moat is sufficient to sustain the business but is not the wide, durable fortress of a Coca-Cola or Visa.",
+        "secReference": "10K-2025.htm, Item 1 — Business Description (network effects, commerce integration, demographics); 10K-2025.htm, Item 1A — Competition and advertiser dependency risks; Margins table (2020-2025)"
+      },
+      {
+        "title": "Consistent Operating History",
+        "description": "Pinterest has been GAAP profitable every year from 2020-2025, but EPS has been highly erratic. EPS peaked at $0.46 in 2021, then collapsed to $0.14 (2022) and $0.05 (2023) before an artificial spike to $2.67 in 2024 (one-time deferred tax benefit) and recovery to $0.61 in 2025. Revenue grew every single year without exception. Free cash flow has been consistently positive and strongly growing from $11.4M (2020) to $1.252B (2025).",
+        "rating": "5/10",
+        "verdict": "FAIL",
+        "reasoning": "While Pinterest has never posted a net loss—an important distinction—EPS trajectory fails Buffett's consistency standard. The 2022 (-69.6%) and 2023 (-64.3%) consecutive EPS declines reflect real operational deterioration: revenue growth slowed to single digits post-COVID, costs expanded, and operating margins compressed to 3.6-4.1%. By Buffett's framework, a business with two consecutive years of sharply declining earnings does not demonstrate the 'consistent earning power' he prizes. The offsetting positives are significant: revenue has grown every year without exception, FCF is robust (CAGR ~153% from 2020-2025), and the business has never required debt. Operating margins improved sharply in 2025 to 7.6%, suggesting the 2022-2023 weakness may be resolved. Still, the EPS record is too volatile to score above 5.",
+        "metrics": {
+          "profitableYears": "6/6 (all years GAAP positive net income)",
+          "epsCAGR": "~22.7% (2020 $0.22 → 2025 $0.61, excluding 2024 one-time)",
+          "downYears": "2 consecutive (2022: -69.6%, 2023: -64.3%)",
+          "revenueCagr": "~20.1% (2020 $1.69B → 2025 $4.22B)",
+          "fcfGrowth": "$11.4M (2020) → $1,251.9M (2025)",
+          "revenueDownYears": "0 (revenue grew every year)"
+        }
+      },
+      {
+        "title": "Favorable Long-Term Prospects",
+        "description": "Digital advertising is a large, structurally growing market as brand spend continues to migrate from offline to online. Pinterest is positioned at the commerce discovery layer—helping users go from 'idea' to 'purchase'—which is a durable and expanding use case. Revenue per user (ARPU) has grown dramatically: revenue grew 149% from 2020-2025 while MAUs grew only 35%, implying significant monetization improvement still in progress. However, the platform faces structural risks including 100% ad revenue dependency, intense competition from Meta/TikTok/Google, data privacy regulations (GDPR/CCPA), and AWS infrastructure concentration.",
+        "rating": "6/10",
+        "verdict": "PASS",
+        "reasoning": "Pinterest's long-term prospects are adequate but carry meaningful uncertainty. On the positive side: digital advertising continues to grow; Pinterest's high-intent commerce positioning is differentiated vs. entertainment-first competitors; MAUs are growing steadily (+11.9% in 2025); and ARPU expansion has substantial runway as international monetization catches up to US levels. The AI-powered visual search capability (Lens) and commerce integration create a credible 20-year survival path as a specialty layer in the commerce funnel. However, the Risk Factors section (10K-2025.htm Item 1A) identifies existential-adjacent risks: complete dependence on ad revenue, regulatory data privacy crackdowns, and the need to continuously out-innovate much larger platforms with far greater R&D budgets. The international ARPU gap (majority of MAUs international but generating lower revenue) is both an opportunity and execution risk. Prospects are positive but not the 'certainty' Buffett seeks.",
+        "secReference": "10K-2025.htm, Item 1 — Business Description (AI/commerce positioning); 10K-2025.htm, Item 1A — Risk Factors (ad dependency, privacy, competition, AWS); MAU and ARPU growth data from MD&A (2020-2025)"
+      }
+    ],
+    "totalScore": 24,
+    "maxScore": 40,
+    "scoreBreakdown": {
+      "simpleUnderstandable": 7,
+      "durableCompetitiveMoat": 6,
+      "consistentOperatingHistory": 5,
+      "favorableLongTermProspects": 6
+    },
+    "overallVerdict": "2 PASS / 1 FAIL / 1 PASS (3 of 4 criteria pass; Consistent Operating History fails due to erratic EPS 2022-2023)",
+    "summaryNote": "Pinterest scores 24/40 on Business Quality. The platform has a clear, understandable business model and real competitive advantages from network effects and demographic positioning. However, EPS history is too volatile to meet Buffett's consistency standard (two consecutive sharp declines 2022-2023), and the moat—while genuine—is narrower than ideal given thin and variable operating margins. All analysis based exclusively on SEC filings (10K-2020.htm through 10K-2025.htm) sourced by Agent 1."
+  },
+  "managementQuality": {
+    "criteria": [
+      {
+        "title": "Rational Capital Allocation",
+        "description": "FCF deployment analysis from 10-K Cash Flow Statements",
+        "rating": "6/10",
+        "verdict": "PASS",
+        "reasoning": "Pinterest demonstrates reasonable but not exceptional capital allocation. The company generated cumulative FCF of ~$3,993M over 2020-2025 ($11.4M + $743.9M + $440.2M + $604.9M + $940.0M + $1,251.9M), growing from $11.4M in 2020 to $1,251.9M in 2025 — an extraordinary scale improvement. No dividends were paid (rational for a growth company reinvesting for scale). No long-term debt was drawn at any point, meaning zero leveraged buybacks. No major M&A was identified in any 10-K filing. Diluted share count was held roughly stable (691.7M in 2021 → 687.8M in 2025) despite substantial stock-based compensation, suggesting buyback activity offset dilution — but basic shares outstanding grew from 628.5M (2020) to peak 683.9M (2022) before declining to 665.1M (2025), indicating dilution was not fully contained in earlier years. No explicit buyback dollar amounts or timing data (vs. stock price) were available in the 10-K cash flow data provided. ROE excluding the one-time 2024 deferred tax item is modest: 2.8% (2020) → 10.4% (2021) → 2.9% (2022) → 1.2% (2023) → 8.8% (2025). The low ROE trend from 2022-2023 indicates retained earnings were not generating strong returns during that period, a Buffett concern. The 2025 recovery to 8.8% is encouraging but not exceptional. Overall: strong FCF discipline and zero debt are positives; low ROE and incomplete buyback timing data prevent a higher score.",
+        "evidence": [
+          "Dividends: $0 paid over 2020-2025 (Source: 10-K Cash Flow Statements — no dividend line items in any filing)",
+          "Buybacks: Diluted shares stable 691.7M (2021) → 687.8M (2025) despite SBC; basic shares down 18.8M from 2022 peak of 683.9M to 665.1M in 2025 (Source: 10K-2025.htm, Balance Sheet; cross-referenced 2020-2024)",
+          "Debt used for buybacks: None — zero long-term debt drawn in any year 2020-2025 (Source: 10K-2020 through 10K-2025, Balance Sheets)",
+          "M&A: No major acquisitions identified in any 10-K 2020-2025 filing",
+          "FCF trend: $11.4M (2020) → $743.9M (2021) → $440.2M (2022) → $604.9M (2023) → $940.0M (2024) → $1,251.9M (2025) — cumulative ~$3,993M (Source: 10K Cash Flow Statements)",
+          "ROE trend (excluding one-time items): 2.8% (2020) → 10.4% (2021) → 2.9% (2022) → 1.2% (2023) → 8.8% (2025) — improving but still modest (Source: 10K-2020 through 10K-2025, Income Statements and Balance Sheets)"
+        ],
+        "secReference": "10-K 2020-2025, Consolidated Statements of Cash Flows; Balance Sheets; Consolidated Statements of Operations"
+      },
+      {
+        "title": "Honest & Transparent",
+        "description": "Assessment of shareholder communications and 10-K clarity",
+        "rating": "5/10",
+        "verdict": "PASS",
+        "reasoning": "The available SEC filings provide limited direct evidence to assess management honesty and transparency at the Buffett standard. No DEF 14A proxy was included in Agent 1's local filing set, so CEO compensation data and pay-for-performance metrics are not available. No shareholder letter text or explicit CEO admissions of mistakes were extracted. However, the 10-K filings include clear, specific risk disclosures (advertiser dependency, AWS concentration, data privacy regulatory risk, dual-class share structure) that are candid about material vulnerabilities. The Agent 1 source notes identified that the 2024 $1,862M net income was an anomalous one-time deferred tax benefit, and this appears clearly disclosed in the 10-K (operating income was only $179.8M vs. $1,862M net income — a stark divergence that would be hard to obscure). CEO William Ready and CFO certified disclosure controls effectiveness via SOX certifications. The dual-class share structure (Class B at 10 votes/share) is disclosed but represents a governance concern in that founders/insiders retain disproportionate voting control. No evidence of excessive non-GAAP adjustments or misleading language was flagged. Assessment: standard corporate disclosure quality — candid risk factors and clear one-time item disclosure, but no above-average transparency signals such as admitted strategic mistakes, plain-English shareholder letters, or pay tied explicitly to long-term ROIC metrics.",
+        "evidence": [
+          "CEO: William Ready (Principal Executive Officer) — SOX certification of disclosure controls as of December 31, 2025 (Source: 10K-2025.htm, Certifications)",
+          "Admits mistakes: No explicit admissions found in available 10-K data; no shareholder letters extracted",
+          "One-time item disclosure: 2024 net income of $1,862.1M vs. operating income of $179.8M clearly reflects deferred tax asset release; not obscured in filing (Source: 10K-2024.htm, Consolidated Statements of Operations)",
+          "Risk factor candor: Clear disclosure of AWS dependency concentration risk, 100% advertiser revenue dependency, and dual-class share governance structure (Source: 10K-2025.htm, Item 1A Risk Factors)",
+          "Compensation data: Not available — DEF 14A not in local filing set; CEO pay-for-performance linkage cannot be assessed",
+          "Dual-class shares: Class A (1 vote) and Class B (10 votes) structure disclosed — insider voting concentration is a governance transparency concern (Source: 10K-2025.htm, Balance Sheet notes)"
+        ],
+        "secReference": "10-K 2020-2025, MD&A and Risk Factors; SOX Certifications; DEF 14A not available in local filing set"
+      },
+      {
+        "title": "Resists Institutional Imperative",
+        "description": "Evidence of contrarian thinking from 10-K actions",
+        "rating": "6/10",
+        "verdict": "PASS",
+        "reasoning": "Pinterest's management shows moderate evidence of resisting institutional imperative, primarily through what they chose NOT to do rather than documented contrarian moves. The most notable signal is the complete absence of M&A activity over 6 years (2020-2025), during a period when digital advertising and social media peers frequently made large acquisitions. With ~$4B in cumulative FCF and a clean balance sheet, management had ample firepower for acquisitions but did not pursue them — a disciplined refusal to engage in the empire-building tendency Buffett warns against. The company maintained zero long-term debt throughout, even as many technology companies aggressively leveraged their balance sheets in 2020-2021 at near-zero interest rates. Pinterest stayed focused on its core visual discovery and commerce niche rather than pivoting to metaverse, crypto, or other fashionable adjacencies visible in the 2021-2023 tech landscape. However, no explicit evidence from the 10-K of management articulating a contrarian philosophy, turning down specific acquisition targets, or making deliberately unpopular decisions that paid off. The dual-class share structure, while common in tech, could enable management to take contrarian long-term stances against short-term investor pressure — though no evidence this has been exercised. Long-term compensation structure (equity vesting over multi-year periods) is implied by the tech industry norms but not confirmed from DEF 14A data. Assessment: mild contrarian signals through capital discipline and M&A abstinence, but insufficient 10-K evidence to score higher.",
+        "evidence": [
+          "Contrarian move — M&A abstinence: Zero major acquisitions over 2020-2025 despite ~$3,993M cumulative FCF and debt-free balance sheet (Source: 10K-2020 through 10K-2025, Cash Flow Statements — no PaymentsToAcquireBusinessesNetOfCashAcquired in significant amounts)",
+          "Contrarian move — no leverage: Maintained zero long-term debt even during the 2020-2021 ultra-low interest rate environment when many peers loaded up on cheap debt (Source: 10K-2020 through 10K-2025, Balance Sheets)",
+          "Avoided fad: No pivot to metaverse, crypto, NFTs, or unrelated adjacencies visible in 10-K business descriptions 2020-2025; remained focused on visual discovery and commerce (Source: 10K-2025.htm, Item 1 vs. 10K-2020.htm, Item 1)",
+          "Long-term focus indicator: Dual-class share structure (Class B at 10 votes/share) structurally protects management from short-term activist pressure, enabling longer-horizon decisions (Source: 10K-2025.htm, Balance Sheet)",
+          "Peer comparison evidence: No explicit 10-K commentary comparing Pinterest's strategy to competitors or articulating a contrarian philosophy — limits conviction in this scoring"
+        ],
+        "secReference": "10-K 2020-2025, Cash Flow Statements (acquisition activity); Item 1 Business Description (strategy focus); Balance Sheets (debt policy)"
+      }
+    ],
+    "totalScore": 17,
+    "maxScore": 30
+  },
+  "financialHealth": {
+    "criteria": [
+      {
+        "title": "Return on Equity >15%",
+        "description": "6-year ROE analysis from 10-K (2020-2025; only 6 years available)",
+        "rating": "3/10",
+        "verdict": "FAIL",
+        "metrics": {
+          "roeByYear": {
+            "2020": "2.8%",
+            "2021": "10.4%",
+            "2022": "2.9%",
+            "2023": "1.2%",
+            "2024": "39.2% (EXCLUDED — one-time deferred tax benefit)",
+            "2025": "8.8%"
+          },
+          "averageROE_all6Years": "10.9% = (2.8 + 10.4 + 2.9 + 1.2 + 39.2 + 8.8) / 6",
+          "averageROE_excluding2024OneTime": "5.2% = (2.8 + 10.4 + 2.9 + 1.2 + 8.8) / 5",
+          "highYear": "2024: 39.2% (non-recurring — deferred tax asset release, excluded from analysis)",
+          "lowYear": "2023: 1.2%",
+          "operationalHigh": "2021: 10.4%",
+          "trend": "volatile — improved 2021 but collapsed 2022-2023; recovering in 2025 (8.8%)",
+          "buffettThreshold": ">15% average over 10 years",
+          "dataLimitation": "Only 6 years of data available (2020-2025); Buffett prefers 10-year analysis",
+          "equityStatus": "Positive equity all years — ROA substitute not needed",
+          "note": "ROE is depressed by large equity base from IPO proceeds and high stock-based compensation. Underlying business economics may be stronger than GAAP ROE suggests."
+        },
+        "secReference": "10-K 2020-2025, Balance Sheets (StockholdersEquity) and Income Statements (NetIncomeLoss)"
+      },
+      {
+        "title": "Strong Profit Margins",
+        "description": "Margin stability analysis over 6 years (2020-2025)",
+        "rating": "5/10",
+        "verdict": "FAIL",
+        "metrics": {
+          "grossMarginByYear": {
+            "2020": "73.4%",
+            "2021": "79.5%",
+            "2022": "75.8%",
+            "2023": "77.5%",
+            "2024": "79.4%",
+            "2025": "80.1%"
+          },
+          "operatingMarginByYear": {
+            "2020": "8.4%",
+            "2021": "12.7%",
+            "2022": "3.6%",
+            "2023": "4.1%",
+            "2024": "4.9%",
+            "2025": "7.6%"
+          },
+          "netMarginByYear": {
+            "2020": "3.7%",
+            "2021": "12.3%",
+            "2022": "3.4%",
+            "2023": "1.2%",
+            "2024": "51.1% (EXCLUDED — one-time deferred tax benefit)",
+            "2025": "9.9%"
+          },
+          "averageGrossMargin": "77.6% = (73.4 + 79.5 + 75.8 + 77.5 + 79.4 + 80.1) / 6",
+          "averageOperatingMargin": "6.9% = (8.4 + 12.7 + 3.6 + 4.1 + 4.9 + 7.6) / 6",
+          "averageNetMargin_excluding2024": "6.1% = (3.7 + 12.3 + 3.4 + 1.2 + 9.9) / 5",
+          "grossMarginTrend": "improving (+6.7% over 5 years: 73.4% → 80.1%)",
+          "operatingMarginTrend": "volatile but improving from 2023 trough (4.1% → 7.6% in 2025)",
+          "netMarginTrend": "volatile — strong 2021 (12.3%), collapsed 2022-2023, recovering 2025 (9.9%)",
+          "buffettThreshold": "Stable or improving margins; net margin ideally >15%",
+          "note": "Gross margins are excellent and improving (77-80%), showing strong pricing power. However, high SBC expense depresses GAAP operating and net margins significantly. Operating leverage improving as revenue scales."
+        },
+        "secReference": "10-K 2020-2025, Consolidated Statements of Operations"
+      },
+      {
+        "title": "Low Debt Levels",
+        "description": "Debt payable in <4 years test — Pinterest carries zero long-term debt",
+        "rating": "10/10",
+        "verdict": "PASS",
+        "metrics": {
+          "debtByYear": {
+            "2020": "$0.0M",
+            "2021": "$0.0M",
+            "2022": "$0.0M",
+            "2023": "$0.0M",
+            "2024": "$0.0M",
+            "2025": "$0.0M"
+          },
+          "totalDebt_2025": "$0.0M",
+          "netIncome_2025": "$416.9M",
+          "yearsToPayOff": "0.0 years — debt-free",
+          "buffettThreshold": "<4 years of earnings",
+          "creditFacility": "Revolving credit facility exists but $0 drawn across all filing years",
+          "note": "Exceptional balance sheet strength. Pinterest has been debt-free since IPO. This is an outstanding financial characteristic fully meeting Buffett's low-debt criterion. Cash and equivalents are substantial, providing M&A and operational flexibility."
+        },
+        "secReference": "10-K 2020-2025, Balance Sheets — no LongTermDebt, LongTermNotesPayable, or SeniorNotes XBRL tags found in any filing"
+      },
+      {
+        "title": "Consistent Free Cash Flow",
+        "description": "FCF growth and consistency over 6 years (2020-2025)",
+        "rating": "9/10",
+        "verdict": "PASS",
+        "metrics": {
+          "fcfByYear": {
+            "2020": "$11.4M",
+            "2021": "$743.9M",
+            "2022": "$440.2M",
+            "2023": "$604.9M",
+            "2024": "$940.0M",
+            "2025": "$1,251.9M"
+          },
+          "fcfCAGR_2020to2025": "156% = (1251.9 / 11.4)^(1/5) - 1 [distorted by near-zero 2020 base]",
+          "fcfCAGR_2021to2025": "13.8% = (1251.9 / 743.9)^(1/4) - 1 [more representative]",
+          "downYears": "1 out of 6 — 2022 ($440.2M vs $743.9M in 2021, -40.8%)",
+          "fcfConversionByYear": {
+            "2020": "18.1% (11.4 / 62.9)",
+            "2021": "235.1% (743.9 / 316.4 — SBC adds back to OCF)",
+            "2022": "458.5% (440.2 / 96.0 — net income very depressed vs FCF)",
+            "2023": "1699.7% (604.9 / 35.6 — net income near-zero, FCF strong)",
+            "2024": "50.5% (940.0 / 1862.1 — denominator inflated by tax item)",
+            "2025": "300.2% (1251.9 / 416.9)"
+          },
+          "averageFCFConversion": "High — FCF substantially exceeds GAAP net income in most years due to SBC add-back; indicates strong cash generation underlying the GAAP results",
+          "buffettThreshold": "FCF CAGR >10%, 0-1 down years preferred",
+          "note": "FCF growth is exceptional — from $11.4M (2020) to $1.25B (2025) in 5 years. Only 1 down year (2022). High FCF/Net Income ratios reflect large non-cash SBC expense that reduces GAAP earnings but not cash. Pinterest is a genuine free cash flow compounder."
+        },
+        "secReference": "10-K 2020-2025, Consolidated Statements of Cash Flows (NetCashProvidedByUsedInOperatingActivities, PaymentsToAcquireProductiveAssets)"
+      },
+      {
+        "title": "Capital Light Business",
+        "description": "CapEx as % of Net Income over 6 years (2020-2025)",
+        "rating": "8/10",
+        "verdict": "PASS",
+        "metrics": {
+          "capexByYear": {
+            "2020": "$17.4M (27.7% of net income)",
+            "2021": "$9.0M (2.9% of net income)",
+            "2022": "$29.0M (30.2% of net income)",
+            "2023": "$8.1M (22.7% of net income)",
+            "2024": "$24.6M (1.3% — denominator inflated by one-time tax item)",
+            "2025": "$32.4M (7.8% of net income)"
+          },
+          "averageCapExPercent_all6Years": "15.4% = (27.7 + 2.9 + 30.2 + 22.7 + 1.3 + 7.8) / 6",
+          "averageCapExPercent_excluding2024": "18.3% = (27.7 + 2.9 + 30.2 + 22.7 + 7.8) / 5",
+          "absoluteCapEx_2025": "$32.4M on $4.2B revenue = 0.8% of revenue",
+          "capexAsPercentOfOperatingCF": {
+            "2020": "60.4% (17.4 / 28.8 — both very low in absolute terms)",
+            "2021": "1.2% (9.0 / 752.9)",
+            "2022": "6.2% (29.0 / 469.2)",
+            "2023": "1.3% (8.1 / 613.0)",
+            "2024": "2.5% (24.6 / 964.6)",
+            "2025": "2.5% (32.4 / 1284.3)"
+          },
+          "buffettThreshold": "CapEx <25% of earnings (favorable); <15% excellent",
+          "businessType": "Highly capital-light — AWS cloud infrastructure means physical asset investment is minimal; CapEx is equipment/leasehold improvements only",
+          "note": "High CapEx % ratios in 2020 and 2022 are artifacts of temporarily depressed net income (low earnings base, not high CapEx). Absolute CapEx is extremely low ($8-32M vs $4.2B revenue). As % of operating cash flow, CapEx is consistently under 7% in recent years — extremely capital-light."
+        },
+        "secReference": "10-K 2020-2025, Consolidated Statements of Cash Flows (PaymentsToAcquireProductiveAssets, PaymentsToAcquirePropertyPlantAndEquipment)"
+      }
+    ],
+    "scoreBreakdown": {
+      "returnOnEquity": "3/10",
+      "profitMargins": "5/10",
+      "debtLevels": "10/10",
+      "freeCashFlow": "9/10",
+      "capitalLight": "8/10"
+    },
+    "totalScore": 35,
+    "maxScore": 50,
+    "overallAssessment": {
+      "strengths": [
+        "Debt-free balance sheet across all 6 years — exceptional financial strength",
+        "FCF grew from $11.4M to $1.25B (2020-2025) with only 1 down year",
+        "Gross margins consistently 73-80% and improving — strong pricing power",
+        "Extremely low absolute CapEx ($8-32M on $4B+ revenue) = capital-light model",
+        "FCF substantially exceeds GAAP net income — true earnings power higher than reported"
+      ],
+      "weaknesses": [
+        "ROE consistently below Buffett's 15% threshold in operational years (5.2% average ex-2024)",
+        "GAAP net margins volatile (1.2%-12.3%) due to high stock-based compensation expense",
+        "Operating margins in mid-single digits (average 6.9%) despite excellent gross margins",
+        "Only 6 years of data available (2020-2025) vs Buffett's preferred 10-year analysis",
+        "Large gap between gross margins (77-80%) and operating margins (4-13%) signals high operating expense relative to revenue"
+      ],
+      "dataNote": "Analysis based on 6 years of SEC 10-K data (2020-2025). Buffett's framework ideally uses 10 years. 2024 metrics excluded from averages where distorted by one-time $1.6B deferred tax asset release."
+    }
+  }
+}
