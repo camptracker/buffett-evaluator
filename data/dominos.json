@@ -2,319 +2,92 @@
   "name": "Domino's Pizza",
   "ticker": "DPZ",
   "industry": "Restaurant - Pizza Franchise",
-  "analysisDate": "March 20, 2026",
+  "analysisDate": "March 22, 2026",
   "currentPrice": 377.79,
-  "intrinsicValue": 425,
-  "marginOfSafety": "+11%",
-  "verdict": "HOLD / WATCH",
-  "score": 105,
-  "oneParagraphSummary": "Domino's is a franchise royalty machine with exceptional economics: asset-light model, 35% ROA, 12% net margins, and consistent FCF generation. The business has grown revenue at 7.8% CAGR for 15 years while returning massive capital to shareholders via dividends and buybacks. However, the company is heavily leveraged (net debt ~$5B) to fund buybacks, creating financial risk. At $378, the stock trades 11% below intrinsic value with modest margin of safety. While the business quality is excellent (Buffett would love the franchise model), the excessive debt and fair valuation make this a HOLD rather than strong BUY.",
+  "intrinsicValue": 278.00,
+  "marginOfSafety": "-36%",
+  "verdict": "AVOID",
+  "score": 98,
+  "oneParagraphSummary": "Domino's is an exceptional franchise business with a capital-light model, wide moat, and 15+ years of consistent profitability (23% EPS CAGR). Business quality is outstanding: 34% ROA, 12% net margins, minimal CapEx, proven digital-first strategy. However, the company is significantly OVERVALUED at $377.79. Intrinsic value is $278/share, implying a -36% margin of safety. Aggressive debt-funded buybacks ($5B net debt, 4.7x EBITDA) create financial risk, especially with franchisee bankruptcies emerging. Buffett would love the business but PASS at this price. Wait for a 30%+ pullback to $270 or below.",
+  
   "financialData": {
     "eps": {
-      "headers": [
-        "Year",
-        "EPS ($)",
-        "YoY Growth"
-      ],
+      "headers": ["Year", "EPS ($)", "YoY Growth"],
       "rows": [
-        [
-          "2025 (TTM)",
-          "17.56",
-          "+5.2%"
-        ],
-        [
-          "2024",
-          "16.69",
-          "+11.4%"
-        ],
-        [
-          "2023",
-          "14.98",
-          "+20.5%"
-        ],
-        [
-          "2022",
-          "12.43",
-          "+23.9%"
-        ],
-        [
-          "2021",
-          "10.03",
-          "+45.8%"
-        ],
-        [
-          "2020",
-          "6.88",
-          "-15.4%"
-        ],
-        [
-          "2019",
-          "8.13",
-          "+18.9%"
-        ],
-        [
-          "2018",
-          "6.84",
-          "+26.8%"
-        ],
-        [
-          "2017",
-          "5.39",
-          "+33.8%"
-        ],
-        [
-          "2016",
-          "4.03",
-          "+35.2%"
-        ],
-        [
-          "2015",
-          "2.98",
-          "+28.4%"
-        ],
-        [
-          "2014",
-          "2.32",
-          "+29.8%"
-        ],
-        [
-          "2013",
-          "1.79",
-          "+34.6%"
-        ],
-        [
-          "2012",
-          "1.33",
-          "+28.8%"
-        ],
-        [
-          "2011",
-          "1.03",
-          "+32.1%"
-        ],
-        [
-          "2010",
-          "0.78",
-          "+44.4%"
-        ]
+        ["2025 (TTM)", "17.56", "+5.2%"],
+        ["2024", "16.69", "+11.4%"],
+        ["2023", "14.98", "+20.5%"],
+        ["2022", "12.43", "+23.9%"],
+        ["2021", "10.03", "+45.8%"],
+        ["2020", "6.88", "-15.4%"],
+        ["2019", "8.13", "+18.9%"],
+        ["2018", "6.84", "+26.8%"],
+        ["2017", "5.39", "+33.8%"],
+        ["2016", "4.03", "+35.2%"],
+        ["2015", "2.98", "+28.4%"],
+        ["2014", "2.32", "+29.8%"],
+        ["2013", "1.79", "+34.6%"],
+        ["2012", "1.33", "+28.8%"],
+        ["2011", "1.03", "+32.1%"],
+        ["2010", "0.78", "--"]
       ]
     },
     "fcf": {
-      "headers": [
-        "Year",
-        "FCF ($M)",
-        "YoY Growth"
-      ],
+      "headers": ["Year", "FCF ($M)", "YoY Growth"],
       "rows": [
-        [
-          "2025 (TTM)",
-          "509",
-          "-12.3%"
-        ],
-        [
-          "2024",
-          "580",
-          "+8.4%"
-        ],
-        [
-          "2023",
-          "535",
-          "+15.5%"
-        ],
-        [
-          "2022",
-          "463",
-          "+18.9%"
-        ],
-        [
-          "2021",
-          "389",
-          "+42.7%"
-        ],
-        [
-          "2020",
-          "273",
-          "-28.4%"
-        ],
-        [
-          "2019",
-          "381",
-          "+12.7%"
-        ],
-        [
-          "2018",
-          "338",
-          "+16.6%"
-        ],
-        [
-          "2017",
-          "290",
-          "+14.2%"
-        ],
-        [
-          "2016",
-          "254",
-          "+22.1%"
-        ],
-        [
-          "2015",
-          "208",
-          "+18.9%"
-        ]
+        ["2025 (TTM)", "509", "-12.3%"],
+        ["2024", "580", "+8.4%"],
+        ["2023", "535", "+15.5%"],
+        ["2022", "463", "+18.9%"],
+        ["2021", "389", "+42.7%"],
+        ["2020", "273", "-28.4%"],
+        ["2019", "381", "+12.7%"],
+        ["2018", "338", "+16.6%"],
+        ["2017", "290", "+14.2%"],
+        ["2016", "254", "+22.1%"]
       ]
     },
     "roe": {
-      "headers": [
-        "Year",
-        "ROE %",
-        "Note"
-      ],
+      "headers": ["Year", "ROE %", "Note"],
       "rows": [
-        [
-          "2025 (TTM)",
-          "Negative",
-          "Shareholder deficit from buybacks"
-        ],
-        [
-          "2024",
-          "Negative",
-          "Shareholder deficit"
-        ],
-        [
-          "2023",
-          "Negative",
-          "Shareholder deficit"
-        ],
-        [
-          "2022",
-          "Negative",
-          "Shareholder deficit"
-        ],
-        [
-          "2021",
-          "Negative",
-          "Shareholder deficit"
-        ],
-        [
-          "2020",
-          "Negative",
-          "Shareholder deficit"
-        ],
-        [
-          "ROA Instead",
-          "34.56%",
-          "More meaningful for Domino's"
-        ],
-        [
-          "Avg ROA (10yr)",
-          "~32%",
-          "Consistently high"
-        ]
+        ["2025 (TTM)", "Negative", "Shareholder deficit from buybacks"],
+        ["2024", "Negative", "Shareholder deficit"],
+        ["2023", "Negative", "Shareholder deficit"],
+        ["2022", "Negative", "Shareholder deficit"],
+        ["2021", "Negative", "Shareholder deficit"],
+        ["2020", "Negative", "Shareholder deficit"],
+        ["ROA Instead", "34.56%", "More meaningful for Domino's"],
+        ["Avg ROA (10yr)", "~32%", "Consistently high"]
       ]
     },
     "debt": {
-      "headers": [
-        "Year",
-        "Net Debt ($B)",
-        "EBITDA ($M)",
-        "Net Debt/EBITDA"
-      ],
+      "headers": ["Year", "Net Debt ($B)", "EBITDA ($M)", "Debt/EBITDA"],
       "rows": [
-        [
-          "2025 (TTM)",
-          "~5.0",
-          "1,055",
-          "4.7x"
-        ],
-        [
-          "2024",
-          "~4.8",
-          "1,020",
-          "4.7x"
-        ],
-        [
-          "2023",
-          "~4.5",
-          "945",
-          "4.8x"
-        ],
-        [
-          "2022",
-          "~4.2",
-          "880",
-          "4.8x"
-        ],
-        [
-          "2021",
-          "~4.5",
-          "775",
-          "5.8x"
-        ],
-        [
-          "2020",
-          "~4.3",
-          "695",
-          "6.2x"
-        ]
+        ["2025 (TTM)", "~5.0", "1,055", "4.7x"],
+        ["2024", "~4.8", "1,020", "4.7x"],
+        ["2023", "~4.5", "945", "4.8x"]
       ]
     },
     "margins": {
-      "headers": [
-        "Year",
-        "Gross %",
-        "Operating %",
-        "Net %"
-      ],
+      "headers": ["Year", "Gross %", "Operating %", "Net %"],
       "rows": [
-        [
-          "2025 (TTM)",
-          "37.2%",
-          "18.5%",
-          "12.2%"
-        ],
-        [
-          "2024",
-          "37.8%",
-          "19.2%",
-          "12.8%"
-        ],
-        [
-          "2023",
-          "37.5%",
-          "18.8%",
-          "12.3%"
-        ],
-        [
-          "2022",
-          "37.1%",
-          "18.1%",
-          "11.7%"
-        ],
-        [
-          "2021",
-          "37.9%",
-          "17.5%",
-          "10.9%"
-        ],
-        [
-          "2020",
-          "38.2%",
-          "16.8%",
-          "9.2%"
-        ]
+        ["2025 (TTM)", "37.2%", "18.5%", "12.2%"],
+        ["2024", "37.8%", "19.2%", "12.8%"],
+        ["2023", "37.5%", "18.8%", "12.3%"]
       ]
     }
   },
+  
   "qualitativeAnalysis": {
     "moat": [
       "Primary Moat: FRANCHISE NETWORK + BRAND + DIGITAL PLATFORM",
-      "20,000+ stores in 90+ countries (scale advantage)",
+      "20,600+ stores in 90+ countries (scale advantage)",
       "75%+ orders via app/online (digital leader in pizza)",
       "Franchise model = capital-light, scalable growth",
       "Supply chain captive to franchisees (recurring revenue)",
       "Brand recognition: #1 pizza delivery globally",
       "Moat Strength: WIDE - network effects, brand, low-cost structure",
-      "Threats: Third-party delivery (Uber Eats, DoorDash), ghost kitchens, wage inflation"
+      "Threats: Third-party delivery (Uber Eats, DoorDash), ghost kitchens, franchisee bankruptcies"
     ],
     "management": [
       "CEO: Russell Weiner (joined 2022, former CMO of Domino's)",
@@ -322,7 +95,7 @@
       "Shareholder Returns: $1B+ annually via dividends + buybacks",
       "Dividend: $7.96/share (2.11% yield), growing 20%+ annually",
       "Strategy: 'Fortressing' (densely cluster stores to reduce delivery times)",
-      "Red Flag: Franchisee bankruptcies mentioned (2025-2026 stress)",
+      "Red Flag: Franchisee bankruptcies reported (2025-2026 stress)",
       "Transparency: Clear financial reporting, honest about international challenges"
     ],
     "industry": [
@@ -333,6 +106,7 @@
       "Competitive Dynamics: Domino's wins on speed + tech, loses on quality perception"
     ]
   },
+  
   "businessQuality": {
     "criteria": [
       {
@@ -343,29 +117,30 @@
       },
       {
         "title": "Durable Competitive Moat",
-        "description": "Wide moat from: (1) Franchise network scale (20K stores = hard to replicate), (2) Brand recognition globally, (3) Digital ordering platform (75% of orders), (4) Supply chain captive to franchisees. Threats: Third-party delivery apps bypassing direct relationship, wage inflation pressuring franchisees.",
+        "description": "Wide moat from: (1) Franchise network scale (20,600 stores = hard to replicate), (2) Brand recognition globally, (3) Digital ordering platform (75% of orders), (4) Supply chain captive to franchisees. Threats: Third-party delivery apps bypassing direct relationship, franchisee bankruptcies weakening system.",
         "rating": "8/10",
         "verdict": "PASS"
       },
       {
         "title": "Consistent Operating History",
-        "description": "Profitable for 15+ consecutive years (public since 2004). EPS CAGR: 22% over 15 years (exceptional). Only 1 down year (2020 COVID, -15% EPS). Consistent revenue growth, margin expansion, FCF generation. This is exactly what Buffett wants to see.",
+        "description": "Profitable for 15+ consecutive years (public since 2004). EPS CAGR: 23% over 15 years (exceptional). Only 1 down year (2020 COVID, -15% EPS). Consistent revenue growth, margin stability, FCF generation. Textbook consistency.",
         "rating": "10/10",
         "verdict": "PASS"
       },
       {
         "title": "Favorable Long-Term Prospects",
-        "description": "Global pizza market growing 4-6% annually. Domino's has runway for international expansion (underpenetrated in Asia, Latin America). Digital ordering and delivery culture are secular tailwinds. Risk: Labor costs, competition from ghost kitchens, changing consumer preferences (health trends).",
-        "rating": "8/10",
+        "description": "Global pizza market growing 4-6% annually. Domino's has runway for international expansion (underpenetrated in Asia, Latin America). Digital ordering and delivery culture are secular tailwinds. Risk: Labor costs, competition from ghost kitchens, franchisee stress could slow growth.",
+        "rating": "7/10",
         "verdict": "PASS"
       }
     ]
   },
+  
   "managementQuality": {
     "criteria": [
       {
         "title": "Rational Capital Allocation",
-        "description": "Management returns $1B+ annually to shareholders (dividends + buybacks). Dividend growing 20%+ annually. Buybacks funded by debt (net debt $5B). This is aggressive but defensible given FCF stability. However, debt levels are high (4.7x EBITDA). Buffett would prefer less leverage.",
+        "description": "Management returns $1B+ annually to shareholders (dividends + buybacks). Dividend growing 20%+ annually. Buybacks funded by debt (net debt $5B). This is aggressive and creates risk given 4.7x EBITDA leverage. FCF stability makes debt serviceable but leaves little flexibility. Buffett would prefer less leverage.",
         "rating": "7/10",
         "verdict": "PASS"
       },
@@ -383,11 +158,12 @@
       }
     ]
   },
+  
   "financialHealth": {
     "criteria": [
       {
         "title": "Return on Equity >15%",
-        "description": "ROE is NEGATIVE due to shareholder deficit from aggressive buybacks. This is common in franchise/capital-light businesses with heavy buybacks. ROA is 35% (exceptional). Use ROA instead of ROE for asset-light businesses. Verdict: PASS despite negative ROE.",
+        "description": "ROE is NEGATIVE due to shareholder deficit from aggressive buybacks. This is common in franchise/capital-light businesses with heavy buybacks. ROA is 34.56% (exceptional). Use ROA instead of ROE for asset-light businesses. Verdict: PASS despite negative ROE.",
         "rating": "8/10",
         "verdict": "PASS"
       },
@@ -405,253 +181,92 @@
       },
       {
         "title": "Consistent Free Cash Flow",
-        "description": "FCF: $509M TTM (down 12% YoY but still solid). 15-year CAGR: ~10%. FCF has grown consistently except 2020 COVID dip. FCF/Revenue: 10% (good for restaurant business). Consistency is strong.",
-        "rating": "9/10",
+        "description": "FCF: $509M TTM (down 12% YoY). 10-year CAGR: ~10%. FCF has grown consistently except 2020 COVID dip. Recent slowing is concerning. FCF/Revenue: 10.3% (good for restaurant business). Consistency is strong overall.",
+        "rating": "8/10",
         "verdict": "PASS"
       },
       {
         "title": "Capital Light Business",
-        "description": "Franchise model = franchisees fund store build-outs (Domino's invests minimal capital). CapEx: ~3-5% of revenue (mostly supply chain, IT). This is VERY capital-light. Buffett loves this model (See's Candies, Nebraska Furniture Mart franchising).",
+        "description": "Franchise model = franchisees fund store build-outs (Domino's invests minimal capital). CapEx: ~11% of net income (mostly supply chain, IT). This is VERY capital-light. Buffett loves this model (See's Candies, Nebraska Furniture Mart franchising).",
         "rating": "10/10",
         "verdict": "PASS"
       }
     ]
   },
+  
   "intrinsicValueCalculation": {
     "inputs": {
-      "headers": [
-        "Input",
-        "Value",
-        "Justification"
-      ],
+      "headers": ["Input", "Value", "Justification"],
       "rows": [
-        [
-          "Current FCF",
-          "$509M",
-          "TTM March 2026"
-        ],
-        [
-          "Growth Rate (Yrs 1-10)",
-          "7%",
-          "Conservative: Below historical 10% due to maturity"
-        ],
-        [
-          "Terminal Growth",
-          "3%",
-          "GDP + population growth"
-        ],
-        [
-          "Discount Rate",
-          "10%",
-          "Buffett's standard rate"
-        ],
-        [
-          "Shares Outstanding",
-          "33.6M",
-          "Current (heavily bought back)"
-        ]
+        ["Current FCF", "$509M", "TTM March 2026"],
+        ["Growth Rate (Yrs 1-10)", "6%", "Conservative: Below historical 10%, mature business slowing"],
+        ["Terminal Growth", "3%", "GDP + population growth"],
+        ["Discount Rate", "10%", "Buffett's standard rate"],
+        ["Shares Outstanding", "33.6M", "Current (heavily bought back)"]
       ]
     },
     "projections": {
-      "headers": [
-        "Year",
-        "FCF ($M)",
-        "Discount Factor",
-        "Present Value ($M)"
-      ],
+      "headers": ["Year", "FCF ($M)", "Discount Factor", "Present Value ($M)"],
       "rows": [
-        [
-          "1",
-          "545",
-          "÷ 1.10¹",
-          "495"
-        ],
-        [
-          "2",
-          "583",
-          "÷ 1.10²",
-          "482"
-        ],
-        [
-          "3",
-          "623",
-          "÷ 1.10³",
-          "468"
-        ],
-        [
-          "5",
-          "714",
-          "÷ 1.10⁵",
-          "443"
-        ],
-        [
-          "10",
-          "1,002",
-          "÷ 1.10¹⁰",
-          "386"
-        ],
-        [
-          "Sum",
-          "",
-          "",
-          "4,685"
-        ]
+        ["1", "539", "÷ 1.10¹", "490"],
+        ["2", "571", "÷ 1.10²", "472"],
+        ["3", "606", "÷ 1.10³", "455"],
+        ["4", "642", "÷ 1.10⁴", "439"],
+        ["5", "680", "÷ 1.10⁵", "422"],
+        ["6", "721", "÷ 1.10⁶", "407"],
+        ["7", "764", "÷ 1.10⁷", "392"],
+        ["8", "810", "÷ 1.10⁸", "378"],
+        ["9", "858", "÷ 1.10⁹", "364"],
+        ["10", "910", "÷ 1.10¹⁰", "351"],
+        ["Sum", "", "", "4,170"]
       ]
     },
     "terminalValue": [
-      "Year 10 FCF: $1,002M",
-      "Terminal Value = $1,002M × 1.03 ÷ (0.10 - 0.03) = $14,757M",
-      "Discounted to Present: $14,757M ÷ 1.10¹⁰ = $5,690M"
+      "Year 10 FCF: $910M",
+      "Terminal Value = $910M × 1.03 ÷ (0.10 - 0.03) = $13,386M",
+      "Discounted to Present: $13,386M ÷ 1.10¹⁰ = $5,162M"
     ],
     "finalValue": [
-      "10-Year Cash Flows (PV): $4,685M",
-      "Terminal Value (PV): $5,690M",
-      "Total Enterprise Value: $10,375M",
-      "Less: Net Debt $5,000M",
-      "Equity Value: $5,375M",
-      "Intrinsic Value Per Share: $5,375M ÷ 33.6M = $160/share",
-      "Wait... that can't be right. Let me recalculate with correct methodology.",
-      "Actually, for levered FCF (already accounts for debt payments), don't subtract debt again.",
-      "Equity Value = $10,375M",
-      "Intrinsic Value Per Share: $10,375M ÷ 33.6M = $309/share",
-      "Hmm, still feels low. Let me use owner earnings approach instead.",
-      "Owner Earnings = Net Income + D&A - CapEx = $602M + $150M - $70M = $682M",
-      "10-year projection at 7% growth + 3% terminal, 10% discount = $520/share",
-      "Accounting for debt risk haircut (15%) = $442/share",
-      "Conservative intrinsic value: $425/share"
+      "10-Year Cash Flows (PV): $4,170M",
+      "Terminal Value (PV): $5,162M",
+      "Total Enterprise Value: $9,332M",
+      "Intrinsic Value Per Share: $9,332M ÷ 33.6M = $278/share"
     ],
     "scenarios": {
-      "headers": [
-        "Scenario",
-        "Assumptions",
-        "Intrinsic Value",
-        "Margin of Safety",
-        "Buy?"
-      ],
+      "headers": ["Scenario", "Assumptions", "Intrinsic Value", "Margin of Safety", "Buy?"],
       "rows": [
-        [
-          "Base Case",
-          "7% growth, 3% terminal",
-          "$425",
-          "+11% (fair value)",
-          "MAYBE"
-        ],
-        [
-          "Conservative",
-          "5% growth, 2.5% terminal",
-          "$350",
-          "-8% (overvalued)",
-          "NO"
-        ],
-        [
-          "Optimistic",
-          "9% growth, 3.5% terminal",
-          "$520",
-          "+27% (undervalued)",
-          "YES"
-        ]
+        ["Base Case", "6% growth, 3% terminal", "$278", "-36% (overvalued)", "NO"],
+        ["Conservative", "4% growth, 2.5% terminal", "$230", "-64% (very overvalued)", "NO"],
+        ["Optimistic", "8% growth, 3.5% terminal", "$340", "-11% (overvalued)", "NO"]
       ]
     }
   },
+  
   "scorecard": {
     "scores": {
-      "headers": [
-        "Category",
-        "Criteria",
-        "Score",
-        "Pass/Fail"
-      ],
+      "headers": ["Category", "Criteria", "Score", "Pass/Fail"],
       "rows": [
-        [
-          "Business Quality",
-          "Simple and understandable",
-          "9/10",
-          "PASS"
-        ],
-        [
-          "Business Quality",
-          "Durable competitive moat",
-          "8/10",
-          "PASS"
-        ],
-        [
-          "Business Quality",
-          "Consistent operating history",
-          "10/10",
-          "PASS"
-        ],
-        [
-          "Business Quality",
-          "Favorable long-term prospects",
-          "8/10",
-          "PASS"
-        ],
-        [
-          "Management",
-          "Rational capital allocation",
-          "7/10",
-          "PASS"
-        ],
-        [
-          "Management",
-          "Honest and transparent",
-          "9/10",
-          "PASS"
-        ],
-        [
-          "Management",
-          "Resists institutional imperative",
-          "8/10",
-          "PASS"
-        ],
-        [
-          "Financial Health",
-          "ROE >15% (use ROA)",
-          "8/10",
-          "PASS"
-        ],
-        [
-          "Financial Health",
-          "Strong profit margins",
-          "9/10",
-          "PASS"
-        ],
-        [
-          "Financial Health",
-          "Low debt levels",
-          "5/10",
-          "WARNING"
-        ],
-        [
-          "Financial Health",
-          "Consistent FCF",
-          "9/10",
-          "PASS"
-        ],
-        [
-          "Financial Health",
-          "Capital light business",
-          "10/10",
-          "PASS"
-        ],
-        [
-          "Valuation",
-          "Margin of safety >30%",
-          "5/10",
-          "WARNING"
-        ],
-        [
-          "**TOTAL**",
-          "",
-          "**105/130**",
-          "81%"
-        ]
+        ["Business Quality", "Simple and understandable", "9/10", "PASS"],
+        ["Business Quality", "Durable competitive moat", "8/10", "PASS"],
+        ["Business Quality", "Consistent operating history", "10/10", "PASS"],
+        ["Business Quality", "Favorable long-term prospects", "7/10", "PASS"],
+        ["Management", "Rational capital allocation", "7/10", "PASS"],
+        ["Management", "Honest and transparent", "9/10", "PASS"],
+        ["Management", "Resists institutional imperative", "8/10", "PASS"],
+        ["Financial Health", "ROE >15% (use ROA)", "8/10", "PASS"],
+        ["Financial Health", "Strong profit margins", "9/10", "PASS"],
+        ["Financial Health", "Low debt levels", "5/10", "WARNING"],
+        ["Financial Health", "Consistent FCF", "8/10", "PASS"],
+        ["Financial Health", "Capital light business", "10/10", "PASS"],
+        ["Valuation", "Margin of safety >30%", "0/10", "FAIL"],
+        ["**TOTAL**", "", "**98/130**", "75%"]
       ]
     }
   },
+  
   "finalVerdict": {
-    "summary": "Domino's is a textbook 'royalty business' that Buffett would admire: capital-light franchise model, wide moat from scale and brand, 15+ years of consistent profitability (22% EPS CAGR), and excellent ROA (35%). Management is competent and transparent. However, the company has levered up aggressively (net debt $5B, 4.7x EBITDA) to fund shareholder returns, creating financial risk. At $378, the stock trades near fair value with only 11% margin of safety in base case. Buffett would likely PASS due to excessive leverage, but modern value investors may find the franchise economics compelling at current price. HOLD/WATCH - great business, fair price, but debt is concerning.",
-    "biggestRisk": "Franchisee financial distress cascades into store closures and brand damage. Recent reports mention franchisee bankruptcies (2025-2026). If labor costs, food inflation, and third-party delivery competition squeeze franchisee margins further, Domino's could face: (1) Slower store growth (hurts royalty revenue), (2) Supply chain volume decline (hurts margin), (3) Brand perception damage from inconsistent quality. With $5B net debt, Domino's has limited financial flexibility if franchisee crisis accelerates. FCF could drop 30-40% in a severe downturn, making debt burden unsustainable.",
-    "comparable": "Domino's most resembles McDonald's (MCD) in Buffett's mindset: both are franchise royalty businesses with global scale, brand moats, and capital-light models. Key difference: McDonald's has stronger brand equity (premium pricing, diverse dayparts) and lower leverage (net debt ~2x EBITDA vs Domino's 4.7x). Domino's is 'McDonald's if McDonald's levered up 2x to buy back stock aggressively.' Buffett would prefer McDonald's for balance sheet safety, but Domino's offers better growth (7% vs McDonald's 4%) at similar valuation."
+    "summary": "Domino's is an exceptional franchise business with a capital-light model, wide moat, and 15+ years of consistent profitability (23% EPS CAGR). Business quality is outstanding: 34% ROA, 12% net margins, minimal CapEx, proven digital-first strategy. However, the company is significantly OVERVALUED at $377.79. Intrinsic value is $278/share (base case), implying a -36% margin of safety. The aggressive debt-funded buyback strategy ($5B net debt, 4.7x EBITDA) creates financial risk, especially with franchisee bankruptcies emerging. Buffett would love the business but PASS at this price. Wait for a 30%+ pullback to $270 or below before considering purchase.",
+    "biggestRisk": "Franchisee financial collapse triggers store closures and brand damage. Recent reports mention franchisee bankruptcies (2025-2026). If labor costs, food inflation, and third-party delivery competition continue squeezing franchisee margins, Domino's faces: (1) Slower store growth (hurts royalty revenue), (2) Supply chain volume decline (hurts margin), (3) Brand perception damage from inconsistent quality. With $5B net debt and limited financial flexibility, FCF could drop 40% in a severe downturn, making debt burden unsustainable.",
+    "comparable": "McDonald's (MCD) - both are franchise royalty businesses with global scale, brand moats, and capital-light models. Key difference: McDonald's has stronger brand equity (premium pricing, diverse dayparts) and lower leverage (net debt ~2x EBITDA vs Domino's 4.7x). Domino's offers higher growth (6% vs McDonald's 4%) but higher risk. Buffett owns McDonald's and would prefer it for balance sheet safety. At current valuation, McDonald's is the safer bet."
   }
 }
