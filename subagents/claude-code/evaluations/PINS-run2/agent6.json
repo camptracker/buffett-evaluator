@@ -1,0 +1,54 @@
+{
+  "agentId": "6",
+  "agentName": "Scorecard & Final Verdict",
+  "timestamp": "2026-03-22T07:00:00Z",
+  "data": {
+    "scorecard": {
+      "scores": {
+        "headers": ["Category", "Criteria", "Score", "Pass/Fail"],
+        "rows": [
+          ["Business Quality", "Simple & understandable", "7/10", "PASS"],
+          ["Business Quality", "Durable moat", "6/10", "PASS"],
+          ["Business Quality", "Consistent history", "5/10", "PASS"],
+          ["Business Quality", "Favorable prospects", "6/10", "PASS"],
+          ["Management", "Rational capital allocation", "6/10", "PASS"],
+          ["Management", "Honest & transparent", "5/10", "PASS"],
+          ["Management", "Resists imperative", "6/10", "PASS"],
+          ["Financial Health", "ROE >15%", "5/10", "FAIL"],
+          ["Financial Health", "Strong margins", "4/10", "FAIL"],
+          ["Financial Health", "Low debt", "10/10", "PASS"],
+          ["Financial Health", "Consistent FCF", "8/10", "PASS"],
+          ["Financial Health", "Capital light", "9/10", "PASS"],
+          ["Valuation", "Margin of safety >30%", "2/10", "FAIL"],
+          ["**TOTAL**", "", "**79/130**", "60.8%"]
+        ]
+      },
+      "totalScore": 79,
+      "percentage": 60.8,
+      "breakdown": {
+        "businessQuality": "24/40 (60%)",
+        "managementQuality": "17/30 (56.7%)",
+        "financialHealth": "36/50 (72%)",
+        "valuation": "2/10 (20%)"
+      }
+    },
+    "finalVerdict": {
+      "overallScore": "79/130 (60.8%)",
+      "verdict": "HOLD",
+      "summary": "Pinterest is a mediocre business scoring 79/130 (60.8%), at the low end of the 'Mediocre' range requiring a deep discount. The company demonstrates exceptional balance sheet strength (zero debt across all 6 years, $2.47B in cash and marketable securities per 10K-2025 Balance Sheet) and capital efficiency (CapEx 0.77% of revenue, 80.07% gross margins per 10K-2025 Income Statement) — characteristics Buffett would genuinely admire. However, extreme EPS volatility (3 down years in 5 YoY comparisons per 10K Income Statements) and excessive stock-based compensation ($880.5M in 2025 exceeding net income of $416.9M per 10K-2025 MD&A) reveal a business generating good economics for employees but inconsistent returns for shareholders. At an indicative $29.45 (midpoint of Oct-Nov 2025 buyback range per 10K-2025 Item 5), the stock trades at fair value with only an 8.3% base-case margin of safety against our intrinsic value of $32.10 — far below Buffett's required 30%+. Buffett would HOLD if already owned but not initiate a new position at this price: decent business economics, but insufficient margin of safety, weak earnings consistency, and intense AI-driven competitive threats disqualify it as a new Buffett purchase.",
+      "biggestRisk": "AI visual search disruption could eliminate Pinterest's core value proposition. The 10K-2025 Item 1A Risk Factors explicitly names Google (Lens, Gemini) and OpenAI (ChatGPT) as direct competitors to Pinterest's visual search and discovery use case. Pinterest's entire moat rests on 90% unbranded searches and its proprietary Taste Graph (10K-2025, Item 1) — but both Google Lens and ChatGPT's multimodal capabilities can now perform intent-based visual discovery without Pinterest. If these AI-native tools erode even 20-30% of Pinterest's discovery use cases, advertiser ARPU would compress and the MAU growth trend (619M, +12% YoY per 10K-2025 Item 7) could reverse. With 100% revenue concentration in advertising (explicitly flagged in 10K-2025 Item 1A as a key risk), Pinterest has no alternative revenue stream to buffer an advertising demand decline. Unlike a franchise or consumer staple, Pinterest cannot raise prices in a demand contraction — advertiser budgets would simply migrate to Google, Meta, or Amazon, all named competitors with greater resources and data advantages (10K-2025, Item 1, Competition). The absence of any long-term advertiser commitments (10K-2025 Item 1A Risk Factors) means revenue can fall faster than costs in a downturn, threatening the FCF-based intrinsic value.",
+      "comparable": "Among Buffett's current major holdings, Pinterest most closely resembles Apple (AAPL). Both are capital-light technology platforms (Pinterest CapEx 0.77% of revenue vs Apple historically <5% of revenue per respective SEC filings) with strong gross margins, large user bases generating switching costs and proprietary data advantages (Pinterest's Taste Graph vs. Apple's ecosystem lock-in), and significant cash generation funding share repurchases. Key similarities from SEC data: Pinterest's $2.0B buyback program (10K-2025 Item 5) mirrors Apple's capital return philosophy, and both platforms use AI as a core competitive differentiator. Critical differences: Apple has far superior earnings consistency (no comparable EPS volatility), much stronger brand moat enabling premium pricing across diverse hardware/services revenue streams, and no advertising revenue concentration risk. Apple's operating margins (~30%+) dwarf Pinterest's 7.58% (2025) — reflecting Apple's pricing power and operating leverage that Pinterest has not demonstrated. Buffett owns Apple because of its consumer ecosystem, pricing power, and earnings predictability — precisely the three qualities Pinterest lacks. Pinterest is what Apple might look like if it had only one revenue stream, volatile earnings, and intense competition from companies twice its size."
+    },
+    "company": "Pinterest",
+    "ticker": "PINS",
+    "totalScore": 79,
+    "verdict": "HOLD",
+    "marginOfSafety": "8.3%",
+    "intrinsicValue": 32.10,
+    "currentPrice": 29.45,
+    "currentPriceNote": "Indicative — midpoint of Oct-Nov 2025 repurchase range ($27.05-$31.85) from 10K-2025 Item 5. Not a verified current market price.",
+    "summary": "Pinterest is a mediocre business scoring 79/130 (60.8%), at the low end of the 'Mediocre' range requiring a deep discount. The company demonstrates exceptional balance sheet strength (zero debt across all 6 years, $2.47B in cash and marketable securities per 10K-2025 Balance Sheet) and capital efficiency (CapEx 0.77% of revenue, 80.07% gross margins per 10K-2025 Income Statement) — characteristics Buffett would genuinely admire. However, extreme EPS volatility (3 down years in 5 YoY comparisons per 10K Income Statements) and excessive stock-based compensation ($880.5M in 2025 exceeding net income of $416.9M per 10K-2025 MD&A) reveal a business generating good economics for employees but inconsistent returns for shareholders. At an indicative $29.45 (midpoint of Oct-Nov 2025 buyback range per 10K-2025 Item 5), the stock trades at fair value with only an 8.3% base-case margin of safety against our intrinsic value of $32.10 — far below Buffett's required 30%+. Buffett would HOLD if already owned but not initiate a new position at this price: decent business economics, but insufficient margin of safety, weak earnings consistency, and intense AI-driven competitive threats disqualify it as a new Buffett purchase.",
+    "biggestRisk": "AI visual search disruption could eliminate Pinterest's core value proposition. The 10K-2025 Item 1A Risk Factors explicitly names Google (Lens, Gemini) and OpenAI (ChatGPT) as direct competitors to Pinterest's visual search and discovery use case. Pinterest's entire moat rests on 90% unbranded searches and its proprietary Taste Graph (10K-2025, Item 1) — but both Google Lens and ChatGPT's multimodal capabilities can now perform intent-based visual discovery without Pinterest. If these AI-native tools erode even 20-30% of Pinterest's discovery use cases, advertiser ARPU would compress and the MAU growth trend (619M, +12% YoY per 10K-2025 Item 7) could reverse. With 100% revenue concentration in advertising (explicitly flagged in 10K-2025 Item 1A as a key risk), Pinterest has no alternative revenue stream to buffer an advertising demand decline. Unlike a franchise or consumer staple, Pinterest cannot raise prices in a demand contraction — advertiser budgets would simply migrate to Google, Meta, or Amazon, all named competitors with greater resources and data advantages (10K-2025, Item 1, Competition). The absence of any long-term advertiser commitments (10K-2025 Item 1A Risk Factors) means revenue can fall faster than costs in a downturn, threatening the FCF-based intrinsic value.",
+    "comparable": "Among Buffett's current major holdings, Pinterest most closely resembles Apple (AAPL). Both are capital-light technology platforms (Pinterest CapEx 0.77% of revenue vs Apple historically <5% of revenue per respective SEC filings) with strong gross margins, large user bases generating switching costs and proprietary data advantages (Pinterest's Taste Graph vs. Apple's ecosystem lock-in), and significant cash generation funding share repurchases. Key similarities from SEC data: Pinterest's $2.0B buyback program (10K-2025 Item 5) mirrors Apple's capital return philosophy, and both platforms use AI as a core competitive differentiator. Critical differences: Apple has far superior earnings consistency (no comparable EPS volatility), much stronger brand moat enabling premium pricing across diverse hardware/services revenue streams, and no advertising revenue concentration risk. Apple's operating margins (~30%+) dwarf Pinterest's 7.58% (2025) — reflecting Apple's pricing power and operating leverage that Pinterest has not demonstrated. Buffett owns Apple because of its consumer ecosystem, pricing power, and earnings predictability — precisely the three qualities Pinterest lacks. Pinterest is what Apple might look like if it had only one revenue stream, volatile earnings, and intense competition from companies twice its size."
+  }
+}

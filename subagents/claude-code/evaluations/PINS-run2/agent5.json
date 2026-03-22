@@ -1,0 +1,105 @@
+{
+  "agentId": "5",
+  "agentName": "Valuation Calculator",
+  "timestamp": "2026-03-22T06:45:00Z",
+  "data": {
+    "intrinsicValueCalculation": {
+      "inputs": {
+        "headers": ["Input", "Value", "Source/Justification"],
+        "rows": [
+          ["Current FCF", "$1,251.9M", "10K-2025.htm, Cash Flow Statement: Operating CF $1,284.3M - CapEx $32.4M = $1,251.9M"],
+          ["Historical FCF CAGR Used", "13.8%", "FCF 2021-2025: ($1,251.9M/$743.9M)^(1/4)-1 = 13.8%. 2020 excluded as COVID-distorted base ($11.4M)."],
+          ["Business Quality Score", "24/40", "Agent 2: Below 25/40 threshold → apply 0.60x multiplier and 5% cap"],
+          ["Financial Health Score", "36/50", "Agent 4: 36/50, within 35-44 range"],
+          ["Total Combined Score", "77/120", "Business 24 + Management 17 + Financial Health 36 = 77/120 (standard range 70-100)"],
+          ["Growth Rate (Yrs 1-10)", "5.0%", "13.8% CAGR × 0.60 = 8.28%; capped at 5% max per low quality rule (Business Quality <25/40)"],
+          ["Terminal Growth Rate", "3.0%", "Conservative GDP-level growth; digital advertising is growing industry (3-4% range, using lower end)"],
+          ["Discount Rate", "10.0%", "Standard rate — total score 77/120 falls in 70-100 range"],
+          ["Shares Outstanding", "665.1M", "10K-2025.htm: Class A 585,458,698 + Class B 79,679,925 = 665,138,623 as of 2026-02-06"],
+          ["Current Price (Indicative)", "$29.45", "No SEC market price available. Using midpoint of $27.05-$31.85 repurchase range (Oct-Nov 2025, 10K-2025.htm Item 5). Current market price unknown from SEC filings."]
+        ]
+      },
+      "projections": {
+        "headers": ["Year", "FCF ($M)", "Calculation", "Discount Factor", "PV ($M)"],
+        "rows": [
+          ["1", "1,314.5", "1,251.9 × 1.05¹", "÷ 1.10¹ = 1.1000", "1,195.0"],
+          ["2", "1,380.2", "1,251.9 × 1.05²", "÷ 1.10² = 1.2100", "1,140.7"],
+          ["3", "1,449.2", "1,251.9 × 1.05³", "÷ 1.10³ = 1.3310", "1,088.8"],
+          ["4", "1,521.7", "1,251.9 × 1.05⁴", "÷ 1.10⁴ = 1.4641", "1,039.4"],
+          ["5", "1,597.8", "1,251.9 × 1.05⁵", "÷ 1.10⁵ = 1.6105", "992.1"],
+          ["6", "1,677.7", "1,251.9 × 1.05⁶", "÷ 1.10⁶ = 1.7716", "947.3"],
+          ["7", "1,761.5", "1,251.9 × 1.05⁷", "÷ 1.10⁷ = 1.9487", "904.0"],
+          ["8", "1,849.6", "1,251.9 × 1.05⁸", "÷ 1.10⁸ = 2.1436", "863.0"],
+          ["9", "1,942.1", "1,251.9 × 1.05⁹", "÷ 1.10⁹ = 2.3579", "823.6"],
+          ["10", "2,039.2", "1,251.9 × 1.05¹⁰", "÷ 1.10¹⁰ = 2.5937", "786.2"],
+          ["Sum", "", "", "", "9,780.1"]
+        ]
+      },
+      "terminalValue": [
+        "Year 10 FCF: $2,039.2M (1,251.9 × 1.05¹⁰ = 1,251.9 × 1.6289 = $2,039.2M)",
+        "Terminal Value = $2,039.2M × 1.03 / (0.10 - 0.03) = $2,100.4M / 0.07 = $30,005.7M",
+        "PV of Terminal Value = $30,005.7M / 1.10¹⁰ = $30,005.7M / 2.5937 = $11,568.0M"
+      ],
+      "finalValue": [
+        "10-Year Cash Flows (PV): $9,780.1M",
+        "Terminal Value (PV): $11,568.0M",
+        "Total Enterprise Value: $9,780.1M + $11,568.0M = $21,348.1M",
+        "Intrinsic Value Per Share: $21,348.1M / 665.1M shares = $32.10"
+      ],
+      "scenarios": {
+        "headers": ["Scenario", "Growth Rate", "Intrinsic Value", "Indicative Price", "MoS", "Buffett Buy?"],
+        "rows": [
+          ["Base Case", "5.0%", "$32.10", "$29.45", "8.3%", "NO (HOLD)"],
+          ["Conservative", "3.0%", "$27.70", "$29.45", "-6.3%", "NO (AVOID)"],
+          ["Optimistic", "7.0%", "$37.22", "$29.45", "20.9%", "NO (WATCH)"]
+        ],
+        "scenarioCalculations": {
+          "conservative": {
+            "growthRate": "3.0%",
+            "year10FCF": "$1,682.5M (1,251.9 × 1.03¹⁰ = 1,251.9 × 1.3439 = $1,682.5M)",
+            "sumOf10YearPVs": "$8,876.8M",
+            "terminalValue": "$1,682.5M × 1.03 / 0.07 = $24,756.5M",
+            "pvTerminalValue": "$24,756.5M / 2.5937 = $9,545.1M",
+            "totalEV": "$18,421.9M",
+            "ivPerShare": "$18,421.9M / 665.1M = $27.70"
+          },
+          "optimistic": {
+            "growthRate": "7.0%",
+            "year10FCF": "$2,462.6M (1,251.9 × 1.07¹⁰ = 1,251.9 × 1.9672 = $2,462.6M)",
+            "sumOf10YearPVs": "$10,786.2M",
+            "terminalValue": "$2,462.6M × 1.03 / 0.07 = $36,236.5M",
+            "pvTerminalValue": "$36,236.5M / 2.5937 = $13,971.5M",
+            "totalEV": "$24,757.7M",
+            "ivPerShare": "$24,757.7M / 665.1M = $37.22"
+          }
+        }
+      },
+      "priceNote": "Current market price is not available from SEC filings. The 10K-2025 Item 5 discloses share repurchases at $27.05-$31.85/share in Oct-Nov 2025. The indicative price of $29.45 (midpoint) is used solely as a reference point. Actual current price should be verified via market data before acting on this analysis."
+    },
+    "valuation": {
+      "intrinsicValue": 32.10,
+      "currentPrice": 29.45,
+      "currentPriceNote": "Indicative — midpoint of Oct-Nov 2025 repurchase range ($27.05-$31.85) from 10K-2025 Item 5. Not a verified current market price.",
+      "marginOfSafety": "8.3%",
+      "marginOfSafetyFormula": "(32.10 - 29.45) / 32.10 × 100% = 2.65 / 32.10 × 100% = 8.3%",
+      "verdict": "HOLD",
+      "score": 2,
+      "maxScore": 10,
+      "reasoning": "Pinterest is trading approximately at fair value by this DCF analysis. At an indicative price of ~$29.45, the 8.3% base-case margin of safety is insufficient for a Buffett-style purchase (which requires ≥30%). Key concerns driving the conservative growth assumption: (1) Business Quality scored 24/40, below the 25/40 threshold — no wide moat, intense competition from Meta, Google, Amazon, TikTok, and OpenAI, all with greater resources; (2) Highly volatile EPS history with 3 down years in 5 YoY comparisons; (3) SBC of $880.5M in 2025 alone exceeds net income, and the $2B buyback program largely offsets SBC dilution rather than creating net value. Positives: zero debt, $2.47B in cash/securities, strong FCF growth ($1.25B in 2025), 80% gross margins, and 619M MAU user base with Gen Z demographics. Only the optimistic scenario (7% growth) shows a meaningful margin of safety (20.9%), but this requires sustained above-GDP growth with no competitive disruption. Buffett would most likely PASS — insufficient margin of safety, inconsistent earnings, and competitive threats from AI-powered alternatives to visual search.",
+      "keyRisks": [
+        "100% revenue concentration in digital advertising — cyclically sensitive",
+        "AI visual search from Google Lens, OpenAI ChatGPT could erode Pinterest's core discovery use case",
+        "SBC of $880.5M (2025) exceeds net income — dilution concern despite buyback program",
+        "Business Quality 24/40 — narrow moat with no durable competitive advantage against much larger rivals",
+        "International users (majority of MAUs) generate significantly lower ARPU than U.S./Canada"
+      ],
+      "keyStrengths": [
+        "Zero debt across all years 2020-2025 — exceptional balance sheet strength",
+        "$2.47B cash and marketable securities — financial fortress",
+        "FCF grew from $11.4M (2020) to $1,251.9M (2025) — strong cash generation",
+        "80.07% gross margin (2025) — evidence of platform pricing power",
+        "619M MAUs with Gen Z majority — favorable demographic for long-term relevance"
+      ]
+    }
+  }
+}

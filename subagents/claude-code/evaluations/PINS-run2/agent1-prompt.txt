@@ -162,7 +162,7 @@ Extract ALL data from local 10-K HTML files.
 
 ## Output File Structure
 
-Write your output to: `evaluations/PINS/agent1.json`
+Write your output to: `evaluations/PINS-run2/agent1.json`
 
 **File Path Documentation:**
 
@@ -299,7 +299,7 @@ For EVERY piece of data, record:
 
 4. **Calculate metrics** (YoY growth, ratios, etc.)
 
-5. **Write JSON** to output file: `evaluations/PINS/agent1.json`
+5. **Write JSON** to output file: `evaluations/PINS-run2/agent1.json`
 
 6. **Print status** to stdout
 
@@ -339,7 +339,7 @@ Before writing the output file, verify:
 Only print status messages like:
 ```
 ✅ Agent 1 (Data Collector) complete
-📄 Output: evaluations/PINS/agent1.json
+📄 Output: evaluations/PINS-run2/agent1.json
 📊 Collected: 6 years financial data from local files
 🗂️  Files read: 10K-2020.htm through 10K-2025.htm, 4× 8-K earnings
 ```

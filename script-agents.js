@@ -371,9 +371,9 @@ function renderAgent6(data) {
     content.innerHTML = html;
 }
 
-// Helper: Render table
+// Helper: Render table (with mobile scroll wrapper)
 function renderTable(headers, rows) {
-    let html = '<table class="data-table"><thead><tr>';
+    let html = '<div class="table-wrapper"><table class="data-table"><thead><tr>';
     headers.forEach(h => html += `<th>${h}</th>`);
     html += '</tr></thead><tbody>';
     rows.forEach(row => {
@@ -381,7 +381,7 @@ function renderTable(headers, rows) {
         row.forEach(cell => html += `<td>${cell}</td>`);
         html += '</tr>';
     });
-    html += '</tbody></table>';
+    html += '</tbody></table></div>';
     return html;
 }
 
@@ -409,11 +409,11 @@ function renderDCFTable(calc) {
     return '<p>DCF details (to be implemented based on data structure)</p>';
 }
 
-// Helper: Render scorecard
+// Helper: Render scorecard (with mobile scroll wrapper)
 function renderScorecard(scorecard) {
     if (!scorecard.scores) return '';
     
-    let html = '<table class="scorecard-table"><thead><tr>';
+    let html = '<div class="table-wrapper"><table class="scorecard-table"><thead><tr>';
     scorecard.scores.headers.forEach(h => html += `<th>${h}</th>`);
     html += '</tr></thead><tbody>';
     
@@ -427,7 +427,7 @@ function renderScorecard(scorecard) {
         html += '</tr>';
     });
     
-    html += '</tbody></table>';
+    html += '</tbody></table></div>';
     return html;
 }
 

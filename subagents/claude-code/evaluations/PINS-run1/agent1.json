@@ -1,0 +1,468 @@
+{
+  "agentId": "1",
+  "agentName": "Data Collector",
+  "timestamp": "2026-03-22T00:00:00Z",
+  "sources": {
+    "localFiles": [
+      "filings/10K-2025.htm",
+      "filings/10K-2024.htm",
+      "filings/10K-2023.htm",
+      "filings/10K-2022.htm",
+      "filings/10K-2021.htm",
+      "filings/10K-2020.htm"
+    ],
+    "cik": "0001506293"
+  },
+  "data": {
+    "company": "Pinterest",
+    "ticker": "PINS",
+    "cik": "0001506293",
+    "currentPrice": null,
+    "currentPriceSource": "Not available in 10-K filings; market price as of analysis date not included in SEC filings",
+    "sharesOutstanding": 664.546,
+    "sharesSource": "10K-2025.htm Balance Sheet: 584,866K Class A + 79,680K Class B shares as of December 31, 2025",
+    "analysisDate": "2026-03-22",
+    "industry": "Digital advertising / social media / visual discovery platform; competes with Google, Meta, Snap, TikTok, and other digital advertising platforms",
+    "financialData": {
+      "eps": {
+        "headers": [
+          "Year",
+          "EPS ($)",
+          "YoY Growth",
+          "Source"
+        ],
+        "rows": [
+          [
+            "2020",
+            -0.22,
+            "N/A",
+            "10K-2020.htm"
+          ],
+          [
+            "2021",
+            0.46,
+            "309.1%",
+            "10K-2021.htm"
+          ],
+          [
+            "2022",
+            -0.14,
+            "-130.4%",
+            "10K-2022.htm"
+          ],
+          [
+            "2023",
+            -0.05,
+            "64.3%",
+            "10K-2023.htm"
+          ],
+          [
+            "2024",
+            2.67,
+            "5440.0%",
+            "10K-2024.htm"
+          ],
+          [
+            "2025",
+            0.61,
+            "-77.2%",
+            "10K-2025.htm"
+          ]
+        ]
+      },
+      "fcf": {
+        "headers": [
+          "Year",
+          "Operating CF ($M)",
+          "CapEx ($M)",
+          "FCF ($M)",
+          "YoY Growth",
+          "Source"
+        ],
+        "rows": [
+          [
+            "2020",
+            28.83,
+            17.4,
+            11.43,
+            "N/A",
+            "10K-2020.htm"
+          ],
+          [
+            "2021",
+            752.91,
+            9.03,
+            743.88,
+            "6408.1%",
+            "10K-2021.htm"
+          ],
+          [
+            "2022",
+            469.2,
+            28.98,
+            440.22,
+            "-40.8%",
+            "10K-2022.htm"
+          ],
+          [
+            "2023",
+            612.96,
+            8.06,
+            604.9,
+            "37.4%",
+            "10K-2023.htm"
+          ],
+          [
+            "2024",
+            964.59,
+            24.61,
+            939.99,
+            "55.4%",
+            "10K-2024.htm"
+          ],
+          [
+            "2025",
+            1284.26,
+            32.38,
+            1251.89,
+            "33.2%",
+            "10K-2025.htm"
+          ]
+        ]
+      },
+      "roe": {
+        "headers": [
+          "Year",
+          "Net Income ($M)",
+          "Equity ($M)",
+          "ROE %",
+          "Source"
+        ],
+        "rows": [
+          [
+            "2020",
+            -128.32,
+            2242.37,
+            "-5.72%",
+            "10K-2020.htm"
+          ],
+          [
+            "2021",
+            316.44,
+            3038.74,
+            "10.41%",
+            "10K-2021.htm"
+          ],
+          [
+            "2022",
+            -96.05,
+            3281.65,
+            "-2.93%",
+            "10K-2022.htm"
+          ],
+          [
+            "2023",
+            -35.61,
+            3090.68,
+            "-1.15%",
+            "10K-2023.htm"
+          ],
+          [
+            "2024",
+            1862.11,
+            4751.15,
+            "39.19%",
+            "10K-2024.htm"
+          ],
+          [
+            "2025",
+            416.86,
+            4745.24,
+            "8.78%",
+            "10K-2025.htm"
+          ]
+        ]
+      },
+      "debt": {
+        "headers": [
+          "Year",
+          "Long-Term Debt ($M)",
+          "Current Debt ($M)",
+          "Total Debt ($M)",
+          "Net Income ($M)",
+          "Years to Pay",
+          "Source"
+        ],
+        "rows": [
+          [
+            "2020",
+            0.0,
+            0.0,
+            0.0,
+            -128.32,
+            "N/A (net loss)",
+            "10K-2020.htm"
+          ],
+          [
+            "2021",
+            0.0,
+            0.0,
+            0.0,
+            316.44,
+            "N/A (no debt)",
+            "10K-2021.htm"
+          ],
+          [
+            "2022",
+            0.0,
+            0.0,
+            0.0,
+            -96.05,
+            "N/A (net loss)",
+            "10K-2022.htm"
+          ],
+          [
+            "2023",
+            0.0,
+            0.0,
+            0.0,
+            -35.61,
+            "N/A (net loss)",
+            "10K-2023.htm"
+          ],
+          [
+            "2024",
+            0.0,
+            0.0,
+            0.0,
+            1862.11,
+            "N/A (no debt)",
+            "10K-2024.htm"
+          ],
+          [
+            "2025",
+            0.0,
+            0.0,
+            0.0,
+            416.86,
+            "N/A (no debt)",
+            "10K-2025.htm"
+          ]
+        ]
+      },
+      "capex": {
+        "headers": [
+          "Year",
+          "Net Income ($M)",
+          "CapEx ($M)",
+          "CapEx %",
+          "Source"
+        ],
+        "rows": [
+          [
+            "2020",
+            -128.32,
+            17.4,
+            "N/A (net loss)",
+            "10K-2020.htm"
+          ],
+          [
+            "2021",
+            316.44,
+            9.03,
+            "2.85%",
+            "10K-2021.htm"
+          ],
+          [
+            "2022",
+            -96.05,
+            28.98,
+            "N/A (net loss)",
+            "10K-2022.htm"
+          ],
+          [
+            "2023",
+            -35.61,
+            8.06,
+            "N/A (net loss)",
+            "10K-2023.htm"
+          ],
+          [
+            "2024",
+            1862.11,
+            24.61,
+            "1.32%",
+            "10K-2024.htm"
+          ],
+          [
+            "2025",
+            416.86,
+            32.38,
+            "7.77%",
+            "10K-2025.htm"
+          ]
+        ]
+      },
+      "margins": {
+        "headers": [
+          "Year",
+          "Revenue ($M)",
+          "Gross Profit ($M)",
+          "Operating Income ($M)",
+          "Net Income ($M)",
+          "Gross %",
+          "Operating %",
+          "Net %",
+          "Source"
+        ],
+        "rows": [
+          [
+            "2020",
+            1692.66,
+            1243.3,
+            -142.5,
+            -128.32,
+            "73.45%",
+            "-8.42%",
+            "-7.58%",
+            "10K-2020.htm"
+          ],
+          [
+            "2021",
+            2578.03,
+            2048.71,
+            326.19,
+            316.44,
+            "79.47%",
+            "12.65%",
+            "12.27%",
+            "10K-2021.htm"
+          ],
+          [
+            "2022",
+            2802.57,
+            2123.98,
+            -101.68,
+            -96.05,
+            "75.79%",
+            "-3.63%",
+            "-3.43%",
+            "10K-2022.htm"
+          ],
+          [
+            "2023",
+            3055.07,
+            2366.31,
+            -125.68,
+            -35.61,
+            "77.46%",
+            "-4.11%",
+            "-1.17%",
+            "10K-2023.htm"
+          ],
+          [
+            "2024",
+            3646.17,
+            2895.81,
+            179.82,
+            1862.11,
+            "79.42%",
+            "4.93%",
+            "51.07%",
+            "10K-2024.htm"
+          ],
+          [
+            "2025",
+            4221.77,
+            3380.25,
+            319.88,
+            416.86,
+            "80.07%",
+            "7.58%",
+            "9.87%",
+            "10K-2025.htm"
+          ]
+        ]
+      },
+      "revenue": {
+        "headers": [
+          "Year",
+          "Revenue ($M)",
+          "YoY Growth",
+          "Source"
+        ],
+        "rows": [
+          [
+            "2020",
+            1692.66,
+            "N/A",
+            "10K-2020.htm"
+          ],
+          [
+            "2021",
+            2578.03,
+            "52.3%",
+            "10K-2021.htm"
+          ],
+          [
+            "2022",
+            2802.57,
+            "8.7%",
+            "10K-2022.htm"
+          ],
+          [
+            "2023",
+            3055.07,
+            "9.0%",
+            "10K-2023.htm"
+          ],
+          [
+            "2024",
+            3646.17,
+            "19.3%",
+            "10K-2024.htm"
+          ],
+          [
+            "2025",
+            4221.77,
+            "15.8%",
+            "10K-2025.htm"
+          ]
+        ]
+      }
+    },
+    "qualitativeData": {
+      "moat": [
+        "AI-powered Taste Graph: Pinterest has built a proprietary network of billions of associations between Pins, searches, boards, products and users. This unique data asset enables increasingly personalized content recommendations and creates network effects that are difficult to replicate.",
+        "Unique user intent signal: Pinterest captures first-party, intent-based signals from users actively planning purchases, life events and projects - a signal distinct from passive social media scrolling. This high-commercial-intent audience is valuable to advertisers.",
+        "Positive and brand-safe environment: Pinterest has built a platform with deliberate content policies that maintain a positive, non-toxic environment, attracting premium advertisers who value brand safety not available on more open social platforms.",
+        "Large scale network of 619 million MAUs (as of Dec 2025) with strong demographics: ~2/3 women, Gen Z over 50% of user base, global reach across 100+ countries. Network effects make the platform more valuable as more users contribute content and engagement.",
+        "Visual search differentiation: Pinterest's focus on visual, image-based search and discovery creates a distinct experience from text-based search engines, making it uniquely positioned at the intersection of search, social, and commerce.",
+        "Switching costs through saved boards: Users invest significant time curating boards and saving Pins, creating behavioral lock-in and a personalized experience that accumulates value over time."
+      ],
+      "management": [
+        "CEO: William Ready - appointed June 2022, succeeding founder Ben Silbermann. Previously President of Commerce at Google. Has focused on transitioning Pinterest toward a commerce and shopping platform.",
+        "CFO: Julia Brau Donnelly - serves as Chief Financial Officer (Principal Financial Officer) as of 2025 10-K signing (February 12, 2026).",
+        "Capital allocation strategy: Pinterest has no long-term debt, maintaining a strong cash position ($2,467.2M in cash, equivalents and marketable securities as of end of 2025). The company has been actively returning capital to shareholders through share buybacks ($927M in 2025, $600M in 2024, $500M in 2023). Free cash flow was $1,251.9M in 2025, $940.0M in 2024, and $604.9M in 2023, showing strong and growing cash generation.",
+        "Share count management: Despite RSU issuances, total shares outstanding declined from 683.2M (2022) to 664.5M (2025), indicating that buybacks are more than offsetting dilution from equity compensation.",
+        "Heavy investment in AI and product development: R&D spend of $1,427.4M in 2025 (33.8% of revenue) reflects a strategy of investing heavily in AI-powered recommendation and advertising systems to drive engagement and monetization."
+      ],
+      "industry": [
+        "Digital Advertising Industry: Pinterest generates substantially all revenue from digital advertising (CPC, CPM, CPD, CPV models). The digital advertising market is large and growing but highly competitive.",
+        "Primary competitors include: Google (search and display ads), Meta (Facebook and Instagram social advertising), Snap (visual/ephemeral social), TikTok (short-form video), and other digital advertising platforms.",
+        "Key industry risks: Advertiser concentration risk (no long-term commitments), cyclical advertising spending tied to economic conditions, platform algorithm changes by Apple (ATT/iOS tracking restrictions) and Google affecting ad targeting, regulatory risk (GDPR, CCPA and other privacy laws), and competition for user attention.",
+        "Commerce integration trend: The industry is shifting toward social commerce where discovery, inspiration and purchase happen within the same platform, a trend directly aligned with Pinterest's strategy.",
+        "AI transformation: The advertising technology industry is being rapidly transformed by AI, which Pinterest is leveraging for content recommendations, ad targeting, and performance optimization.",
+        "International monetization gap: Pinterest generates most revenue from US/Canada but majority of users are international, representing significant untapped monetization opportunity as well as currency and regulatory risk."
+      ],
+      "consumer": [
+        "User growth: MAUs grew from 459M (2020) to 619M (2025), a 35% increase over 5 years. Growth accelerated in 2025 (+12% YoY to 619M MAUs).",
+        "Engagement trend: Pinterest users engage in multi-session journeys for inspiration and planning, distinct from passive social media consumption. Users actively search, save and curate content with purchase intent.",
+        "Demographics: Platform resonates strongly with women (~2/3 of user base) and Gen Z (>50% of user base), positioning Pinterest well for future advertiser demand targeting these demographics.",
+        "Monetization per user (ARPU): Revenue growth has outpaced MAU growth, indicating improving monetization. 2025 revenue of $4,221.8M on 619M MAUs implies ~$6.82 global ARPU, up from ~$3.69 in 2020 on 459M MAUs.",
+        "Shopping behavior: Users come to Pinterest with high commercial intent - planning purchases, home projects, weddings, fashion. This intent-based behavior aligns with advertiser conversion objectives.",
+        "Platform expansion: Pinterest has expanded from a static Pin-saving app to include video, collages, real-time shopping, and AI-powered visual search, broadening engagement modes and time spent on platform."
+      ]
+    }
+  }
+}

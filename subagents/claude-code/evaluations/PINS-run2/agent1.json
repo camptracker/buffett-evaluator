@@ -1,0 +1,474 @@
+{
+  "agentId": "1",
+  "agentName": "Data Collector",
+  "timestamp": "2026-03-22T00:00:00Z",
+  "sources": {
+    "localFiles": [
+      "evaluations/PINS-run2/filings/10K-2020.htm",
+      "evaluations/PINS-run2/filings/10K-2021.htm",
+      "evaluations/PINS-run2/filings/10K-2022.htm",
+      "evaluations/PINS-run2/filings/10K-2023.htm",
+      "evaluations/PINS-run2/filings/10K-2024.htm",
+      "evaluations/PINS-run2/filings/10K-2025.htm"
+    ],
+    "cik": "0001506293"
+  },
+  "data": {
+    "company": "Pinterest",
+    "ticker": "PINS",
+    "cik": "0001506293",
+    "currentPrice": null,
+    "currentPriceSource": "Not available in local filings - no 8-K earnings files found. Last known repurchase price: $27.05-$31.85 (Oct-Nov 2025) per 10K-2025.htm Item 5",
+    "sharesOutstanding": 665.1,
+    "sharesSource": "10K-2025.htm, dei:EntityCommonStockSharesOutstanding as of 2026-02-06: Class A 585,458,698 + Class B 79,679,925 = 665,138,623 total",
+    "analysisDate": "2026-03-22",
+    "industry": "Social Media / Digital Advertising / Visual Discovery Platform",
+    "financialData": {
+      "eps": {
+        "headers": [
+          "Year",
+          "EPS ($)",
+          "YoY Growth",
+          "Source"
+        ],
+        "rows": [
+          [
+            "2020",
+            "0.22",
+            "N/A",
+            "10K-2020.htm, Income Statement"
+          ],
+          [
+            "2021",
+            "0.46",
+            "109.09%",
+            "10K-2021.htm, Income Statement"
+          ],
+          [
+            "2022",
+            "0.14",
+            "-69.57%",
+            "10K-2022.htm, Income Statement"
+          ],
+          [
+            "2023",
+            "0.05",
+            "-64.29%",
+            "10K-2023.htm, Income Statement"
+          ],
+          [
+            "2024",
+            "2.67",
+            "5240.0%",
+            "10K-2024.htm, Income Statement"
+          ],
+          [
+            "2025",
+            "0.61",
+            "-77.15%",
+            "10K-2025.htm, Income Statement"
+          ]
+        ]
+      },
+      "fcf": {
+        "headers": [
+          "Year",
+          "Operating CF ($M)",
+          "CapEx ($M)",
+          "FCF ($M)",
+          "YoY Growth",
+          "Source"
+        ],
+        "rows": [
+          [
+            "2020",
+            "28.8",
+            "17.4",
+            "11.4",
+            "N/A",
+            "10K-2020.htm, Cash Flow Statement"
+          ],
+          [
+            "2021",
+            "752.9",
+            "9.0",
+            "743.9",
+            "6410.95%",
+            "10K-2021.htm, Cash Flow Statement"
+          ],
+          [
+            "2022",
+            "469.2",
+            "29.0",
+            "440.2",
+            "-40.82%",
+            "10K-2022.htm, Cash Flow Statement"
+          ],
+          [
+            "2023",
+            "613.0",
+            "8.1",
+            "604.9",
+            "37.41%",
+            "10K-2023.htm, Cash Flow Statement"
+          ],
+          [
+            "2024",
+            "964.6",
+            "24.6",
+            "940.0",
+            "55.4%",
+            "10K-2024.htm, Cash Flow Statement"
+          ],
+          [
+            "2025",
+            "1284.3",
+            "32.4",
+            "1251.9",
+            "33.18%",
+            "10K-2025.htm, Cash Flow Statement"
+          ]
+        ]
+      },
+      "roe": {
+        "headers": [
+          "Year",
+          "Net Income ($M)",
+          "Equity ($M)",
+          "ROE %",
+          "Source"
+        ],
+        "rows": [
+          [
+            "2020",
+            "128.3",
+            "2242.4",
+            "5.72%",
+            "10K-2020.htm, Balance Sheet/Income Statement"
+          ],
+          [
+            "2021",
+            "316.4",
+            "3038.7",
+            "10.41%",
+            "10K-2021.htm, Balance Sheet/Income Statement"
+          ],
+          [
+            "2022",
+            "96.0",
+            "3281.7",
+            "2.93%",
+            "10K-2022.htm, Balance Sheet/Income Statement"
+          ],
+          [
+            "2023",
+            "35.6",
+            "3090.7",
+            "1.15%",
+            "10K-2023.htm, Balance Sheet/Income Statement"
+          ],
+          [
+            "2024",
+            "1862.1",
+            "4751.2",
+            "39.19%",
+            "10K-2024.htm, Balance Sheet/Income Statement"
+          ],
+          [
+            "2025",
+            "416.9",
+            "4745.2",
+            "8.78%",
+            "10K-2025.htm, Balance Sheet/Income Statement"
+          ]
+        ]
+      },
+      "debt": {
+        "headers": [
+          "Year",
+          "Long-Term Debt ($M)",
+          "Current Debt ($M)",
+          "Total Debt ($M)",
+          "Net Income ($M)",
+          "Years to Pay",
+          "Source"
+        ],
+        "rows": [
+          [
+            "2020",
+            "0.0",
+            "0.0",
+            "0.0",
+            "128.3",
+            "0 (no debt)",
+            "10K-2020.htm, Balance Sheet"
+          ],
+          [
+            "2021",
+            "0.0",
+            "0.0",
+            "0.0",
+            "316.4",
+            "0 (no debt)",
+            "10K-2021.htm, Balance Sheet"
+          ],
+          [
+            "2022",
+            "0.0",
+            "0.0",
+            "0.0",
+            "96.0",
+            "0 (no debt)",
+            "10K-2022.htm, Balance Sheet"
+          ],
+          [
+            "2023",
+            "0.0",
+            "0.0",
+            "0.0",
+            "35.6",
+            "0 (no debt)",
+            "10K-2023.htm, Balance Sheet"
+          ],
+          [
+            "2024",
+            "0.0",
+            "0.0",
+            "0.0",
+            "1862.1",
+            "0 (no debt)",
+            "10K-2024.htm, Balance Sheet"
+          ],
+          [
+            "2025",
+            "0.0",
+            "0.0",
+            "0.0",
+            "416.9",
+            "0 (no debt)",
+            "10K-2025.htm, Balance Sheet"
+          ]
+        ]
+      },
+      "capex": {
+        "headers": [
+          "Year",
+          "Net Income ($M)",
+          "CapEx ($M)",
+          "CapEx %",
+          "Source"
+        ],
+        "rows": [
+          [
+            "2020",
+            "128.3",
+            "17.4",
+            "13.56%",
+            "10K-2020.htm, Cash Flow Statement"
+          ],
+          [
+            "2021",
+            "316.4",
+            "9.0",
+            "2.85%",
+            "10K-2021.htm, Cash Flow Statement"
+          ],
+          [
+            "2022",
+            "96.0",
+            "29.0",
+            "30.18%",
+            "10K-2022.htm, Cash Flow Statement"
+          ],
+          [
+            "2023",
+            "35.6",
+            "8.1",
+            "22.64%",
+            "10K-2023.htm, Cash Flow Statement"
+          ],
+          [
+            "2024",
+            "1862.1",
+            "24.6",
+            "1.32%",
+            "10K-2024.htm, Cash Flow Statement"
+          ],
+          [
+            "2025",
+            "416.9",
+            "32.4",
+            "7.77%",
+            "10K-2025.htm, Cash Flow Statement"
+          ]
+        ]
+      },
+      "margins": {
+        "headers": [
+          "Year",
+          "Revenue ($M)",
+          "Gross Profit ($M)",
+          "Operating Income ($M)",
+          "Net Income ($M)",
+          "Gross %",
+          "Operating %",
+          "Net %",
+          "Source"
+        ],
+        "rows": [
+          [
+            "2020",
+            "1692.7",
+            "1243.3",
+            "142.5",
+            "128.3",
+            "73.45%",
+            "8.42%",
+            "7.58%",
+            "10K-2020.htm, Income Statement"
+          ],
+          [
+            "2021",
+            "2578.0",
+            "2048.7",
+            "326.2",
+            "316.4",
+            "79.47%",
+            "12.65%",
+            "12.27%",
+            "10K-2021.htm, Income Statement"
+          ],
+          [
+            "2022",
+            "2802.6",
+            "2124.0",
+            "101.7",
+            "96.0",
+            "75.79%",
+            "3.63%",
+            "3.43%",
+            "10K-2022.htm, Income Statement"
+          ],
+          [
+            "2023",
+            "3055.1",
+            "2366.3",
+            "125.7",
+            "35.6",
+            "77.46%",
+            "4.11%",
+            "1.17%",
+            "10K-2023.htm, Income Statement"
+          ],
+          [
+            "2024",
+            "3646.2",
+            "2895.8",
+            "179.8",
+            "1862.1",
+            "79.42%",
+            "4.93%",
+            "51.07%",
+            "10K-2024.htm, Income Statement"
+          ],
+          [
+            "2025",
+            "4221.8",
+            "3380.2",
+            "319.9",
+            "416.9",
+            "80.07%",
+            "7.58%",
+            "9.87%",
+            "10K-2025.htm, Income Statement"
+          ]
+        ]
+      },
+      "revenue": {
+        "headers": [
+          "Year",
+          "Revenue ($M)",
+          "YoY Growth",
+          "Source"
+        ],
+        "rows": [
+          [
+            "2020",
+            "1692.7",
+            "N/A",
+            "10K-2020.htm, Income Statement"
+          ],
+          [
+            "2021",
+            "2578.0",
+            "52.31%",
+            "10K-2021.htm, Income Statement"
+          ],
+          [
+            "2022",
+            "2802.6",
+            "8.71%",
+            "10K-2022.htm, Income Statement"
+          ],
+          [
+            "2023",
+            "3055.1",
+            "9.01%",
+            "10K-2023.htm, Income Statement"
+          ],
+          [
+            "2024",
+            "3646.2",
+            "19.35%",
+            "10K-2024.htm, Income Statement"
+          ],
+          [
+            "2025",
+            "4221.8",
+            "15.79%",
+            "10K-2025.htm, Income Statement"
+          ]
+        ]
+      }
+    },
+    "qualitativeData": {
+      "moat": [
+        "Pinterest is an AI-powered visual search and discovery platform positioned at the intersection of search, social, and commerce (10K-2025.htm, Item 1 Overview).",
+        "The platform has 619 million monthly active users globally as of December 31, 2025, with women comprising roughly two-thirds of users and Gen Z users representing over 50% of the user base (10K-2025.htm, Item 1).",
+        "Pinterest possesses a proprietary 'Taste Graph' - billions of associations between Pins, searches, boards, products and users - which generates unique first-party intent-based signals that power AI recommendation systems (10K-2025.htm, Item 1).",
+        "Over 90% of searches on Pinterest are unbranded, positioning the platform uniquely as a visual discovery tool where users come with high commercial intent before brand selection (10K-2025.htm, Item 1).",
+        "Pinterest competes primarily with Amazon, Meta (Facebook, Instagram), Google (YouTube, Lens, Gemini), OpenAI (ChatGPT), Snap, Reddit, TikTok and X - all significantly larger companies with greater resources (10K-2025.htm, Item 1, Competition).",
+        "Intellectual property includes approximately 400 issued patents and pending applications, over 660 registered trademarks as of December 31, 2025 (10K-2025.htm, Item 1).",
+        "Revenue model is entirely advertising-based (~100% from ads), with substantial concentration in retail and CPG verticals (10K-2025.htm, Item 1A Risk Factors).",
+        "Free cash flow was $1,251.9 million in 2025 with cash, cash equivalents and marketable securities of $2,467.2 million (10K-2025.htm, Item 7 MD&A Overview)."
+      ],
+      "management": [
+        "William Ready is CEO; Ben Silbermann (co-founder) is non-executive Chair of the Board (10K-2025.htm, Risk Factors - Key Personnel).",
+        "Executive officers' employment is at-will (10K-2025.htm, Risk Factors - Key Personnel).",
+        "Company executed a $2.0 billion stock repurchase program authorized on November 5, 2024, with share buybacks at $27.05-$31.85/share in Oct-Nov 2025 (10K-2025.htm, Item 5 Purchases of Equity Securities).",
+        "Headcount was 5,265 as of December 31, 2025 (10K-2025.htm, Item 7 MD&A Overview of 2025 results).",
+        "Board authorized entry into a definitive agreement to acquire tvScientific, Inc. in Q4 2025 (10K-2025.htm, Risk Factors - Acquisitions).",
+        "Share-based compensation expense was $880.5 million in 2025, an increase of $114.7 million year-over-year (10K-2025.htm, Item 7 MD&A Overview).",
+        "No dividends declared or paid; revolving credit facility places limitations on dividends (10K-2025.htm, Item 5)."
+      ],
+      "industry": [
+        "Pinterest operates in digital advertising, competing with major technology platforms including Meta, Google, Amazon, TikTok, and emerging AI competitors including OpenAI (10K-2025.htm, Item 1, Competition).",
+        "Revenue seasonality: advertising business is strongest in Q4, resulting in higher Q4 revenue and higher Q1 free cash flow from Q4 collections (10K-2025.htm, Item 1A).",
+        "Pinterest generates substantially all revenue from advertising, dependent on attracting/retaining advertisers and scaling internationally (10K-2025.htm, Risk Factors).",
+        "Digital advertising competition is intense; most advertisers do not have long-term commitments with Pinterest (10K-2025.htm, Item 1A Risk Factors).",
+        "General economic uncertainty, including inflation, tariffs, and related trade measures are cited as key risk factors for the advertising industry (10K-2025.htm, Risk Factors Preamble).",
+        "Upper funnel 'brand' revenue billed on CPM/CPV; lower funnel 'performance' revenue on CPC/CPM/CPV or other performance metrics (10K-2025.htm, Item 1)."
+      ],
+      "consumer": [
+        "619 million monthly active users (MAUs) as of December 31, 2025, up 12% from December 31, 2024 (10K-2025.htm, Item 7 MD&A Overview).",
+        "Weekly Active Users (WAUs) represent approximately 62% of MAUs as of December 31, 2025 (10K-2025.htm, Item 7 Trends in User Metrics).",
+        "Users come to Pinterest for inspiration-to-action journeys - moving from idea discovery through curation to purchase - aligning with the advertiser marketing funnel (10K-2025.htm, Item 1 Overview).",
+        "Platform resonates particularly with women (~2/3 of users) and Gen Z (>50% of user base), with global reach across 100+ countries (10K-2025.htm, Item 1).",
+        "Billions of searches and saves per month, with the vast majority of queries being visual. Users use platform for home, fashion, recipes, weddings and other aspiration/shopping categories (10K-2025.htm, Item 1).",
+        "Content includes images, videos, collages, and product catalogs uploaded by retailers, brands, creators, publishers and users. Over 90% of searches are unbranded (10K-2025.htm, Item 1).",
+        "Platform historically sees lower engagement in Q2 and higher engagement in Q4 (holiday shopping season) (10K-2025.htm, Item 1A).",
+        "Revenue per user varies significantly by geography - U.S. and Canada generates highest ARPU due to relative size and maturity of digital advertising market (10K-2025.htm, Item 7)."
+      ]
+    }
+  }
+}

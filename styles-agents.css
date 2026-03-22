@@ -509,27 +509,171 @@ footer {
     margin-top: 3rem;
 }
 
+/* Table scroll wrapper for mobile */
+.table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 1rem 0;
+}
+
+.data-table {
+    min-width: 600px; /* Force horizontal scroll on small screens */
+}
+
+.scorecard-table {
+    min-width: 500px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    header {
+        padding: 1.5rem 0;
+    }
+    
     header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+    
+    header .subtitle {
+        font-size: 1rem;
+    }
+    
+    main {
+        padding: 1rem 0;
+    }
+    
+    #company-selector {
+        padding: 1rem;
+    }
+    
+    #company-select {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    #company-header {
+        padding: 1.5rem;
     }
     
     .company-title {
         flex-direction: column;
         align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .company-title h1 {
+        font-size: 1.5rem;
+    }
+    
+    .verdict-badge {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
     }
     
     .company-meta {
         flex-direction: column;
         gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .verdict-summary {
+        font-size: 0.95rem;
+    }
+    
+    .agent-header {
+        padding: 1rem;
+        flex-wrap: wrap;
     }
     
     .agent-header h2 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .score-badge {
+        order: 1;
+        margin-right: auto;
+    }
+    
+    .toggle-btn {
+        order: 2;
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .agent-content {
+        padding: 1rem;
     }
     
     .iv-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .criterion-header {
+        flex-wrap: wrap;
+    }
+    
+    .criterion-header h4 {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .rating, .verdict-tag {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.6rem;
+    }
+    
+    /* Make tables scrollable horizontally */
+    .data-table, .scorecard-table {
+        font-size: 0.85rem;
+    }
+    
+    .data-table th,
+    .data-table td,
+    .scorecard-table th,
+    .scorecard-table td {
+        padding: 0.5rem;
+    }
+    
+    .qual-item,
+    .criterion-card {
+        padding: 1rem;
+    }
+    
+    .risk-section,
+    .comparable-section {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .company-title h1 {
+        font-size: 1.3rem;
+    }
+    
+    .agent-header h2 {
+        font-size: 1rem;
+    }
+    
+    .data-table,
+    .scorecard-table {
+        font-size: 0.75rem;
+    }
+    
+    .data-table th,
+    .data-table td,
+    .scorecard-table th,
+    .scorecard-table td {
+        padding: 0.4rem 0.3rem;
     }
 }

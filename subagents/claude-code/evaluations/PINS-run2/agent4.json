@@ -1,0 +1,114 @@
+{
+  "agentId": "4",
+  "agentName": "Financial Health Evaluator",
+  "timestamp": "2026-03-22T06:30:00Z",
+  "data": {
+    "financialHealth": {
+      "criteria": [
+        {
+          "title": "Return on Equity >15%",
+          "description": "6-year average ROE from 10-K (2020-2025; pre-IPO data unavailable)",
+          "rating": "5/10",
+          "verdict": "FAIL",
+          "metrics": {
+            "averageROE": "11.36%",
+            "calculation": "(5.72% + 10.41% + 2.93% + 1.15% + 39.19% + 8.78%) / 6 = 68.18% / 6 = 11.36%",
+            "highYear": "2024: 39.19% (anomaly — net income $1,862.1M vs operating income $179.8M; driven by non-recurring tax benefit/deferred tax asset recognition)",
+            "lowYear": "2023: 1.15%",
+            "averageROEExcluding2024Outlier": "5.80% = (5.72% + 10.41% + 2.93% + 1.15% + 8.78%) / 5",
+            "trend": "volatile — trough in 2023, 2025 partial recovery to 8.78%",
+            "note": "2024 net income ($1,862.1M) far exceeds operating income ($179.8M); normalized ROE ex-outlier is ~5.80%, well below Buffett's 15% threshold. Positive equity throughout so ROA substitution not needed.",
+            "debtAdjusted": "No — zero debt across all years, ROE not inflated by leverage"
+          },
+          "secReference": "10-K 2020-2025, Balance Sheets and Income Statements"
+        },
+        {
+          "title": "Strong Profit Margins",
+          "description": "Margin stability over 6 years (2020-2025)",
+          "rating": "4/10",
+          "verdict": "FAIL",
+          "metrics": {
+            "averageGrossMargin": "77.61%",
+            "grossMarginCalculation": "(73.45% + 79.47% + 75.79% + 77.46% + 79.42% + 80.07%) / 6 = 465.66% / 6 = 77.61%",
+            "averageOperatingMargin": "6.89%",
+            "operatingMarginCalculation": "(8.42% + 12.65% + 3.63% + 4.11% + 4.93% + 7.58%) / 6 = 41.32% / 6 = 6.89%",
+            "averageNetMargin": "14.23%",
+            "netMarginCalculation": "(7.58% + 12.27% + 3.43% + 1.17% + 51.07% + 9.87%) / 6 = 85.39% / 6 = 14.23%",
+            "averageNetMarginExcluding2024": "6.86% = (7.58% + 12.27% + 3.43% + 1.17% + 9.87%) / 5",
+            "trend": "volatile — operating margin fell from 12.65% (2021) to 3.63% (2022), slowly recovering to 7.58% (2025); improving trajectory but still weak",
+            "grossMarginTrend": "stable/improving — ranged 73.45%-80.07%, reflecting strong platform economics",
+            "note": "2024 net margin (51.07%) is a non-recurring distortion. Core operating margin is the best signal: 6.89% average, recovering to 7.58% in 2025. Gross margins are excellent (77-80%) indicating pricing power, but high SBC (~$880M in 2025) suppresses operating margins."
+          },
+          "secReference": "10-K 2020-2025, Income Statements"
+        },
+        {
+          "title": "Low Debt Levels",
+          "description": "Debt payable in <4 years test — Pinterest carries zero financial debt",
+          "rating": "10/10",
+          "verdict": "PASS",
+          "metrics": {
+            "totalDebt2025": "$0.0M",
+            "totalDebt2024": "$0.0M",
+            "totalDebt2023": "$0.0M",
+            "totalDebt2022": "$0.0M",
+            "totalDebt2021": "$0.0M",
+            "totalDebt2020": "$0.0M",
+            "yearsToPayOff": "0 years (no debt)",
+            "buffettThreshold": "<4 years",
+            "cashAndSecurities2025": "$2,467.2M (net cash positive)",
+            "note": "Pinterest carries zero long-term and zero current financial debt across all 6 years. The company is net cash positive with $2,467.2M in cash and marketable securities as of 2025. A revolving credit facility exists but no borrowings drawn. This is exceptional by Buffett's standard."
+          },
+          "secReference": "10-K 2020-2025, Balance Sheets"
+        },
+        {
+          "title": "Consistent Free Cash Flow",
+          "description": "FCF growth and consistency (2020-2025)",
+          "rating": "8/10",
+          "verdict": "PASS",
+          "metrics": {
+            "fcf2020": "$11.4M",
+            "fcf2021": "$743.9M",
+            "fcf2022": "$440.2M (down year)",
+            "fcf2023": "$604.9M",
+            "fcf2024": "$940.0M",
+            "fcf2025": "$1,251.9M",
+            "fcfCAGR": "155.9%",
+            "fcfCAGRCalculation": "(1251.9 / 11.4)^(1/5) - 1 = (109.82)^(0.2) - 1 = 2.559 - 1 = 155.9%",
+            "fcfCAGRNote": "CAGR is inflated by depressed 2020 base (COVID ad market impact). From 2021-2025 CAGR: (1251.9/743.9)^(1/4) - 1 = (1.683)^(0.25) - 1 = 13.8%",
+            "downYears": "1 out of 5 (2022: $440.2M vs 2021: $743.9M, -40.8%)",
+            "fcfConversion2025": "300.2% (FCF $1,251.9M / Net Income $416.9M)",
+            "fcfConversionNote": "High FCF/Net Income ratio driven by large non-cash SBC charges ($880.5M in 2025) adding back to operating cash flow",
+            "trend": "strong growth — FCF has grown every year except 2022, reaching $1.25B in 2025"
+          },
+          "secReference": "10-K 2020-2025, Cash Flow Statements"
+        },
+        {
+          "title": "Capital Light Business",
+          "description": "CapEx as % of net income (2020-2025)",
+          "rating": "9/10",
+          "verdict": "PASS",
+          "metrics": {
+            "capex2020": "$17.4M (13.56% of net income)",
+            "capex2021": "$9.0M (2.85% of net income)",
+            "capex2022": "$29.0M (30.18% — inflated by depressed $96M net income)",
+            "capex2023": "$8.1M (22.64% of net income)",
+            "capex2024": "$24.6M (1.32% of net income)",
+            "capex2025": "$32.4M (7.77% of net income)",
+            "averageCapExPercent": "13.05%",
+            "averageCapExCalculation": "(13.56% + 2.85% + 30.18% + 22.64% + 1.32% + 7.77%) / 6 = 78.32% / 6 = 13.05%",
+            "averageCapExAsPercentOfRevenue": "0.66%",
+            "capexAsPercentOfRevenue2025": "0.77% ($32.4M / $4,221.8M)",
+            "buffettThreshold": "<25%",
+            "businessType": "Highly capital-light software/advertising platform — minimal physical infrastructure investment needed",
+            "note": "2022 ratio (30.18%) is misleading due to cyclically low net income; absolute CapEx was only $29M. CapEx as % of revenue has been consistently below 1%, confirming asset-light model."
+          },
+          "secReference": "10-K 2020-2025, Cash Flow Statements"
+        }
+      ],
+      "totalScore": 36,
+      "maxScore": 50,
+      "summary": "Pinterest scores 36/50 on Financial Health. The company earns perfect marks for zero debt and strong marks for capital-light operations and growing free cash flow. The primary weaknesses are volatile/low ROE and operating margins — reflecting high stock-based compensation costs (~21% of revenue in 2025) that depress GAAP profitability despite strong underlying gross economics (77-80% gross margins). The platform's FCF generation ($1.25B in 2025) and debt-free balance sheet represent genuine Buffett-style financial strength.",
+      "dataNote": "Analysis based on 2020-2025 SEC 10-K filings (6 years). Pre-2020 data unavailable in local filings. Buffett's framework ideally uses 10 years."
+    }
+  }
+}
