@@ -1,0 +1,194 @@
+{
+  "agentId": "1",
+  "agentName": "Data Collector",
+  "timestamp": "2026-03-22T07:00:00Z",
+  "sources": {
+    "localFiles": [
+      "evaluations/PINS/filings/10K-2025.htm",
+      "evaluations/PINS/filings/10K-2024.htm",
+      "evaluations/PINS/filings/10K-2023.htm",
+      "evaluations/PINS/filings/10K-2022.htm",
+      "evaluations/PINS/filings/10K-2021.htm",
+      "evaluations/PINS/filings/10K-2020.htm"
+    ],
+    "filesNotFound": [
+      "filings/8K-Q4-2024.htm (no 8-K files present in evaluations/PINS/filings/ directory)"
+    ],
+    "cik": "0001506293"
+  },
+  "data": {
+    "company": "Pinterest",
+    "ticker": "PINS",
+    "cik": "0001506293",
+    "currentPrice": null,
+    "currentPriceSource": "Not available - no 8-K earnings files found in evaluations/PINS/filings/",
+    "sharesOutstanding": 584.9,
+    "sharesOutstandingUnit": "millions (basic shares)",
+    "sharesSource": "10K-2025.htm, us-gaap:CommonStockSharesOutstanding XBRL tag = 584,866 thousand",
+    "analysisDate": "2026-03-22",
+    "industry": "AI-powered visual search and discovery platform; positioned at intersection of search, social, and commerce. Source: 10K-2025.htm, Item 1 Business",
+    "notes": {
+      "2024_net_income": "2024 net income of $1,862M is significantly elevated due to a one-time deferred tax asset recognition (reversal of valuation allowance). Normalized net income is much lower - use with caution in ratio analysis.",
+      "capex_tag_2020_2023": "CapEx for 2020-2023 uses XBRL tag us-gaap:PaymentsToAcquireProductiveAssets; 2024-2025 uses us-gaap:PaymentsToAcquirePropertyPlantAndEquipment. Both represent property/equipment purchases.",
+      "debt_note": "No long-term debt found in XBRL data for any year 2020-2025. Tags us-gaap:LongTermDebt and us-gaap:LongTermDebtNoncurrent not present in any filing.",
+      "xbrl_method": "All financial values extracted from inline XBRL (iXBRL) tags in SEC HTML filings. Primary period context values used; confirmed by cross-referencing prior-year columns across consecutive filings."
+    },
+
+    "financialData": {
+      "eps": {
+        "headers": ["Year", "EPS Diluted ($)", "YoY Change", "Source"],
+        "rows": [
+          ["2020", "0.22", "N/A", "10K-2020.htm, us-gaap:EarningsPerShareDiluted (confirmed as prior-year value in 10K-2021.htm)"],
+          ["2021", "0.46", "+109%", "10K-2021.htm, us-gaap:EarningsPerShareDiluted"],
+          ["2022", "0.14", "-70%", "10K-2022.htm, us-gaap:EarningsPerShareDiluted"],
+          ["2023", "0.05", "-64%", "10K-2023.htm, us-gaap:EarningsPerShareDiluted"],
+          ["2024", "2.67", "+5240% (tax benefit distorted)", "10K-2024.htm, us-gaap:EarningsPerShareDiluted"],
+          ["2025", "0.61", "-77% (normalizing from tax benefit)", "10K-2025.htm, us-gaap:EarningsPerShareDiluted"]
+        ]
+      },
+
+      "fcf": {
+        "headers": ["Year", "Operating CF ($M)", "CapEx ($M)", "FCF ($M)", "YoY Growth", "Source"],
+        "rows": [
+          ["2020", "28.8", "17.4", "11.4", "N/A", "10K-2020.htm, Cash Flow Statement. Op CF: us-gaap:NetCashProvidedByUsedInOperatingActivities=28,826. CapEx: us-gaap:PaymentsToAcquireProductiveAssets=17,401. FCF=28,826-17,401=11,425"],
+          ["2021", "752.9", "9.0", "743.9", "+6421%", "10K-2021.htm, Cash Flow Statement. Op CF=752,907. CapEx=9,031. FCF=743,876"],
+          ["2022", "469.2", "29.0", "440.2", "-41%", "10K-2022.htm, Cash Flow Statement. Op CF=469,202. CapEx=28,984. FCF=440,218"],
+          ["2023", "613.0", "8.1", "604.9", "+37%", "10K-2023.htm, Cash Flow Statement. Op CF=612,961. CapEx=8,063. FCF=604,898"],
+          ["2024", "964.6", "24.6", "940.0", "+55%", "10K-2024.htm, Cash Flow Statement. Op CF=964,594. CapEx=24,606 (PaymentsToAcquirePropertyPlantAndEquipment). FCF=939,988"],
+          ["2025", "1284.3", "32.4", "1251.9", "+33%", "10K-2025.htm, Cash Flow Statement. Op CF=1,284,264. CapEx=32,375. FCF=1,251,889"]
+        ]
+      },
+
+      "roe": {
+        "headers": ["Year", "Net Income ($M)", "Stockholders Equity ($M)", "ROE %", "Source"],
+        "rows": [
+          ["2020", "128.3", "2242.4", "5.7%", "10K-2020.htm. Net Income: us-gaap:NetIncomeLoss=128,323. Equity: us-gaap:StockholdersEquity=2,242,371. ROE=128,323/2,242,371=5.7%"],
+          ["2021", "316.4", "3038.7", "10.4%", "10K-2021.htm. Net Income=316,438. Equity=3,038,743. ROE=316,438/3,038,743=10.4%"],
+          ["2022", "96.0", "3281.7", "2.9%", "10K-2022.htm. Net Income=96,047. Equity=3,281,654. ROE=96,047/3,281,654=2.9%"],
+          ["2023", "35.6", "3090.7", "1.2%", "10K-2023.htm. Net Income=35,610. Equity=3,090,680. ROE=35,610/3,090,680=1.2%"],
+          ["2024", "1862.1", "4751.2", "39.2% (distorted by tax benefit)", "10K-2024.htm. Net Income=1,862,106. Equity=4,751,154. ROE=1,862,106/4,751,154=39.2%"],
+          ["2025", "416.9", "4745.2", "8.8%", "10K-2025.htm. Net Income=416,855. Equity=4,745,238. ROE=416,855/4,745,238=8.8%"]
+        ]
+      },
+
+      "debt": {
+        "headers": ["Year", "Long-Term Debt ($M)", "Current Debt ($M)", "Total Debt ($M)", "Net Income ($M)", "Years to Pay Off", "Source"],
+        "rows": [
+          ["2020", "0", "0", "0", "128.3", "0.0", "10K-2020.htm, Balance Sheet. us-gaap:LongTermDebt not present in XBRL filing"],
+          ["2021", "0", "0", "0", "316.4", "0.0", "10K-2021.htm, Balance Sheet. No long-term debt tags in XBRL"],
+          ["2022", "0", "0", "0", "96.0", "0.0", "10K-2022.htm, Balance Sheet. No long-term debt tags in XBRL"],
+          ["2023", "0", "0", "0", "35.6", "0.0", "10K-2023.htm, Balance Sheet. No long-term debt tags in XBRL"],
+          ["2024", "0", "0", "0", "1862.1", "0.0", "10K-2024.htm, Balance Sheet. No long-term debt tags in XBRL"],
+          ["2025", "0", "0", "0", "416.9", "0.0", "10K-2025.htm, Balance Sheet. No long-term debt tags in XBRL"]
+        ]
+      },
+
+      "capex": {
+        "headers": ["Year", "Net Income ($M)", "CapEx ($M)", "CapEx % of Net Income", "Source"],
+        "rows": [
+          ["2020", "128.3", "17.4", "13.6%", "10K-2020.htm. CapEx: us-gaap:PaymentsToAcquireProductiveAssets=17,401. Net Income=128,323. CapEx%=17,401/128,323=13.6%"],
+          ["2021", "316.4", "9.0", "2.9%", "10K-2021.htm. CapEx=9,031. Net Income=316,438. CapEx%=9,031/316,438=2.9%"],
+          ["2022", "96.0", "29.0", "30.2%", "10K-2022.htm. CapEx=28,984. Net Income=96,047. CapEx%=28,984/96,047=30.2%"],
+          ["2023", "35.6", "8.1", "22.6%", "10K-2023.htm. CapEx=8,063. Net Income=35,610. CapEx%=8,063/35,610=22.6%"],
+          ["2024", "1862.1", "24.6", "1.3% (tax-distorted base)", "10K-2024.htm. CapEx=24,606 (PaymentsToAcquirePropertyPlantAndEquipment). Net Income=1,862,106. CapEx%=24,606/1,862,106=1.3%"],
+          ["2025", "416.9", "32.4", "7.8%", "10K-2025.htm. CapEx=32,375. Net Income=416,855. CapEx%=32,375/416,855=7.8%"]
+        ]
+      },
+
+      "margins": {
+        "headers": ["Year", "Revenue ($M)", "Gross Profit ($M)", "Operating Income ($M)", "Net Income ($M)", "Gross %", "Operating %", "Net %", "Source"],
+        "rows": [
+          ["2020", "1692.7", "1243.3", "142.5", "128.3", "73.5%", "8.4%", "7.6%", "10K-2020.htm, Income Statement. Revenue=1,692,658. COGS=449,358. GP=1,243,300 (calc). Op Inc=142,504. Net Inc=128,323"],
+          ["2021", "2578.0", "2048.7", "326.2", "316.4", "79.5%", "12.7%", "12.3%", "10K-2021.htm, Income Statement. Revenue=2,578,027. COGS=529,320. GP=2,048,707. Op Inc=326,187. Net Inc=316,438"],
+          ["2022", "2802.6", "2124.0", "101.7", "96.0", "75.8%", "3.6%", "3.4%", "10K-2022.htm, Income Statement. Revenue=2,802,574. COGS=678,597. GP=2,123,977. Op Inc=101,677. Net Inc=96,047"],
+          ["2023", "3055.1", "2366.3", "125.7", "35.6", "77.5%", "4.1%", "1.2%", "10K-2023.htm, Income Statement. Revenue=3,055,071. COGS=688,760. GP=2,366,311. Op Inc=125,678. Net Inc=35,610"],
+          ["2024", "3646.2", "2895.8", "179.8", "1862.1", "79.4%", "4.9%", "51.1% (tax-distorted)", "10K-2024.htm, Income Statement. Revenue=3,646,166. COGS=750,355. GP=2,895,811. Op Inc=179,817. Net Inc=1,862,106"],
+          ["2025", "4221.8", "3380.2", "319.9", "416.9", "80.1%", "7.6%", "9.9%", "10K-2025.htm, Income Statement. Revenue=4,221,767. COGS=841,521. GP=3,380,246. Op Inc=319,883. Net Inc=416,855"]
+        ]
+      },
+
+      "revenue": {
+        "headers": ["Year", "Revenue ($M)", "YoY Growth", "Source"],
+        "rows": [
+          ["2020", "1692.7", "N/A (earliest year in dataset)", "10K-2020.htm, us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax = 1,692,658"],
+          ["2021", "2578.0", "+52.3%", "10K-2021.htm. Revenue=2,578,027. Growth=(2,578,027-1,692,658)/1,692,658=52.3%"],
+          ["2022", "2802.6", "+8.7%", "10K-2022.htm. Revenue=2,802,574. Growth=(2,802,574-2,578,027)/2,578,027=8.7%"],
+          ["2023", "3055.1", "+9.0%", "10K-2023.htm. Revenue=3,055,071. Growth=(3,055,071-2,802,574)/2,802,574=9.0%"],
+          ["2024", "3646.2", "+19.3%", "10K-2024.htm. Revenue=3,646,166. Growth=(3,646,166-3,055,071)/3,055,071=19.3%"],
+          ["2025", "4221.8", "+15.8%", "10K-2025.htm. Revenue=4,221,767. Growth=(4,221,767-3,646,166)/3,646,166=15.8%"]
+        ]
+      }
+    },
+
+    "qualitativeData": {
+      "moat": [
+        {
+          "text": "Pinterest is an 'AI-powered visual search and discovery platform, positioned at the intersection of search, social, and commerce.' Offers a unique and differentiated experience enabling people to go from inspiration to action - a distinct use case from pure social media or pure search.",
+          "source": "10K-2025.htm, Item 1 Business - Overview"
+        },
+        {
+          "text": "Key proprietary asset: The 'Taste Graph' - a network of many billions of associations between Pins, searches, boards, products and users. Built from user curation activity (saving content, creating boards and collages). This proprietary knowledge graph enables highly relevant content recommendations and is self-reinforcing.",
+          "source": "10K-2025.htm, Item 1 Business - Our Users and Our Platform"
+        },
+        {
+          "text": "619 million monthly active users globally (as of fiscal year 2025). Platform particularly resonates with women (roughly two-thirds of total user base) and Gen Z (over 50% of user base). Present in over 100 countries. Strong demographic concentration creates a differentiated advertising audience.",
+          "source": "10K-2025.htm, Item 1 Business - Our Users and Our Platform"
+        },
+        {
+          "text": "Structural moat evidenced by financial metrics: Gross margins expanding from 73.5% (2020) to 80.1% (2025), CapEx consistently below 1% of revenue in recent years, and zero long-term debt across 6-year history. Classic asset-light platform economics.",
+          "source": "Calculated from 10K-2020.htm through 10K-2025.htm, Income Statement and Cash Flow Statement"
+        }
+      ],
+      "management": [
+        {
+          "text": "CEO: William Ready (Bill Ready). Identified as key personnel in Risk Factors. Ben Silbermann (co-founder and former CEO) executed a Transition Letter dated June 22, 2022, indicating Ready assumed the CEO role in mid-2022.",
+          "source": "10K-2025.htm, Risk Factors - key personnel dependency; Exhibit list referencing 'Transition Letter, dated June 22, 2022 between Pinterest, Inc. and Ben Silbermann'"
+        },
+        {
+          "text": "Governance risk: Co-founders Paul Sciarra and Benjamin Silbermann retain significant voting power despite no longer being employed. Dual-class share structure maintains founder/insider voting control.",
+          "source": "10K-2025.htm, Risk Factors - voting power section"
+        },
+        {
+          "text": "Capital allocation quality: Zero long-term debt maintained across all 6 years. Free cash flow generation accelerating ($11.4M in 2020 to $1,251.9M in 2025). Management has chosen not to deploy debt financing, preserving financial flexibility.",
+          "source": "Calculated from 10K-2020.htm through 10K-2025.htm, Cash Flow Statements and Balance Sheets"
+        },
+        {
+          "text": "Single operating segment - CEO is chief operating decision maker reviewing consolidated financials with disaggregated revenue data. Focused business model without complex multi-segment structure.",
+          "source": "10K-2025.htm, Notes to Financial Statements - Segment Reporting Policy"
+        }
+      ],
+      "industry": [
+        {
+          "text": "Pinterest operates in digital advertising market at the intersection of search, social media, and e-commerce. Revenue model is advertising-based with ARPU (Average Revenue Per User) as primary monetization metric. International vs. US ARPU gap represents significant growth opportunity.",
+          "source": "10K-2025.htm, Item 1 Business and MD&A - Key Metrics (ARPU definition)"
+        },
+        {
+          "text": "Key industry risk: Dependence on advertising revenue makes business cyclical with macro conditions. Competition from Google, Meta, TikTok, and other platforms for advertiser budgets and user attention.",
+          "source": "10K-2025.htm, Item 1A Risk Factors"
+        },
+        {
+          "text": "AI integration is central to competitive positioning - described as 'AI-powered visual search and discovery platform.' AI/ML capabilities drive recommendation quality and user engagement, which in turn drives advertising value.",
+          "source": "10K-2025.htm, Item 1 Business - Overview"
+        }
+      ],
+      "consumer": [
+        {
+          "text": "619 million MAUs as of fiscal year 2025. MAU defined as authenticated user visiting website, mobile app, or browser extension at least once in trailing 30-day period. User base shows high geographic diversity (100+ countries).",
+          "source": "10K-2025.htm, Item 1 Business - Our Users and Our Platform; MAU definition from MD&A Key Metrics section"
+        },
+        {
+          "text": "ARPU is primary monetization metric. Calculated as total revenue divided by average MAUs, broken down by geography. US ARPU significantly higher than international, creating a long-term growth lever as international monetization improves.",
+          "source": "10K-2025.htm, MD&A - Key Metrics section"
+        },
+        {
+          "text": "High user intent differentiator: Users come to Pinterest with purchase intent ('inspiration-to-action' journey). Users search for ideas, curate boards, and increasingly transact directly on platform. This high commercial intent makes the platform valuable to advertisers versus pure entertainment social media.",
+          "source": "10K-2025.htm, Item 1 Business - Overview"
+        },
+        {
+          "text": "Self-reinforcing engagement loop: User curation (saving Pins, creating boards) generates Taste Graph signals, which improve recommendations, which drives more engagement and curation. Gen Z represents over 50% of user base - strong demographic trend supporting long-term user growth.",
+          "source": "10K-2025.htm, Item 1 Business - Our Users and Our Platform"
+        }
+      ]
+    }
+  }
+}

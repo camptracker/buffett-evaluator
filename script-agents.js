@@ -1,0 +1,455 @@
+// Company registry - maps ticker to evaluation directory
+const companies = {
+    'PINS': 'subagents/claude-code/evaluations/PINS'
+};
+
+// Load available companies on page load
+document.addEventListener('DOMContentLoaded', async () => {
+    await loadCompanyList();
+    setupEventListeners();
+});
+
+// Load list of available companies
+async function loadCompanyList() {
+    const select = document.getElementById('company-select');
+    
+    // For now, manually populate
+    // TODO: Auto-discover from evaluations directory
+    for (const ticker of Object.keys(companies)) {
+        const option = document.createElement('option');
+        option.value = ticker;
+        option.textContent = ticker;
+        select.appendChild(option);
+    }
+}
+
+// Setup event listeners
+function setupEventListeners() {
+    const select = document.getElementById('company-select');
+    select.addEventListener('change', (e) => {
+        if (e.target.value) {
+            loadCompanyEvaluation(e.target.value);
+        } else {
+            document.getElementById('evaluation-container').style.display = 'none';
+        }
+    });
+
+    // Toggle buttons
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const section = e.target.getAttribute('data-section');
+            toggleSection(section);
+        });
+    });
+}
+
+// Toggle section visibility
+function toggleSection(sectionId) {
+    const content = document.getElementById(`${sectionId}-content`);
+    const btn = document.querySelector(`[data-section="${sectionId}"]`);
+    
+    if (content.style.display === 'none' || !content.style.display) {
+        content.style.display = 'block';
+        btn.textContent = '▲';
+    } else {
+        content.style.display = 'none';
+        btn.textContent = '▼';
+    }
+}
+
+// Load company evaluation from all agent files
+async function loadCompanyEvaluation(ticker) {
+    const basePath = companies[ticker];
+    if (!basePath) {
+        console.error(`Company ${ticker} not found in registry`);
+        return;
+    }
+
+    try {
+        // Load all 6 agent files
+        const agents = await Promise.all([
+            fetch(`${basePath}/agent1.json`).then(r => r.json()),
+            fetch(`${basePath}/agent2.json`).then(r => r.json()),
+            fetch(`${basePath}/agent3.json`).then(r => r.json()),
+            fetch(`${basePath}/agent4.json`).then(r => r.json()),
+            fetch(`${basePath}/agent5.json`).then(r => r.json()),
+            fetch(`${basePath}/agent6.json`).then(r => r.json())
+        ]);
+
+        renderEvaluation(ticker, agents);
+        document.getElementById('evaluation-container').style.display = 'block';
+    } catch (error) {
+        console.error(`Failed to load evaluation for ${ticker}:`, error);
+        alert(`Failed to load evaluation for ${ticker}`);
+    }
+}
+
+// Render full evaluation
+function renderEvaluation(ticker, agents) {
+    const [agent1, agent2, agent3, agent4, agent5, agent6] = agents;
+
+    renderHeader(agent1.data, agent6.data);
+    renderAgent1(agent1.data);
+    renderAgent2(agent2.data);
+    renderAgent3(agent3.data);
+    renderAgent4(agent4.data);
+    renderAgent5(agent5.data);
+    renderAgent6(agent6.data);
+}
+
+// Render company header
+function renderHeader(data1, data6) {
+    const header = document.getElementById('company-header');
+    const verdictClass = (data6.verdict || '').toLowerCase().replace(/\s+/g, '-');
+    
+    header.innerHTML = `
+        <div class="company-title">
+            <h1>${data1.company} (${data1.ticker})</h1>
+            <div class="verdict-badge ${verdictClass}">${data6.verdict || 'CONDITIONAL'}</div>
+        </div>
+        <div class="company-meta">
+            <span>📅 ${data1.analysisDate || 'N/A'}</span>
+            <span>🏭 ${data1.industry || 'N/A'}</span>
+            <span>📊 ${data6.totalScore}/${data6.totalScoreOutOf}</span>
+        </div>
+        <div class="verdict-summary">
+            <p>${data6.summary || ''}</p>
+        </div>
+    `;
+}
+
+// Render Agent 1: Data Collector
+function renderAgent1(data) {
+    const content = document.getElementById('agent1-content');
+    
+    let html = '<div class="agent1-container">';
+    
+    // Financial Data Tables
+    html += '<h3>Financial Data</h3>';
+    
+    if (data.financialData) {
+        const tables = ['eps', 'fcf', 'roe', 'debt', 'capex', 'margins', 'revenue'];
+        
+        tables.forEach(tableName => {
+            const table = data.financialData[tableName];
+            if (table && table.rows) {
+                html += `<h4>${tableName.toUpperCase()}</h4>`;
+                html += renderTable(table.headers, table.rows);
+                if (table.notes) {
+                    html += `<p class="table-note"><em>${table.notes}</em></p>`;
+                }
+            }
+        });
+    }
+    
+    // Qualitative Data
+    if (data.qualitativeData) {
+        html += '<h3>Qualitative Analysis</h3>';
+        
+        const sections = ['moat', 'management', 'industry', 'consumer'];
+        sections.forEach(section => {
+            const items = data.qualitativeData[section];
+            if (items && items.length > 0) {
+                html += `<h4>${section.charAt(0).toUpperCase() + section.slice(1)}</h4>`;
+                html += '<div class="qual-items">';
+                items.forEach(item => {
+                    html += `
+                        <div class="qual-item">
+                            <strong>${item.factor || item.trend || item.metric || item.role || 'Item'}:</strong>
+                            <p>${item.description || item.value || ''}</p>
+                            <cite>Source: ${item.source}</cite>
+                        </div>
+                    `;
+                });
+                html += '</div>';
+            }
+        });
+    }
+    
+    html += '</div>';
+    content.innerHTML = html;
+}
+
+// Render Agent 2: Business Quality
+function renderAgent2(data) {
+    const content = document.getElementById('agent2-content');
+    const scoreElem = document.getElementById('agent2-score');
+    
+    const bq = data.businessQuality;
+    if (!bq) return;
+    
+    scoreElem.textContent = `${bq.totalScore}/${bq.maxScore}`;
+    
+    let html = '<div class="agent2-container">';
+    
+    bq.criteria.forEach(criterion => {
+        const passClass = criterion.verdict.toLowerCase();
+        html += `
+            <div class="criterion-card ${passClass}">
+                <div class="criterion-header">
+                    <h4>${criterion.title}</h4>
+                    <span class="rating">${criterion.rating}</span>
+                    <span class="verdict-tag ${passClass}">${criterion.verdict}</span>
+                </div>
+                <p class="description">${criterion.description}</p>
+                <div class="reasoning">
+                    <strong>Reasoning:</strong>
+                    <p>${criterion.reasoning}</p>
+                </div>
+                ${criterion.metrics ? renderMetrics(criterion.metrics) : ''}
+                <cite class="sec-ref">📄 ${criterion.secReference}</cite>
+            </div>
+        `;
+    });
+    
+    html += '</div>';
+    content.innerHTML = html;
+}
+
+// Render Agent 3: Management Quality
+function renderAgent3(data) {
+    const content = document.getElementById('agent3-content');
+    const scoreElem = document.getElementById('agent3-score');
+    
+    const mq = data.managementQuality;
+    if (!mq) return;
+    
+    scoreElem.textContent = `${mq.totalScore}/${mq.maxScore}`;
+    
+    let html = '<div class="agent3-container">';
+    
+    mq.criteria.forEach(criterion => {
+        const passClass = criterion.verdict.toLowerCase();
+        html += `
+            <div class="criterion-card ${passClass}">
+                <div class="criterion-header">
+                    <h4>${criterion.title}</h4>
+                    <span class="rating">${criterion.rating}</span>
+                    <span class="verdict-tag ${passClass}">${criterion.verdict}</span>
+                </div>
+                <p class="description">${criterion.description}</p>
+                <div class="reasoning">
+                    <strong>Reasoning:</strong>
+                    <p>${criterion.reasoning}</p>
+                </div>
+                ${criterion.examples ? renderExamples(criterion.examples) : ''}
+                <cite class="sec-ref">📄 ${criterion.secReference}</cite>
+            </div>
+        `;
+    });
+    
+    html += '</div>';
+    content.innerHTML = html;
+}
+
+// Render Agent 4: Financial Health
+function renderAgent4(data) {
+    const content = document.getElementById('agent4-content');
+    const scoreElem = document.getElementById('agent4-score');
+    
+    const fh = data.financialHealth;
+    if (!fh) return;
+    
+    scoreElem.textContent = `${fh.totalScore}/${fh.maxScore}`;
+    
+    let html = '<div class="agent4-container">';
+    
+    fh.criteria.forEach(criterion => {
+        const passClass = criterion.verdict.toLowerCase().replace(/\s+/g, '-');
+        html += `
+            <div class="criterion-card ${passClass}">
+                <div class="criterion-header">
+                    <h4>${criterion.title}</h4>
+                    <span class="rating">${criterion.rating}</span>
+                    <span class="verdict-tag ${passClass}">${criterion.verdict}</span>
+                </div>
+                <p class="description">${criterion.description}</p>
+                <div class="reasoning">
+                    <strong>Reasoning:</strong>
+                    <p>${criterion.reasoning}</p>
+                </div>
+                ${criterion.metrics ? renderMetrics(criterion.metrics) : ''}
+                <cite class="sec-ref">📄 ${criterion.secReference}</cite>
+            </div>
+        `;
+    });
+    
+    html += '</div>';
+    content.innerHTML = html;
+}
+
+// Render Agent 5: Valuation
+function renderAgent5(data) {
+    const content = document.getElementById('agent5-content');
+    
+    const val = data.valuation;
+    const calc = data.intrinsicValueCalculation;
+    if (!val && !calc) return;
+    
+    let html = '<div class="agent5-container">';
+    
+    // Intrinsic Value Summary
+    if (val) {
+        html += `
+            <div class="valuation-summary">
+                <h3>Intrinsic Value Estimate</h3>
+                <div class="iv-grid">
+                    <div class="iv-item">
+                        <span class="iv-label">Base Case</span>
+                        <span class="iv-value">$${val.baseCase || 'N/A'}</span>
+                    </div>
+                    <div class="iv-item">
+                        <span class="iv-label">Conservative</span>
+                        <span class="iv-value">$${val.conservative || 'N/A'}</span>
+                    </div>
+                    <div class="iv-item">
+                        <span class="iv-label">Optimistic</span>
+                        <span class="iv-value">$${val.optimistic || 'N/A'}</span>
+                    </div>
+                </div>
+                ${val.note ? `<p class="val-note">${val.note}</p>` : ''}
+            </div>
+        `;
+    }
+    
+    // DCF Calculation Details
+    if (calc) {
+        html += `
+            <div class="dcf-details">
+                <h3>DCF Calculation</h3>
+                ${renderDCFTable(calc)}
+            </div>
+        `;
+    }
+    
+    html += '</div>';
+    content.innerHTML = html;
+}
+
+// Render Agent 6: Final Verdict
+function renderAgent6(data) {
+    const content = document.getElementById('agent6-content');
+    const scoreElem = document.getElementById('agent6-score');
+    
+    scoreElem.textContent = `${data.totalScore}/${data.totalScoreOutOf}`;
+    
+    let html = '<div class="agent6-container">';
+    
+    // Scorecard
+    if (data.scorecard) {
+        html += '<h3>Scorecard</h3>';
+        html += renderScorecard(data.scorecard);
+    }
+    
+    // Final Verdict
+    if (data.finalVerdict) {
+        html += '<h3>Final Verdict</h3>';
+        html += `<div class="final-verdict">${renderFinalVerdict(data.finalVerdict)}</div>`;
+    }
+    
+    // Biggest Risk
+    if (data.biggestRisk) {
+        html += `
+            <div class="risk-section">
+                <h3>⚠️ Biggest Risk</h3>
+                <p>${data.biggestRisk}</p>
+            </div>
+        `;
+    }
+    
+    // Comparable
+    if (data.comparable) {
+        html += `
+            <div class="comparable-section">
+                <h3>🔍 Berkshire Comparable</h3>
+                <p>${data.comparable}</p>
+            </div>
+        `;
+    }
+    
+    html += '</div>';
+    content.innerHTML = html;
+}
+
+// Helper: Render table
+function renderTable(headers, rows) {
+    let html = '<table class="data-table"><thead><tr>';
+    headers.forEach(h => html += `<th>${h}</th>`);
+    html += '</tr></thead><tbody>';
+    rows.forEach(row => {
+        html += '<tr>';
+        row.forEach(cell => html += `<td>${cell}</td>`);
+        html += '</tr>';
+    });
+    html += '</tbody></table>';
+    return html;
+}
+
+// Helper: Render metrics
+function renderMetrics(metrics) {
+    let html = '<div class="metrics">';
+    for (const [key, value] of Object.entries(metrics)) {
+        html += `<div class="metric-item"><strong>${key}:</strong> ${value}</div>`;
+    }
+    html += '</div>';
+    return html;
+}
+
+// Helper: Render examples
+function renderExamples(examples) {
+    let html = '<div class="examples"><strong>Examples:</strong><ul>';
+    examples.forEach(ex => html += `<li>${ex}</li>`);
+    html += '</ul></div>';
+    return html;
+}
+
+// Helper: Render DCF table
+function renderDCFTable(calc) {
+    // Implement based on intrinsicValueCalculation structure
+    return '<p>DCF details (to be implemented based on data structure)</p>';
+}
+
+// Helper: Render scorecard
+function renderScorecard(scorecard) {
+    if (!scorecard.scores) return '';
+    
+    let html = '<table class="scorecard-table"><thead><tr>';
+    scorecard.scores.headers.forEach(h => html += `<th>${h}</th>`);
+    html += '</tr></thead><tbody>';
+    
+    scorecard.scores.rows.forEach(row => {
+        const isTotal = row[0].includes('TOTAL') || row[0].includes('**');
+        html += `<tr class="${isTotal ? 'total-row' : ''}">`;
+        row.forEach((cell, idx) => {
+            const cellContent = String(cell).replace(/\*\*/g, '');
+            html += `<td${isTotal ? ' class="total-cell"' : ''}>${cellContent}</td>`;
+        });
+        html += '</tr>';
+    });
+    
+    html += '</tbody></table>';
+    return html;
+}
+
+// Helper: Render final verdict
+function renderFinalVerdict(verdict) {
+    let html = '';
+    
+    if (verdict.conditionalVerdict) {
+        html += '<div class="conditional-verdict"><h4>Price-Based Verdict:</h4><ul>';
+        for (const [key, value] of Object.entries(verdict.conditionalVerdict)) {
+            html += `<li><strong>${key}:</strong> ${value}</li>`;
+        }
+        html += '</ul></div>';
+    }
+    
+    if (verdict.businessQualityVerdict) {
+        html += `<p><strong>Business Quality:</strong> ${verdict.businessQualityVerdict}</p>`;
+    }
+    
+    if (verdict.summary) {
+        html += `<p>${verdict.summary}</p>`;
+    }
+    
+    return html;
+}

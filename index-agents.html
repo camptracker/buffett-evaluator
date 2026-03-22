@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buffett Evaluator - Multi-Agent Analysis</title>
+    <link rel="stylesheet" href="styles-agents.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>📊 Buffett Evaluator</h1>
+            <p class="subtitle">Multi-agent analysis using Warren Buffett's investment framework</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="company-selector">
+            <label for="company-select">Select Company:</label>
+            <select id="company-select">
+                <option value="">Choose a company...</option>
+            </select>
+        </div>
+
+        <div id="evaluation-container" style="display: none;">
+            <!-- Header -->
+            <div id="company-header"></div>
+
+            <!-- Agent Sections -->
+            <div class="agent-section" id="agent1-section">
+                <div class="agent-header">
+                    <h2>📊 Agent 1: Data Collector</h2>
+                    <button class="toggle-btn" data-section="agent1">▼</button>
+                </div>
+                <div class="agent-content" id="agent1-content"></div>
+            </div>
+
+            <div class="agent-section" id="agent2-section">
+                <div class="agent-header">
+                    <h2>🏢 Agent 2: Business Quality</h2>
+                    <span class="score-badge" id="agent2-score"></span>
+                    <button class="toggle-btn" data-section="agent2">▼</button>
+                </div>
+                <div class="agent-content" id="agent2-content"></div>
+            </div>
+
+            <div class="agent-section" id="agent3-section">
+                <div class="agent-header">
+                    <h2>👔 Agent 3: Management Quality</h2>
+                    <span class="score-badge" id="agent3-score"></span>
+                    <button class="toggle-btn" data-section="agent3">▼</button>
+                </div>
+                <div class="agent-content" id="agent3-content"></div>
+            </div>
+
+            <div class="agent-section" id="agent4-section">
+                <div class="agent-header">
+                    <h2>💪 Agent 4: Financial Health</h2>
+                    <span class="score-badge" id="agent4-score"></span>
+                    <button class="toggle-btn" data-section="agent4">▼</button>
+                </div>
+                <div class="agent-content" id="agent4-content"></div>
+            </div>
+
+            <div class="agent-section" id="agent5-section">
+                <div class="agent-header">
+                    <h2>💎 Agent 5: Valuation</h2>
+                    <button class="toggle-btn" data-section="agent5">▼</button>
+                </div>
+                <div class="agent-content" id="agent5-content"></div>
+            </div>
+
+            <div class="agent-section" id="agent6-section">
+                <div class="agent-header">
+                    <h2>📋 Agent 6: Final Verdict</h2>
+                    <span class="score-badge" id="agent6-score"></span>
+                    <button class="toggle-btn" data-section="agent6">▼</button>
+                </div>
+                <div class="agent-content" id="agent6-content"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Multi-agent evaluation system. Not financial advice.</p>
+        </div>
+    </footer>
+
+    <script src="script-agents.js"></script>
+</body>
+</html>
