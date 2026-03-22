@@ -1,8 +1,8 @@
 // Company registry - maps ticker to evaluation directory
 const companies = {
     'PINS (Run 1)': 'subagents/claude-code/evaluations/PINS-run1',
-    'PINS (Run 2)': 'subagents/claude-code/evaluations/PINS-run2',
-    'PINS (Run 3)': 'subagents/claude-code/evaluations/PINS-run3'
+    'PINS (Run 2)': 'subagents/claude-code/evaluations/PINS-run2'
+    // 'PINS (Run 3)': 'subagents/claude-code/evaluations/PINS-run3' // TODO: Add when evaluation completes
 };
 
 // Load available companies on page load
@@ -67,6 +67,17 @@ async function loadCompanyEvaluation(ticker) {
         return;
     }
 
+    // Show loading state
+    const container = document.getElementById('evaluation-container');
+    container.innerHTML = `
+        <div style="background: white; padding: 3rem; border-radius: 8px; text-align: center;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
+            <h2 style="color: #2d3748; margin-bottom: 0.5rem;">Loading Evaluation...</h2>
+            <p style="color: #718096;">Fetching data for ${ticker}</p>
+        </div>
+    `;
+    container.style.display = 'block';
+
     try {
         // Load all 6 agent files
         const agents = await Promise.all([
@@ -82,7 +93,22 @@ async function loadCompanyEvaluation(ticker) {
         document.getElementById('evaluation-container').style.display = 'block';
     } catch (error) {
         console.error(`Failed to load evaluation for ${ticker}:`, error);
-        alert(`Failed to load evaluation for ${ticker}`);
+        const container = document.getElementById('evaluation-container');
+        container.innerHTML = `
+            <div style="background: white; padding: 2rem; border-radius: 8px; text-align: center;">
+                <h2 style="color: #f56565; margin-bottom: 1rem;">⚠️ Failed to Load</h2>
+                <p style="color: #4a5568; margin-bottom: 1rem;">
+                    Could not load evaluation for <strong>${ticker}</strong>
+                </p>
+                <p style="color: #718096; font-size: 0.9rem; margin-bottom: 1rem;">
+                    ${error.message || 'Network error or missing data files'}
+                </p>
+                <button onclick="location.reload()" style="padding: 0.75rem 1.5rem; background: #667eea; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">
+                    Reload Page
+                </button>
+            </div>
+        `;
+        container.style.display = 'block';
     }
 }
 
@@ -97,6 +123,16 @@ function renderEvaluation(ticker, agents) {
     renderAgent4(agent4.data);
     renderAgent5(agent5.data);
     renderAgent6(agent6.data);
+    
+    // Expand Agent 6 (Final Verdict) by default for quick overview
+    setTimeout(() => {
+        const agent6Content = document.getElementById('agent6-content');
+        const agent6Btn = document.querySelector('[data-section="agent6"]');
+        if (agent6Content && agent6Btn) {
+            agent6Content.style.display = 'block';
+            agent6Btn.textContent = '▲';
+        }
+    }, 100);
 }
 
 // Render company header
