@@ -205,9 +205,13 @@ Before finalizing any evaluation, verify:
 
 ### Agent 1 Output:
 - [ ] All financial data has SEC filing citation (type, date, page)
+- [ ] **All financial data has SEC EDGAR URL** (exact link to filing)
+- [ ] **Sources array includes URLs for every filing**
+- [ ] **CIK number documented**
+- [ ] **Company search URL included**
 - [ ] No data from Yahoo Finance, Bloomberg, or aggregators
-- [ ] Sources array lists all SEC filings used
 - [ ] Every calculation shown (e.g., YoY growth = (Current - Prior) / Prior)
+- [ ] **Every qualitative statement has source + URL**
 
 ### Agent 2-4 Output:
 - [ ] All analysis references Agent 1 data (which is SEC-sourced)
@@ -332,8 +336,51 @@ This ensures:
 
 ---
 
+## URL Documentation (Added March 22, 2026)
+
+**NEW REQUIREMENT: All data must include SEC EDGAR URLs**
+
+### What Changed:
+- Agent 1 now collects exact URLs for every SEC filing
+- Financial data tables include "URL" column
+- Qualitative data includes URL field for each statement
+- Sources array documents all filing URLs
+
+### Why:
+- **Transparency:** Anyone can verify our analysis by clicking filing links
+- **Auditability:** Third parties can audit data extraction
+- **Reproducibility:** Future evaluations can use same filings
+- **Trust:** Proves we're using primary sources
+
+### URL Format:
+```
+https://www.sec.gov/cgi-bin/viewer?action=view&cik=[CIK]&accession_number=[ACCESSION]&xbrl_type=v
+```
+
+### Example:
+```json
+{
+  "sources": {
+    "cik": "0000320193",
+    "companySearchUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=320193",
+    "secFilings": [
+      {
+        "type": "10-K",
+        "year": 2024,
+        "url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=320193&accession_number=0000320193-24-000123"
+      }
+    ]
+  }
+}
+```
+
+**See URL-DOCUMENTATION.md for complete guide.**
+
+---
+
 **Audit completed:** March 22, 2026  
 **Auditor:** Bob (OpenClaw AI)  
 **Files modified:** All 6 agent prompts (agents/1-6-*.md)  
 **Data source policy:** SEC.gov + official IR only  
+**URL documentation:** ✅ REQUIRED  
 **Status:** ✅ COMPLIANT

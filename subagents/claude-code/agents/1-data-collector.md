@@ -166,15 +166,64 @@ Extract ALL data from SEC 10-K and 10-Q filings ONLY.
 
 Write your output to: `[OUTPUT_FILE]`
 
+**CRITICAL: Document ALL URLs**
+
+For EVERY SEC filing you use, record:
+- Filing type (10-K, 10-Q, DEF 14A)
+- Year or period
+- Filed date
+- **Full SEC EDGAR URL** (exact link to the filing)
+
+**URL Format:**
+```
+https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=[CIK]&type=[TYPE]&dateb=&owner=exclude&count=100
+
+Or direct filing URL:
+https://www.sec.gov/Archives/edgar/data/[CIK]/[ACCESSION]/[FILENAME].htm
+```
+
+**Example:**
+```json
+{
+  "type": "10-K",
+  "year": 2024,
+  "filedDate": "2025-02-15",
+  "accessionNumber": "0000320193-25-000010",
+  "url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=320193&accession_number=0000320193-25-000010&xbrl_type=v"
+}
+```
+
 ```json
 {
   "agentId": "1",
   "agentName": "Data Collector",
   "timestamp": "2026-03-22T05:30:00Z",
   "sources": {
+    "cik": "0001234567",
+    "companySearchUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1234567&type=&dateb=&owner=exclude&count=100",
     "secFilings": [
-      {"type": "10-K", "year": 2024, "filedDate": "2025-02-15", "url": "https://sec.gov/..."},
-      {"type": "10-K", "year": 2023, "filedDate": "2024-02-15", "url": "https://sec.gov/..."}
+      {
+        "type": "10-K",
+        "year": 2024,
+        "filedDate": "2025-02-15",
+        "accessionNumber": "0001234567-25-000010",
+        "url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000010&xbrl_type=v",
+        "htmlUrl": "https://www.sec.gov/Archives/edgar/data/1234567/000123456725000010/filename.htm"
+      },
+      {
+        "type": "10-K",
+        "year": 2023,
+        "filedDate": "2024-02-15",
+        "accessionNumber": "0001234567-24-000008",
+        "url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-24-000008&xbrl_type=v"
+      },
+      {
+        "type": "DEF 14A",
+        "year": 2025,
+        "filedDate": "2025-04-01",
+        "accessionNumber": "0001234567-25-000015",
+        "url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000015"
+      }
     ]
   },
   "data": {
@@ -190,73 +239,133 @@ Write your output to: `[OUTPUT_FILE]`
     
     "financialData": {
       "eps": {
-        "headers": ["Year", "EPS ($)", "YoY Growth", "Source"],
+        "headers": ["Year", "EPS ($)", "YoY Growth", "Source", "URL"],
         "rows": [
-          ["2024", "5.00", "+10.0%", "10-K filed 2025-02-15, p.52"],
-          ["2023", "4.55", "+8.3%", "10-K filed 2024-02-15, p.48"]
+          ["2024", "5.00", "+10.0%", "10-K filed 2025-02-15, p.52", "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000010&xbrl_type=v"],
+          ["2023", "4.55", "+8.3%", "10-K filed 2024-02-15, p.48", "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-24-000008&xbrl_type=v"]
         ]
       },
       "fcf": {
-        "headers": ["Year", "Operating CF ($M)", "CapEx ($M)", "FCF ($M)", "YoY Growth", "Source"],
+        "headers": ["Year", "Operating CF ($M)", "CapEx ($M)", "FCF ($M)", "YoY Growth", "Source", "URL"],
         "rows": [
-          ["2024", "10,000", "2,000", "8,000", "+15%", "10-K 2025, Cash Flow Statement"]
+          ["2024", "10,000", "2,000", "8,000", "+15%", "10-K 2025, Cash Flow Statement", "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000010"]
         ]
       },
       "roe": {
-        "headers": ["Year", "Net Income ($M)", "Equity ($M)", "ROE %", "Source"],
+        "headers": ["Year", "Net Income ($M)", "Equity ($M)", "ROE %", "Source", "URL"],
         "rows": [
-          ["2024", "5,000", "25,000", "20.0%", "10-K 2025, p.52, p.55"]
+          ["2024", "5,000", "25,000", "20.0%", "10-K 2025, p.52, p.55", "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000010"]
         ]
       },
       "debt": {
-        "headers": ["Year", "Long-Term Debt ($M)", "Current Debt ($M)", "Total Debt ($M)", "Net Income ($M)", "Years to Pay", "Source"],
+        "headers": ["Year", "Long-Term Debt ($M)", "Current Debt ($M)", "Total Debt ($M)", "Net Income ($M)", "Years to Pay", "Source", "URL"],
         "rows": [
-          ["2024", "10,000", "1,000", "11,000", "5,000", "2.2", "10-K 2025, Balance Sheet"]
+          ["2024", "10,000", "1,000", "11,000", "5,000", "2.2", "10-K 2025, Balance Sheet", "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000010"]
         ]
       },
       "capex": {
-        "headers": ["Year", "Net Income ($M)", "CapEx ($M)", "CapEx %", "Source"],
+        "headers": ["Year", "Net Income ($M)", "CapEx ($M)", "CapEx %", "Source", "URL"],
         "rows": [
-          ["2024", "5,000", "2,000", "40%", "10-K 2025, Cash Flow"]
+          ["2024", "5,000", "2,000", "40%", "10-K 2025, Cash Flow", "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000010"]
         ]
       },
       "margins": {
-        "headers": ["Year", "Revenue ($M)", "Gross Profit ($M)", "Operating Income ($M)", "Net Income ($M)", "Gross %", "Operating %", "Net %", "Source"],
+        "headers": ["Year", "Revenue ($M)", "Gross Profit ($M)", "Operating Income ($M)", "Net Income ($M)", "Gross %", "Operating %", "Net %", "Source", "URL"],
         "rows": [
-          ["2024", "50,000", "20,000", "8,000", "5,000", "40%", "16%", "10%", "10-K 2025, Income Statement"]
+          ["2024", "50,000", "20,000", "8,000", "5,000", "40%", "16%", "10%", "10-K 2025, Income Statement", "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000010"]
         ]
       },
       "revenue": {
-        "headers": ["Year", "Revenue ($M)", "YoY Growth", "Source"],
+        "headers": ["Year", "Revenue ($M)", "YoY Growth", "Source", "URL"],
         "rows": [
-          ["2024", "50,000", "+12%", "10-K 2025, p.50"]
+          ["2024", "50,000", "+12%", "10-K 2025, p.50", "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000010"]
         ]
       }
     },
     
     "qualitativeData": {
       "moat": [
-        "Primary moat: Network effects (Source: 10-K 2025, Item 1, p.5)",
-        "Evidence: 2B+ users, 80%+ market share (Source: 10-K 2025, Item 1)",
-        "Durability: High switching costs documented (Source: 10-K 2025, Item 1)",
-        "Competitors: Listed in 10-K Risk Factors (Source: 10-K 2025, Item 1A, p.15)"
+        {
+          "text": "Primary moat: Network effects",
+          "source": "10-K 2025, Item 1, p.5",
+          "url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000010"
+        },
+        {
+          "text": "Evidence: 2B+ users, 80%+ market share",
+          "source": "10-K 2025, Item 1",
+          "url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000010"
+        },
+        {
+          "text": "Durability: High switching costs documented",
+          "source": "10-K 2025, Item 1",
+          "url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000010"
+        },
+        {
+          "text": "Competitors: Listed in 10-K Risk Factors",
+          "source": "10-K 2025, Item 1A, p.15",
+          "url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000010"
+        }
       ],
       "management": [
-        "CEO: John Doe, tenure 10 years (Source: DEF 14A 2025, p.8)",
-        "Capital allocation: $5B buybacks, $2B dividends in last 5 years (Source: 10-K 2025, Cash Flow Statement)",
-        "Compensation: $15M in 2024, tied to ROIC targets (Source: DEF 14A 2025, p.25)",
-        "Shareholder letter quote: 'We focus on long-term value' (Source: 2024 Annual Report, CEO Letter)"
+        {
+          "text": "CEO: John Doe, tenure 10 years",
+          "source": "DEF 14A 2025, p.8",
+          "url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000015"
+        },
+        {
+          "text": "Capital allocation: $5B buybacks, $2B dividends in last 5 years",
+          "source": "10-K 2025, Cash Flow Statement",
+          "url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000010"
+        },
+        {
+          "text": "Compensation: $15M in 2024, tied to ROIC targets",
+          "source": "DEF 14A 2025, p.25",
+          "url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000015"
+        },
+        {
+          "text": "Shareholder letter quote: 'We focus on long-term value'",
+          "source": "2024 Annual Report, CEO Letter",
+          "url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000010"
+        }
       ],
       "industry": [
-        "Industry growth: 8-10% annually per management (Source: 10-K 2025, MD&A, p.30)",
-        "Tailwinds: Digital transformation (Source: 10-K 2025, Item 1)",
-        "Headwinds: Regulatory scrutiny (Source: 10-K 2025, Risk Factors, p.18)",
-        "Disruption risk: AI competition (Source: 10-K 2025, Risk Factors, p.20)"
+        {
+          "text": "Industry growth: 8-10% annually per management",
+          "source": "10-K 2025, MD&A, p.30",
+          "url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000010"
+        },
+        {
+          "text": "Tailwinds: Digital transformation",
+          "source": "10-K 2025, Item 1",
+          "url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000010"
+        },
+        {
+          "text": "Headwinds: Regulatory scrutiny",
+          "source": "10-K 2025, Risk Factors, p.18",
+          "url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000010"
+        },
+        {
+          "text": "Disruption risk: AI competition",
+          "source": "10-K 2025, Risk Factors, p.20",
+          "url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000010"
+        }
       ],
       "consumer": [
-        "Brand loyalty: 90%+ retention rate (Source: 10-K 2025, MD&A, p.32)",
-        "Pricing power: Raised prices 3 years in row without volume loss (Source: 10-K 2025, MD&A)",
-        "Switching costs: High per management (Source: 10-K 2025, Item 1, p.7)"
+        {
+          "text": "Brand loyalty: 90%+ retention rate",
+          "source": "10-K 2025, MD&A, p.32",
+          "url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000010"
+        },
+        {
+          "text": "Pricing power: Raised prices 3 years in row without volume loss",
+          "source": "10-K 2025, MD&A",
+          "url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000010"
+        },
+        {
+          "text": "Switching costs: High per management",
+          "source": "10-K 2025, Item 1, p.7",
+          "url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=1234567&accession_number=0001234567-25-000010"
+        }
       ]
     }
   }
@@ -268,23 +377,49 @@ Write your output to: `[OUTPUT_FILE]`
 ## Execution Instructions
 
 1. **Search SEC EDGAR** for company by ticker
-2. **Download** last 10-20 years of 10-K filings (and recent 10-Qs)
-3. **Extract data** manually from filings (read PDFs or HTML)
-4. **Calculate metrics** (YoY growth, ratios, etc.)
-5. **Cite sources** for EVERY data point (filing type, year, page number)
-6. **Write JSON** to output file: `[OUTPUT_FILE]`
-7. **Print status** to stdout
+   - Go to: https://www.sec.gov/edgar/searchedgar/companysearch.html
+   - Search by ticker: [TICKER]
+   - Note the CIK number
+   - Save company search URL
+
+2. **Collect filing URLs**
+   - For each 10-K, 10-Q, DEF 14A: copy exact URL
+   - URL format: `https://www.sec.gov/cgi-bin/viewer?action=view&cik=[CIK]&accession_number=[ACCESSION]`
+   - Also note accession number (e.g., 0001234567-25-000010)
+
+3. **Download filings**
+   - Last 10-20 years of 10-K filings
+   - Recent 10-Qs for current price/data
+   - DEF 14A for CEO info
+
+4. **Extract data** from each filing
+   - Read PDFs or HTML versions
+   - Note page numbers for citations
+
+5. **Calculate metrics** (YoY growth, ratios, etc.)
+
+6. **Record URLs** for EVERY filing used
+   - Add URL column to all data tables
+   - Include URL in sources array
+
+7. **Write JSON** to output file: `[OUTPUT_FILE]`
+
+8. **Print status** to stdout
 
 ## Quality Checks
 
 Before writing the output file, verify:
 
 - ✅ ALL data has SEC filing citation (filing type + date + page)
+- ✅ ALL data has SEC EDGAR URL (full link to exact filing)
+- ✅ Sources array includes URLs for every filing used
+- ✅ CIK number documented
+- ✅ Company search URL included
 - ✅ NO data from Yahoo Finance, Bloomberg, or third-party sources
 - ✅ At least 10 years of historical data (if company is old enough)
 - ✅ All calculations shown (e.g., FCF = Operating CF - CapEx)
 - ✅ JSON is valid syntax
-- ✅ Sources array lists all filings used
+- ✅ Every qualitative statement has source + URL
 
 ## Example Citations
 
