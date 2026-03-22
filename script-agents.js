@@ -1,6 +1,8 @@
 // Company registry - maps ticker to evaluation directory
 const companies = {
-    'PINS': 'subagents/claude-code/evaluations/PINS'
+    'PINS (Run 1)': 'subagents/claude-code/evaluations/PINS-run1',
+    'PINS (Run 2)': 'subagents/claude-code/evaluations/PINS-run2',
+    'PINS (Run 3)': 'subagents/claude-code/evaluations/PINS-run3'
 };
 
 // Load available companies on page load
