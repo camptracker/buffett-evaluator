@@ -1,8 +1,8 @@
 // Company registry - maps ticker to evaluation directory
 const companies = {
     'PINS (Run 1)': 'subagents/claude-code/evaluations/PINS-run1',
-    'PINS (Run 2)': 'subagents/claude-code/evaluations/PINS-run2'
-    // 'PINS (Run 3)': 'subagents/claude-code/evaluations/PINS-run3' // TODO: Add when evaluation completes
+    'PINS (Run 2)': 'subagents/claude-code/evaluations/PINS-run2',
+    'PINS (Run 3)': 'subagents/claude-code/evaluations/PINS-run3'
 };
 
 // Load available companies on page load
@@ -67,15 +67,25 @@ async function loadCompanyEvaluation(ticker) {
         return;
     }
 
-    // Show loading state
+    // Show loading state (without destroying child elements)
     const container = document.getElementById('evaluation-container');
-    container.innerHTML = `
-        <div style="background: white; padding: 3rem; border-radius: 8px; text-align: center;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
-            <h2 style="color: #2d3748; margin-bottom: 0.5rem;">Loading Evaluation...</h2>
-            <p style="color: #718096;">Fetching data for ${ticker}</p>
-        </div>
-    `;
+    const header = document.getElementById('company-header');
+    if (header) {
+        header.innerHTML = `
+            <div style="background: white; padding: 3rem; border-radius: 8px; text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
+                <h2 style="color: #2d3748; margin-bottom: 0.5rem;">Loading Evaluation...</h2>
+                <p style="color: #718096;">Fetching data for ${ticker}</p>
+            </div>
+        `;
+    }
+    
+    // Hide all agent sections during loading
+    for (let i = 1; i <= 6; i++) {
+        const section = document.getElementById(`agent${i}-section`);
+        if (section) section.style.display = 'none';
+    }
+    
     container.style.display = 'block';
 
     try {
@@ -94,20 +104,31 @@ async function loadCompanyEvaluation(ticker) {
     } catch (error) {
         console.error(`Failed to load evaluation for ${ticker}:`, error);
         const container = document.getElementById('evaluation-container');
-        container.innerHTML = `
-            <div style="background: white; padding: 2rem; border-radius: 8px; text-align: center;">
-                <h2 style="color: #f56565; margin-bottom: 1rem;">⚠️ Failed to Load</h2>
-                <p style="color: #4a5568; margin-bottom: 1rem;">
-                    Could not load evaluation for <strong>${ticker}</strong>
-                </p>
-                <p style="color: #718096; font-size: 0.9rem; margin-bottom: 1rem;">
-                    ${error.message || 'Network error or missing data files'}
-                </p>
-                <button onclick="location.reload()" style="padding: 0.75rem 1.5rem; background: #667eea; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">
-                    Reload Page
-                </button>
-            </div>
-        `;
+        const header = document.getElementById('company-header');
+        
+        if (header) {
+            header.innerHTML = `
+                <div style="background: white; padding: 2rem; border-radius: 8px; text-align: center;">
+                    <h2 style="color: #f56565; margin-bottom: 1rem;">⚠️ Failed to Load</h2>
+                    <p style="color: #4a5568; margin-bottom: 1rem;">
+                        Could not load evaluation for <strong>${ticker}</strong>
+                    </p>
+                    <p style="color: #718096; font-size: 0.9rem; margin-bottom: 1rem;">
+                        ${error.message || 'Network error or missing data files'}
+                    </p>
+                    <button onclick="location.reload()" style="padding: 0.75rem 1.5rem; background: #667eea; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">
+                        Reload Page
+                    </button>
+                </div>
+            `;
+        }
+        
+        // Hide all agent sections on error
+        for (let i = 1; i <= 6; i++) {
+            const section = document.getElementById(`agent${i}-section`);
+            if (section) section.style.display = 'none';
+        }
+        
         container.style.display = 'block';
     }
 }
@@ -115,6 +136,12 @@ async function loadCompanyEvaluation(ticker) {
 // Render full evaluation
 function renderEvaluation(ticker, agents) {
     const [agent1, agent2, agent3, agent4, agent5, agent6] = agents;
+
+    // Show all agent sections
+    for (let i = 1; i <= 6; i++) {
+        const section = document.getElementById(`agent${i}-section`);
+        if (section) section.style.display = 'block';
+    }
 
     renderHeader(agent1.data, agent6.data);
     renderAgent1(agent1.data);
@@ -138,6 +165,11 @@ function renderEvaluation(ticker, agents) {
 // Render company header
 function renderHeader(data1, data6) {
     const header = document.getElementById('company-header');
+    if (!header) {
+        console.error('company-header element not found');
+        return;
+    }
+    
     const verdictClass = (data6.verdict || '').toLowerCase().replace(/\s+/g, '-');
     
     header.innerHTML = `

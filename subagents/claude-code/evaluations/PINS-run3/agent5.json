@@ -1,0 +1,111 @@
+{
+  "agentId": "5",
+  "agentName": "Valuation Calculator",
+  "timestamp": "2026-03-22T06:45:00Z",
+  "data": {
+    "intrinsicValueCalculation": {
+      "inputs": {
+        "headers": ["Input", "Value", "Source/Justification"],
+        "rows": [
+          ["Current FCF", "$1,251.9M", "10K-2025.htm, Cash Flow Statement — FCF = Operating CF $1,284.3M minus CapEx $32.4M"],
+          ["FCF CAGR (2021-2025)", "14.9%", "(1,251,889 / 718,331)^(1/4) - 1 = 14.9%; 2021 used as base (2020 FCF was negative)"],
+          ["Growth Rate (Yrs 1-10)", "5%", "Business Quality 24/40 (< 25 threshold) → use CAGR × 0.60 = 14.9% × 0.60 = 8.94%, capped at 5% per matrix rule for low-quality score"],
+          ["Terminal Growth", "3%", "Growing industry: international ARPU still only 3% of US level, large monetization runway; conservative GDP-level floor with expansion upside"],
+          ["Discount Rate", "10%", "Total score 77/120 (scaled ~83/130) → Standard business range (70-100/130) → 10% standard Buffett discount rate"],
+          ["Shares Outstanding", "584.866M", "10K-2025.htm, Balance Sheet — 584,866 thousand shares as of Dec 31, 2025"],
+          ["Current Price", "N/A", "Not available in SEC filings (no 8-K price disclosures in local filing set; currentPrice: null in Agent 1 data)"]
+        ]
+      },
+      "growthRateJustification": [
+        "Business Quality Score: 24/40 — falls BELOW the 25/40 threshold",
+        "Financial Health Score: 35/50 — meets the 35/50 threshold but does not override Business Quality failure",
+        "Matrix rule applied: Business Quality < 25/40 → Use (historical CAGR × 0.60) or 5% max",
+        "Calculation: 14.9% × 0.60 = 8.94%; capped at 5% maximum per low-quality rule",
+        "Key concern: 2 GAAP loss years (2022-2023), ROE never exceeded 15% in a clean year, thin operating margins (7.6% in 2025)",
+        "FCF story is stronger (14.9% CAGR, $1.25B in 2025), but quality scores mandate conservative growth assumption"
+      ],
+      "projections": {
+        "headers": ["Year", "FCF ($M)", "Calculation", "Discount Factor", "PV ($M)"],
+        "rows": [
+          ["1", "1,314.5", "1,251.9 × 1.05¹", "÷ 1.10¹", "1,195.0"],
+          ["2", "1,380.2", "1,251.9 × 1.05²", "÷ 1.10²", "1,140.7"],
+          ["3", "1,449.2", "1,251.9 × 1.05³", "÷ 1.10³", "1,088.8"],
+          ["4", "1,521.7", "1,251.9 × 1.05⁴", "÷ 1.10⁴", "1,039.3"],
+          ["5", "1,597.8", "1,251.9 × 1.05⁵", "÷ 1.10⁵", "991.5"],
+          ["6", "1,677.7", "1,251.9 × 1.05⁶", "÷ 1.10⁶", "947.0"],
+          ["7", "1,761.5", "1,251.9 × 1.05⁷", "÷ 1.10⁷", "904.0"],
+          ["8", "1,849.6", "1,251.9 × 1.05⁸", "÷ 1.10⁸", "863.3"],
+          ["9", "1,942.1", "1,251.9 × 1.05⁹", "÷ 1.10⁹", "823.6"],
+          ["10", "2,039.2", "1,251.9 × 1.05¹⁰", "÷ 1.10¹⁰", "786.2"],
+          ["Sum", "", "", "", "9,779.4"]
+        ]
+      },
+      "terminalValue": [
+        "Year 10 FCF: $2,039.2M (1,251.9 × 1.05¹⁰ = 1,251.9 × 1.62889 = $2,039.2M)",
+        "Terminal Value = $2,039.2M × 1.03 / (0.10 - 0.03) = $2,100.4M / 0.07 = $30,005.7M",
+        "PV of Terminal Value = $30,005.7M / 1.10¹⁰ = $30,005.7M / 2.59374 = $11,567.9M",
+        "Terminal Value represents 54.2% of total enterprise value — within typical range for growing businesses"
+      ],
+      "finalValue": [
+        "10-Year Cash Flows (PV): $9,779.4M",
+        "Terminal Value (PV): $11,567.9M",
+        "Total Enterprise Value: $21,347.3M",
+        "Shares Outstanding: 584.866M",
+        "Intrinsic Value Per Share: $21,347.3M / 584.866M = $36.50"
+      ],
+      "scenarios": {
+        "headers": ["Scenario", "Growth Rate", "Enterprise Value ($M)", "Intrinsic Value/Share", "Current Price", "MoS", "Buffett Buy?"],
+        "rows": [
+          ["Base Case", "5%", "$21,347M", "$36.50", "N/A (not in SEC filings)", "N/A", "Cannot determine"],
+          ["Conservative", "3%", "$18,413M", "$31.48", "N/A (not in SEC filings)", "N/A", "Cannot determine"],
+          ["Optimistic", "7%", "$24,769M", "$42.35", "N/A (not in SEC filings)", "N/A", "Cannot determine"]
+        ],
+        "scenarioCalcDetails": {
+          "conservative_3pct": {
+            "year10FCF": "$1,682.5M (1,251.9 × 1.03¹⁰ = 1,251.9 × 1.343916)",
+            "terminalValue": "$24,753M (1,682.5 × 1.03 / 0.07)",
+            "pvTerminalValue": "$9,543M (24,753 / 2.59374)",
+            "sumPVs": "$8,869M",
+            "totalEV": "$18,412M",
+            "ivPerShare": "$31.48"
+          },
+          "optimistic_7pct": {
+            "year10FCF": "$2,462.7M (1,251.9 × 1.07¹⁰ = 1,251.9 × 1.967151)",
+            "terminalValue": "$36,237M (2,462.7 × 1.03 / 0.07)",
+            "pvTerminalValue": "$13,969M (36,237 / 2.59374)",
+            "sumPVs": "$10,800M",
+            "totalEV": "$24,769M",
+            "ivPerShare": "$42.35"
+          }
+        }
+      },
+      "priceDataLimitation": [
+        "WARNING: Current stock price not available in SEC filing data",
+        "Pinterest's 10-K filings do not disclose current market price",
+        "No 8-K filings were present in the local PINS-run3/filings/ directory",
+        "Margin of Safety calculation REQUIRES current market price — cannot be completed from SEC data alone",
+        "To complete the MoS analysis, an authoritative current price source (e.g., market feed, 8-K) is required",
+        "Intrinsic value of $36.50 (base case) represents the DCF fair value benchmark against which any current price should be compared"
+      ]
+    },
+    "valuation": {
+      "intrinsicValue": 36.50,
+      "intrinsicValueConservative": 31.48,
+      "intrinsicValueOptimistic": 42.35,
+      "currentPrice": null,
+      "currentPriceSource": "Not available in SEC filings",
+      "marginOfSafety": "N/A - current price not available in SEC filings",
+      "verdict": "INCOMPLETE - Intrinsic value established at $36.50 (base case); MoS verdict requires current market price",
+      "score": null,
+      "maxScore": 10,
+      "reasoning": "DCF valuation complete. Intrinsic value range: $31.48 (conservative, 3% growth) to $42.35 (optimistic, 7% growth), with base case of $36.50/share at 5% growth. Growth rate was capped at 5% per the quality score matrix: Business Quality of 24/40 falls below the 25/40 threshold, triggering CAGR × 0.60 rule with 5% ceiling. Financial health (35/50) and management quality (18/30) scores provide further context for the conservative approach. Buffett verdict (Buy/Watch/Hold/Avoid) and valuation score (0-10) cannot be determined without a verifiable current market price from SEC-authorized sources. The FCF fundamentals are strong ($1.25B in 2025, 14.9% CAGR), but the quality-adjusted growth assumption and 10% discount rate yield a fair value of approximately $36.50 per share."
+    },
+    "qualityScoreSummary": {
+      "businessQuality": "24/40 (60%) — genuine but narrow moat, inconsistent profitability history, AI disruption risk",
+      "managementQuality": "18/30 (60%) — debt elimination and acquisition discipline positive; no shareholder return program is a concern",
+      "financialHealth": "35/50 (70%) — debt-free and capital-light are strong; ROE below 15% and volatile margins are weak",
+      "totalScore": "77/120 (64.2%)",
+      "discountRateRationale": "77/120 scaled to ~83/130 (standard business range 70-100/130) → 10% discount rate applied"
+    }
+  }
+}

@@ -1,0 +1,250 @@
+# Agent 6: Scorecard & Final Verdict (Claude Code Edition)
+
+## CRITICAL: Data Source Requirements
+
+**YOU MAY ONLY USE DATA FROM AGENTS 1-5 OUTPUT**
+
+All analysis is based on SEC-verified data processed by previous agents. Do NOT add external research.
+
+---
+
+## Your Role
+You are Warren Buffett's final decision-maker. Compile all agent evaluations into a scorecard and deliver a clear verdict.
+
+## Input Files
+- `evaluations/PINS-run3/merged-prev.json` - Merged output from Agents 1-5
+
+## Your Task
+
+### Step 1: Compile Final Scorecard
+
+**Extract scores from previous agents:**
+```javascript
+const input = JSON.parse(fs.readFileSync('evaluations/PINS-run3/merged-prev.json', 'utf-8'));
+
+// Agent 2: Business Quality (4 criteria × 10 = 40 pts max)
+const businessQuality = input.data.businessQuality.criteria;
+const bqScores = businessQuality.map(c => parseFloat(c.rating.split('/')[0]));
+
+// Agent 3: Management Quality (3 criteria × 10 = 30 pts max)
+const managementQuality = input.data.managementQuality.criteria;
+const mqScores = managementQuality.map(c => parseFloat(c.rating.split('/')[0]));
+
+// Agent 4: Financial Health (5 criteria × 10 = 50 pts max)
+const financialHealth = input.data.financialHealth.criteria;
+const fhScores = financialHealth.map(c => parseFloat(c.rating.split('/')[0]));
+
+// Agent 5: Valuation (1 criterion × 10 = 10 pts max)
+const valuation = input.data.valuation.score;
+
+// Total: 13 criteria, 130 points max
+const totalScore = [...bqScores, ...mqScores, ...fhScores, valuation].reduce((a,b) => a+b, 0);
+```
+
+**Create scorecard table:**
+
+| Category | Criteria | Score | Pass/Fail |
+|----------|----------|-------|-----------|
+| Business Quality | Simple & understandable | X/10 | PASS/FAIL |
+| Business Quality | Durable moat | X/10 | PASS/FAIL |
+| Business Quality | Consistent history | X/10 | PASS/FAIL |
+| Business Quality | Favorable prospects | X/10 | PASS/FAIL |
+| Management | Rational capital allocation | X/10 | PASS/FAIL |
+| Management | Honest & transparent | X/10 | PASS/FAIL |
+| Management | Resists imperative | X/10 | PASS/FAIL |
+| Financial Health | ROE >15% | X/10 | PASS/FAIL |
+| Financial Health | Strong margins | X/10 | PASS/FAIL |
+| Financial Health | Low debt | X/10 | PASS/FAIL |
+| Financial Health | Consistent FCF | X/10 | PASS/FAIL |
+| Financial Health | Capital light | X/10 | PASS/FAIL |
+| Valuation | Margin of safety >30% | X/10 | PASS/FAIL |
+| **TOTAL** | | **X/130** | **X%** |
+
+---
+
+### Step 2: Overall Verdict
+
+**Calculate percentage:**
+```
+Percentage = (Total Score / 130) × 100%
+```
+
+**Interpretation:**
+- **100-130 (77%+):** Exceptional - Strong Buy
+- **80-99 (62-76%):** Good - Buy at fair price
+- **60-79 (46-61%):** Mediocre - Requires deep discount
+- **<60 (<46%):** Avoid - Too many red flags
+
+**Final verdict (decision tree):**
+```
+IF score ≥90 AND marginOfSafety ≥30%:
+  → BUY (great business at great price)
+  
+ELSE IF score ≥80 AND marginOfSafety ≥10%:
+  → WATCH (good business at fair price)
+  
+ELSE IF score ≥70 AND marginOfSafety <10%:
+  → HOLD (decent business, wait for better price)
+  
+ELSE IF marginOfSafety <0%:
+  → AVOID (overvalued regardless of quality)
+  
+ELSE:
+  → AVOID (business quality too low)
+```
+
+**Buffett's rule:** Quality > Price, but BOTH matter. A wonderful business at a terrible price is still a terrible investment.
+
+---
+
+### Step 3: One Paragraph Summary
+
+Write 4-6 sentences that:
+1. **Summarize business quality** - Great/Good/Mediocre/Poor based on score
+2. **Note key strengths** - What would Buffett love? (from Agent 2-4 evidence)
+3. **Identify key weaknesses** - What would Buffett hate? (from Risk Factors, debt analysis)
+4. **State valuation conclusion** - Undervalued/Fair/Overvalued (from Agent 5)
+5. **Give final verdict** - BUY/WATCH/HOLD/AVOID with primary reason
+
+**Use ONLY data from previous agents (all sourced from SEC filings).**
+
+**Example structure:**
+> "[Company] is a [exceptional/good/mediocre/poor] business scoring [X/130 (X%)]. The company demonstrates [key strength from Agent 2-4 with SEC citation]. However, [key weakness from Agents/SEC data] creates risk. At $[price], the stock trades [undervalued/fair/overvalued] with a margin of safety of [X%]. Buffett would [BUY/WATCH/HOLD/AVOID] because [primary reason based on SEC data]."
+
+---
+
+### Step 4: Biggest Risk to This Thesis
+
+**Identify the single most important risk** from SEC filings.
+
+**Sources (from Agent 1 data):**
+- 10-K Risk Factors (Item 1A)
+- Debt analysis (high leverage = financial risk)
+- Industry headwinds (from MD&A)
+- Competitive threats (from Risk Factors)
+
+**Be specific (use SEC filing evidence):**
+- Not "competition" → "Amazon entering market (Risk Factors, 10-K 2025, p.18)"
+- Not "regulation" → "FDA approval risk for pipeline drug (Risk Factors, 10-K 2025, p.22)"
+- Not "debt" → "Franchisee bankruptcies (noted in 2025 10-K) could cascade into store closures"
+
+**1-2 paragraphs maximum. Cite the SEC filing source.**
+
+---
+
+### Step 5: Comparable Buffett Holdings
+
+**Which Berkshire Hathaway holding does this company most resemble?**
+
+**Current major Buffett holdings (for reference):**
+- Apple (AAPL) - Tech ecosystem, high margins, capital-light
+- American Express (AXP) - Payment network, brand moat
+- Coca-Cola (KO) - Beverage brand, global distribution
+- Chevron (CVX) - Energy, commodity
+- Bank of America (BAC) - Financial services
+
+**Answer (1 paragraph):**
+1. Which holding is most similar and why?
+2. Key similarities (business model, moat type, economics from SEC data)
+3. Key differences (strengths/weaknesses vs the comparable)
+
+**Base comparison on SEC filing data** (not external opinions).
+
+---
+
+## Output File
+
+Write your output to: `evaluations/PINS-run3/agent6.json`
+
+```json
+{
+  "agentId": "6",
+  "agentName": "Scorecard & Final Verdict",
+  "timestamp": "2026-03-22T07:00:00Z",
+  "data": {
+    "scorecard": {
+      "scores": {
+        "headers": ["Category", "Criteria", "Score", "Pass/Fail"],
+        "rows": [
+          ["Business Quality", "Simple & understandable", "9/10", "PASS"],
+          ["Business Quality", "Durable moat", "8/10", "PASS"],
+          ["Business Quality", "Consistent history", "10/10", "PASS"],
+          ["Business Quality", "Favorable prospects", "7/10", "PASS"],
+          ["Management", "Rational capital allocation", "7/10", "PASS"],
+          ["Management", "Honest & transparent", "9/10", "PASS"],
+          ["Management", "Resists imperative", "8/10", "PASS"],
+          ["Financial Health", "ROE >15%", "8/10", "PASS"],
+          ["Financial Health", "Strong margins", "9/10", "PASS"],
+          ["Financial Health", "Low debt", "5/10", "WARNING"],
+          ["Financial Health", "Consistent FCF", "8/10", "PASS"],
+          ["Financial Health", "Capital light", "10/10", "PASS"],
+          ["Valuation", "Margin of safety >30%", "0/10", "FAIL"],
+          ["**TOTAL**", "", "**98/130**", "75%"]
+        ]
+      },
+      "totalScore": 98,
+      "percentage": 75,
+      "breakdown": {
+        "businessQuality": "34/40 (85%)",
+        "managementQuality": "24/30 (80%)",
+        "financialHealth": "40/50 (80%)",
+        "valuation": "0/10 (0%)"
+      }
+    },
+    "finalVerdict": {
+      "overallScore": "98/130 (75%)",
+      "verdict": "AVOID",
+      "summary": "Company X is a high-quality business (98/130, 75%) with exceptional capital efficiency (34% ROA from 10-K), stable margins (12% net margin over 10 years per Income Statements), and a proven franchise model (20,600 stores per 10-K Item 1). However, aggressive debt-funded buybacks ($5B net debt, 4.7x EBITDA per 10-K Balance Sheet) create financial risk, especially with franchisee bankruptcies noted in the 2025 10-K Risk Factors. At $378, the stock is significantly overvalued with a -36% margin of safety (intrinsic value $278). Buffett would AVOID at this price despite loving the business quality, waiting for a 30%+ pullback to $270 or below.",
+      "biggestRisk": "Franchisee financial collapse triggers store closures and brand damage. The 2025 10-K Risk Factors (page 18) notes franchisee bankruptcies emerging in 2025-2026. If labor costs, food inflation, and third-party delivery competition continue squeezing franchisee margins (as discussed in MD&A), the company faces: (1) Slower store growth hurting royalty revenue, (2) Supply chain volume decline hurting margins, (3) Brand inconsistency from closures. With $5B net debt (per 10-K Balance Sheet) and limited financial flexibility, FCF could drop 40% in a severe downturn per sensitivity analysis, making the debt burden unsustainable.",
+      "comparable": "McDonald's (MCD) - Both are franchise royalty businesses with global scale, brand moats (per respective 10-Ks), and capital-light models (CapEx <15% of earnings per Cash Flow Statements). Key difference: McDonald's has stronger brand equity enabling premium pricing across dayparts (breakfast, lunch, dinner diversification per 10-K), and lower leverage (net debt ~2x EBITDA vs Company X's 4.7x per respective Balance Sheets). Company X offers higher growth (6% vs McDonald's 4% per respective MD&As) but with higher risk. Buffett owns McDonald's and would prefer it for balance sheet safety given the franchisee stress risks."
+    },
+    "company": "[from Agent 1]",
+    "ticker": "[from Agent 1]",
+    "totalScore": 98,
+    "verdict": "AVOID",
+    "marginOfSafety": "-36%",
+    "intrinsicValue": 278.00,
+    "currentPrice": 378.00,
+    "summary": "[one paragraph summary from finalVerdict]",
+    "biggestRisk": "[from finalVerdict]",
+    "comparable": "[from finalVerdict]"
+  }
+}
+```
+
+## Execution Instructions
+
+1. **Read input file** `evaluations/PINS-run3/merged-prev.json` (merged agents 1-5)
+2. **Extract all scores** from agents 2-5
+3. **Calculate total** (sum of 13 criteria)
+4. **Determine verdict** using decision tree
+5. **Write one-paragraph summary** (cite SEC sources)
+6. **Identify biggest risk** (from 10-K Risk Factors)
+7. **Compare to Buffett holding** (based on SEC data similarities)
+8. **Write JSON** to `evaluations/PINS-run3/agent6.json`
+9. **Print status** to stdout
+
+## Quality Checks
+
+Before writing output:
+- ✅ Total score = sum of all 13 individual scores
+- ✅ Percentage calculated correctly
+- ✅ Verdict matches decision tree logic
+- ✅ Summary cites specific SEC filings
+- ✅ Biggest risk from 10-K Risk Factors (cited)
+- ✅ Comparable uses SEC-based similarities
+- ✅ JSON is valid
+
+## Example Output Message
+
+```
+✅ Agent 6 (Scorecard & Verdict) complete
+📄 Output: evaluations/PINS-run3/agent6.json
+📊 Final Score: 98/130 (75%)
+🎯 Verdict: AVOID
+💰 Intrinsic Value: $278 vs Price: $378
+📉 Margin of Safety: -36% (overvalued)
+🔍 All analysis based on SEC filings processed by Agents 1-5
+```
+
+**Do NOT print JSON to stdout - write it to the file.**
