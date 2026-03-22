@@ -172,6 +172,13 @@ function renderHeader(data1, data6) {
     
     const verdictClass = (data6.verdict || '').toLowerCase().replace(/\s+/g, '-');
     
+    // Extract totalScoreOutOf from overallScore if missing (e.g., "77/130 (59.2%)" → 130)
+    let totalScoreOutOf = data6.totalScoreOutOf;
+    if (!totalScoreOutOf && data6.finalVerdict && data6.finalVerdict.overallScore) {
+        const match = data6.finalVerdict.overallScore.match(/\/(\d+)/);
+        if (match) totalScoreOutOf = match[1];
+    }
+    
     header.innerHTML = `
         <div class="company-title">
             <h1>${data1.company} (${data1.ticker})</h1>
@@ -180,7 +187,7 @@ function renderHeader(data1, data6) {
         <div class="company-meta">
             <span>📅 ${data1.analysisDate || 'N/A'}</span>
             <span>🏭 ${data1.industry || 'N/A'}</span>
-            <span>📊 ${data6.totalScore}/${data6.totalScoreOutOf}</span>
+            <span>📊 ${data6.totalScore}/${totalScoreOutOf || '?'}</span>
         </div>
         <div class="verdict-summary">
             <p>${data6.summary || ''}</p>

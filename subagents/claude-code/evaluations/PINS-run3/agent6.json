@@ -3,6 +3,7 @@
   "agentName": "Scorecard & Final Verdict",
   "timestamp": "2026-03-22T07:00:00Z",
   "data": {
+    "totalScoreOutOf": 130,
     "scorecard": {
       "scores": {
         "headers": ["Category", "Criteria", "Score", "Pass/Fail"],
