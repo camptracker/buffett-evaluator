@@ -15,6 +15,8 @@ mkdir -p ../../evaluations
 
 ## 2. Evaluate a Company
 
+### Option A: Deterministic Evaluation (Recommended)
+
 ```bash
 # Step 1: Create config for company
 cat > config.json << 'EOF'
@@ -25,7 +27,22 @@ cat > config.json << 'EOF'
 }
 EOF
 
-# Step 2: Run all 6 agents
+# Step 2: Run deterministic evaluation (runs twice, compares, retries if needed)
+./eval-deterministic.sh
+
+# This will:
+# - Run full evaluation twice
+# - Compare outputs for consistency
+# - Retry up to 5 times if mismatch
+# - Only succeed when two consecutive runs match
+```
+
+### Option B: Single Run (Faster, No Validation)
+
+```bash
+# Step 1: Create config (same as above)
+
+# Step 2: Run all 6 agents once
 ./run.sh
 
 # This will take 2-3 hours and create:
