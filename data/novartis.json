@@ -4,88 +4,300 @@
   "industry": "Pharmaceuticals - Major",
   "analysisDate": "March 20, 2026",
   "currentPrice": 148.19,
-  "intrinsicValue": 165.00,
+  "intrinsicValue": 165,
   "marginOfSafety": "+10%",
   "verdict": "HOLD / FAIR VALUE",
-  "score": 98,
+  "score": 108,
   "oneParagraphSummary": "Novartis is a Swiss pharmaceutical giant with exceptional financials: 31% ROE, 25% net margins, $12B+ annual FCF, and consistent profitability for 20+ years. The company has a strong pipeline of innovative drugs (oncology, immunology, cardiovascular), recently streamlined by spinning off Sandoz (generics) and Alcon (eye care) to focus on high-margin patented medicines. At $148, the stock trades near fair value with modest 10% margin of safety. While Buffett would admire the predictable earnings and dividend consistency (3.2% yield), he'd be concerned about patent cliffs, regulatory pricing pressure, and R&D risk. HOLD at current price, BUY on dip below $130.",
-  
   "financialData": {
     "eps": {
-      "headers": ["Year", "EPS ($)", "YoY Growth"],
+      "headers": [
+        "Year",
+        "EPS ($)",
+        "YoY Growth"
+      ],
       "rows": [
-        ["2025 (TTM)", "7.14", "+8.0%"],
-        ["2024", "6.61", "+12.4%"],
-        ["2023", "5.88", "+17.6%"],
-        ["2022", "5.00", "+5.3%"],
-        ["2021", "4.75", "+58.3%"],
-        ["2020", "3.00", "-40.0%"],
-        ["2019", "5.00", "+4.2%"],
-        ["2018", "4.80", "+20.0%"],
-        ["2017", "4.00", "+14.3%"],
-        ["2016", "3.50", "+16.7%"],
-        ["2015", "3.00", "+7.1%"],
-        ["2014", "2.80", "+12.0%"],
-        ["2013", "2.50", "+8.7%"],
-        ["2012", "2.30", "+9.5%"],
-        ["2011", "2.10", "+10.5%"],
-        ["2010", "1.90", "+11.8%"]
+        [
+          "2025 (TTM)",
+          "7.14",
+          "+8.0%"
+        ],
+        [
+          "2024",
+          "6.61",
+          "+12.4%"
+        ],
+        [
+          "2023",
+          "5.88",
+          "+17.6%"
+        ],
+        [
+          "2022",
+          "5.00",
+          "+5.3%"
+        ],
+        [
+          "2021",
+          "4.75",
+          "+58.3%"
+        ],
+        [
+          "2020",
+          "3.00",
+          "-40.0%"
+        ],
+        [
+          "2019",
+          "5.00",
+          "+4.2%"
+        ],
+        [
+          "2018",
+          "4.80",
+          "+20.0%"
+        ],
+        [
+          "2017",
+          "4.00",
+          "+14.3%"
+        ],
+        [
+          "2016",
+          "3.50",
+          "+16.7%"
+        ],
+        [
+          "2015",
+          "3.00",
+          "+7.1%"
+        ],
+        [
+          "2014",
+          "2.80",
+          "+12.0%"
+        ],
+        [
+          "2013",
+          "2.50",
+          "+8.7%"
+        ],
+        [
+          "2012",
+          "2.30",
+          "+9.5%"
+        ],
+        [
+          "2011",
+          "2.10",
+          "+10.5%"
+        ],
+        [
+          "2010",
+          "1.90",
+          "+11.8%"
+        ]
       ]
     },
     "fcf": {
-      "headers": ["Year", "FCF ($B)", "YoY Growth"],
+      "headers": [
+        "Year",
+        "FCF ($B)",
+        "YoY Growth"
+      ],
       "rows": [
-        ["2025 (TTM)", "12.12", "+5.6%"],
-        ["2024", "11.48", "+8.3%"],
-        ["2023", "10.60", "+12.8%"],
-        ["2022", "9.40", "+6.8%"],
-        ["2021", "8.80", "+29.4%"],
-        ["2020", "6.80", "-32.0%"],
-        ["2019", "10.00", "+8.7%"],
-        ["2018", "9.20", "+9.5%"],
-        ["2017", "8.40", "+7.7%"],
-        ["2016", "7.80", "+8.3%"],
-        ["2015", "7.20", "+9.1%"]
+        [
+          "2025 (TTM)",
+          "12.12",
+          "+5.6%"
+        ],
+        [
+          "2024",
+          "11.48",
+          "+8.3%"
+        ],
+        [
+          "2023",
+          "10.60",
+          "+12.8%"
+        ],
+        [
+          "2022",
+          "9.40",
+          "+6.8%"
+        ],
+        [
+          "2021",
+          "8.80",
+          "+29.4%"
+        ],
+        [
+          "2020",
+          "6.80",
+          "-32.0%"
+        ],
+        [
+          "2019",
+          "10.00",
+          "+8.7%"
+        ],
+        [
+          "2018",
+          "9.20",
+          "+9.5%"
+        ],
+        [
+          "2017",
+          "8.40",
+          "+7.7%"
+        ],
+        [
+          "2016",
+          "7.80",
+          "+8.3%"
+        ],
+        [
+          "2015",
+          "7.20",
+          "+9.1%"
+        ]
       ]
     },
     "roe": {
-      "headers": ["Year", "ROE %"],
+      "headers": [
+        "Year",
+        "ROE %"
+      ],
       "rows": [
-        ["2025 (TTM)", "30.81%"],
-        ["2024", "29.50%"],
-        ["2023", "27.80%"],
-        ["2022", "25.40%"],
-        ["2021", "23.90%"],
-        ["2020", "16.50%"],
-        ["2019", "24.20%"],
-        ["2018", "22.80%"],
-        ["2017", "21.50%"],
-        ["2016", "20.30%"]
+        [
+          "2025 (TTM)",
+          "30.81%"
+        ],
+        [
+          "2024",
+          "29.50%"
+        ],
+        [
+          "2023",
+          "27.80%"
+        ],
+        [
+          "2022",
+          "25.40%"
+        ],
+        [
+          "2021",
+          "23.90%"
+        ],
+        [
+          "2020",
+          "16.50%"
+        ],
+        [
+          "2019",
+          "24.20%"
+        ],
+        [
+          "2018",
+          "22.80%"
+        ],
+        [
+          "2017",
+          "21.50%"
+        ],
+        [
+          "2016",
+          "20.30%"
+        ]
       ]
     },
     "debt": {
-      "headers": ["Year", "Net Debt ($B)", "Net Income ($B)", "Years to Payoff"],
+      "headers": [
+        "Year",
+        "Net Debt ($B)",
+        "Net Income ($B)",
+        "Years to Payoff"
+      ],
       "rows": [
-        ["2025 (TTM)", "~24", "13.98", "1.7 years"],
-        ["2024", "~22", "13.20", "1.7 years"],
-        ["2023", "~20", "11.80", "1.7 years"],
-        ["2022", "~18", "10.00", "1.8 years"],
-        ["2021", "~16", "9.50", "1.7 years"]
+        [
+          "2025 (TTM)",
+          "~24",
+          "13.98",
+          "1.7 years"
+        ],
+        [
+          "2024",
+          "~22",
+          "13.20",
+          "1.7 years"
+        ],
+        [
+          "2023",
+          "~20",
+          "11.80",
+          "1.7 years"
+        ],
+        [
+          "2022",
+          "~18",
+          "10.00",
+          "1.8 years"
+        ],
+        [
+          "2021",
+          "~16",
+          "9.50",
+          "1.7 years"
+        ]
       ]
     },
     "margins": {
-      "headers": ["Year", "Gross %", "Operating %", "Net %"],
+      "headers": [
+        "Year",
+        "Gross %",
+        "Operating %",
+        "Net %"
+      ],
       "rows": [
-        ["2025 (TTM)", "73.5%", "29.2%", "24.7%"],
-        ["2024", "74.2%", "30.1%", "25.3%"],
-        ["2023", "73.8%", "29.5%", "24.8%"],
-        ["2022", "73.1%", "28.7%", "23.9%"],
-        ["2021", "72.8%", "27.9%", "22.5%"],
-        ["2020", "71.5%", "25.2%", "18.8%"]
+        [
+          "2025 (TTM)",
+          "73.5%",
+          "29.2%",
+          "24.7%"
+        ],
+        [
+          "2024",
+          "74.2%",
+          "30.1%",
+          "25.3%"
+        ],
+        [
+          "2023",
+          "73.8%",
+          "29.5%",
+          "24.8%"
+        ],
+        [
+          "2022",
+          "73.1%",
+          "28.7%",
+          "23.9%"
+        ],
+        [
+          "2021",
+          "72.8%",
+          "27.9%",
+          "22.5%"
+        ],
+        [
+          "2020",
+          "71.5%",
+          "25.2%",
+          "18.8%"
+        ]
       ]
     }
   },
-  
   "qualitativeAnalysis": {
     "moat": [
       "Primary Moat: PATENT PROTECTION + R&D SCALE + REGULATORY BARRIERS",
@@ -114,7 +326,6 @@
       "Novartis Position: #5-6 globally by revenue, leader in immunology and oncology"
     ]
   },
-  
   "businessQuality": {
     "criteria": [
       {
@@ -143,7 +354,6 @@
       }
     ]
   },
-  
   "managementQuality": {
     "criteria": [
       {
@@ -166,7 +376,6 @@
       }
     ]
   },
-  
   "financialHealth": {
     "criteria": [
       {
@@ -201,27 +410,85 @@
       }
     ]
   },
-  
   "intrinsicValueCalculation": {
     "inputs": {
-      "headers": ["Input", "Value", "Justification"],
+      "headers": [
+        "Input",
+        "Value",
+        "Justification"
+      ],
       "rows": [
-        ["Current FCF", "$12.12B", "TTM March 2026"],
-        ["Growth Rate (Yrs 1-10)", "6%", "Conservative: pharma industry growth, pipeline execution"],
-        ["Terminal Growth", "3%", "GDP + population growth"],
-        ["Discount Rate", "9%", "Lower than 10% due to defensive nature, consistent cash flows"],
-        ["Shares Outstanding", "1.93B", "Current (minimal buybacks)"]
+        [
+          "Current FCF",
+          "$12.12B",
+          "TTM March 2026"
+        ],
+        [
+          "Growth Rate (Yrs 1-10)",
+          "6%",
+          "Conservative: pharma industry growth, pipeline execution"
+        ],
+        [
+          "Terminal Growth",
+          "3%",
+          "GDP + population growth"
+        ],
+        [
+          "Discount Rate",
+          "9%",
+          "Lower than 10% due to defensive nature, consistent cash flows"
+        ],
+        [
+          "Shares Outstanding",
+          "1.93B",
+          "Current (minimal buybacks)"
+        ]
       ]
     },
     "projections": {
-      "headers": ["Year", "FCF ($B)", "Discount Factor", "Present Value ($B)"],
+      "headers": [
+        "Year",
+        "FCF ($B)",
+        "Discount Factor",
+        "Present Value ($B)"
+      ],
       "rows": [
-        ["1", "12.85", "÷ 1.09¹", "11.79"],
-        ["2", "13.62", "÷ 1.09²", "11.47"],
-        ["3", "14.44", "÷ 1.09³", "11.15"],
-        ["5", "16.22", "÷ 1.09⁵", "10.54"],
-        ["10", "21.72", "÷ 1.09¹⁰", "9.17"],
-        ["Sum", "", "", "108.20"]
+        [
+          "1",
+          "12.85",
+          "÷ 1.09¹",
+          "11.79"
+        ],
+        [
+          "2",
+          "13.62",
+          "÷ 1.09²",
+          "11.47"
+        ],
+        [
+          "3",
+          "14.44",
+          "÷ 1.09³",
+          "11.15"
+        ],
+        [
+          "5",
+          "16.22",
+          "÷ 1.09⁵",
+          "10.54"
+        ],
+        [
+          "10",
+          "21.72",
+          "÷ 1.09¹⁰",
+          "9.17"
+        ],
+        [
+          "Sum",
+          "",
+          "",
+          "108.20"
+        ]
       ]
     },
     "terminalValue": [
@@ -242,37 +509,134 @@
       "Conservative intrinsic value: $165/share"
     ],
     "scenarios": {
-      "headers": ["Scenario", "Assumptions", "Intrinsic Value", "Margin of Safety", "Buy?"],
+      "headers": [
+        "Scenario",
+        "Assumptions",
+        "Intrinsic Value",
+        "Margin of Safety",
+        "Buy?"
+      ],
       "rows": [
-        ["Base Case", "6% growth, 3% terminal", "$165", "+10% (fair value)", "MAYBE"],
-        ["Conservative", "4% growth, 2.5% terminal", "$135", "-10% (overvalued)", "NO"],
-        ["Optimistic", "8% growth, 3.5% terminal", "$200", "+26% (undervalued)", "YES"]
+        [
+          "Base Case",
+          "6% growth, 3% terminal",
+          "$165",
+          "+10% (fair value)",
+          "MAYBE"
+        ],
+        [
+          "Conservative",
+          "4% growth, 2.5% terminal",
+          "$135",
+          "-10% (overvalued)",
+          "NO"
+        ],
+        [
+          "Optimistic",
+          "8% growth, 3.5% terminal",
+          "$200",
+          "+26% (undervalued)",
+          "YES"
+        ]
       ]
     }
   },
-  
   "scorecard": {
     "scores": {
-      "headers": ["Category", "Criteria", "Score", "Pass/Fail"],
+      "headers": [
+        "Category",
+        "Criteria",
+        "Score",
+        "Pass/Fail"
+      ],
       "rows": [
-        ["Business Quality", "Simple and understandable", "7/10", "PASS"],
-        ["Business Quality", "Durable competitive moat", "8/10", "PASS"],
-        ["Business Quality", "Consistent operating history", "10/10", "PASS"],
-        ["Business Quality", "Favorable long-term prospects", "8/10", "PASS"],
-        ["Management", "Rational capital allocation", "9/10", "PASS"],
-        ["Management", "Honest and transparent", "9/10", "PASS"],
-        ["Management", "Resists institutional imperative", "8/10", "PASS"],
-        ["Financial Health", "ROE >15%", "10/10", "PASS"],
-        ["Financial Health", "Strong profit margins", "10/10", "PASS"],
-        ["Financial Health", "Low debt levels", "8/10", "PASS"],
-        ["Financial Health", "Consistent FCF", "9/10", "PASS"],
-        ["Financial Health", "Capital light business", "8/10", "PASS"],
-        ["Valuation", "Margin of safety >30%", "4/10", "WARNING"],
-        ["**TOTAL**", "", "**98/130**", "75%"]
+        [
+          "Business Quality",
+          "Simple and understandable",
+          "7/10",
+          "PASS"
+        ],
+        [
+          "Business Quality",
+          "Durable competitive moat",
+          "8/10",
+          "PASS"
+        ],
+        [
+          "Business Quality",
+          "Consistent operating history",
+          "10/10",
+          "PASS"
+        ],
+        [
+          "Business Quality",
+          "Favorable long-term prospects",
+          "8/10",
+          "PASS"
+        ],
+        [
+          "Management",
+          "Rational capital allocation",
+          "9/10",
+          "PASS"
+        ],
+        [
+          "Management",
+          "Honest and transparent",
+          "9/10",
+          "PASS"
+        ],
+        [
+          "Management",
+          "Resists institutional imperative",
+          "8/10",
+          "PASS"
+        ],
+        [
+          "Financial Health",
+          "ROE >15%",
+          "10/10",
+          "PASS"
+        ],
+        [
+          "Financial Health",
+          "Strong profit margins",
+          "10/10",
+          "PASS"
+        ],
+        [
+          "Financial Health",
+          "Low debt levels",
+          "8/10",
+          "PASS"
+        ],
+        [
+          "Financial Health",
+          "Consistent FCF",
+          "9/10",
+          "PASS"
+        ],
+        [
+          "Financial Health",
+          "Capital light business",
+          "8/10",
+          "PASS"
+        ],
+        [
+          "Valuation",
+          "Margin of safety >30%",
+          "4/10",
+          "WARNING"
+        ],
+        [
+          "**TOTAL**",
+          "",
+          "**108/130**",
+          "83%"
+        ]
       ]
     }
   },
-  
   "finalVerdict": {
     "summary": "Novartis is a blue-chip pharmaceutical company with exceptional financial quality: 31% ROE, 25% net margins, $12B+ FCF, 20+ years of profitability, and a 27-year dividend growth streak (3.2% yield). The business has a wide moat from patent protection, R&D scale ($11B+/year), and regulatory expertise. Management is competent (CEO Vas Narasimhan well-regarded), transparent, and strategically focused (spun off Sandoz/Alcon to concentrate on high-margin innovative drugs). At $148, the stock trades near fair value with ~10% margin of safety. Buffett would appreciate the consistency and dividends but worry about patent cliffs (Cosentyx 2029-2031), R&D execution risk, and government pricing pressure (IRA drug negotiations). HOLD at current price, BUY on dip below $130 (30%+ margin of safety).",
     "biggestRisk": "Patent cliff cascade + pipeline failures = FCF collapse. Novartis' top 5 drugs (Entresto, Cosentyx, Kisqali, Pluvicto, Promacta) represent ~50% of revenue. Cosentyx (immunology blockbuster, $5B+ annual sales) faces biosimilar competition starting 2029-2031. If: (1) Biosimilars take 50%+ market share (typical), (2) Pipeline drugs in Phase 3 trials fail (30-40% failure rate), (3) New drug launches underperform, then Novartis could see FCF drop 20-30% by 2030. With $24B net debt (increasing to ~$35B post-M&A), lower FCF would pressure dividend sustainability and force strategic asset sales. This is exactly what happened to Pfizer post-Lipitor patent expiration (2011-2015).",

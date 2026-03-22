@@ -4,87 +4,307 @@
   "industry": "Restaurant - Pizza Franchise",
   "analysisDate": "March 20, 2026",
   "currentPrice": 377.79,
-  "intrinsicValue": 425.00,
+  "intrinsicValue": 425,
   "marginOfSafety": "+11%",
   "verdict": "HOLD / WATCH",
-  "score": 95,
+  "score": 105,
   "oneParagraphSummary": "Domino's is a franchise royalty machine with exceptional economics: asset-light model, 35% ROA, 12% net margins, and consistent FCF generation. The business has grown revenue at 7.8% CAGR for 15 years while returning massive capital to shareholders via dividends and buybacks. However, the company is heavily leveraged (net debt ~$5B) to fund buybacks, creating financial risk. At $378, the stock trades 11% below intrinsic value with modest margin of safety. While the business quality is excellent (Buffett would love the franchise model), the excessive debt and fair valuation make this a HOLD rather than strong BUY.",
-  
   "financialData": {
     "eps": {
-      "headers": ["Year", "EPS ($)", "YoY Growth"],
+      "headers": [
+        "Year",
+        "EPS ($)",
+        "YoY Growth"
+      ],
       "rows": [
-        ["2025 (TTM)", "17.56", "+5.2%"],
-        ["2024", "16.69", "+11.4%"],
-        ["2023", "14.98", "+20.5%"],
-        ["2022", "12.43", "+23.9%"],
-        ["2021", "10.03", "+45.8%"],
-        ["2020", "6.88", "-15.4%"],
-        ["2019", "8.13", "+18.9%"],
-        ["2018", "6.84", "+26.8%"],
-        ["2017", "5.39", "+33.8%"],
-        ["2016", "4.03", "+35.2%"],
-        ["2015", "2.98", "+28.4%"],
-        ["2014", "2.32", "+29.8%"],
-        ["2013", "1.79", "+34.6%"],
-        ["2012", "1.33", "+28.8%"],
-        ["2011", "1.03", "+32.1%"],
-        ["2010", "0.78", "+44.4%"]
+        [
+          "2025 (TTM)",
+          "17.56",
+          "+5.2%"
+        ],
+        [
+          "2024",
+          "16.69",
+          "+11.4%"
+        ],
+        [
+          "2023",
+          "14.98",
+          "+20.5%"
+        ],
+        [
+          "2022",
+          "12.43",
+          "+23.9%"
+        ],
+        [
+          "2021",
+          "10.03",
+          "+45.8%"
+        ],
+        [
+          "2020",
+          "6.88",
+          "-15.4%"
+        ],
+        [
+          "2019",
+          "8.13",
+          "+18.9%"
+        ],
+        [
+          "2018",
+          "6.84",
+          "+26.8%"
+        ],
+        [
+          "2017",
+          "5.39",
+          "+33.8%"
+        ],
+        [
+          "2016",
+          "4.03",
+          "+35.2%"
+        ],
+        [
+          "2015",
+          "2.98",
+          "+28.4%"
+        ],
+        [
+          "2014",
+          "2.32",
+          "+29.8%"
+        ],
+        [
+          "2013",
+          "1.79",
+          "+34.6%"
+        ],
+        [
+          "2012",
+          "1.33",
+          "+28.8%"
+        ],
+        [
+          "2011",
+          "1.03",
+          "+32.1%"
+        ],
+        [
+          "2010",
+          "0.78",
+          "+44.4%"
+        ]
       ]
     },
     "fcf": {
-      "headers": ["Year", "FCF ($M)", "YoY Growth"],
+      "headers": [
+        "Year",
+        "FCF ($M)",
+        "YoY Growth"
+      ],
       "rows": [
-        ["2025 (TTM)", "509", "-12.3%"],
-        ["2024", "580", "+8.4%"],
-        ["2023", "535", "+15.5%"],
-        ["2022", "463", "+18.9%"],
-        ["2021", "389", "+42.7%"],
-        ["2020", "273", "-28.4%"],
-        ["2019", "381", "+12.7%"],
-        ["2018", "338", "+16.6%"],
-        ["2017", "290", "+14.2%"],
-        ["2016", "254", "+22.1%"],
-        ["2015", "208", "+18.9%"]
+        [
+          "2025 (TTM)",
+          "509",
+          "-12.3%"
+        ],
+        [
+          "2024",
+          "580",
+          "+8.4%"
+        ],
+        [
+          "2023",
+          "535",
+          "+15.5%"
+        ],
+        [
+          "2022",
+          "463",
+          "+18.9%"
+        ],
+        [
+          "2021",
+          "389",
+          "+42.7%"
+        ],
+        [
+          "2020",
+          "273",
+          "-28.4%"
+        ],
+        [
+          "2019",
+          "381",
+          "+12.7%"
+        ],
+        [
+          "2018",
+          "338",
+          "+16.6%"
+        ],
+        [
+          "2017",
+          "290",
+          "+14.2%"
+        ],
+        [
+          "2016",
+          "254",
+          "+22.1%"
+        ],
+        [
+          "2015",
+          "208",
+          "+18.9%"
+        ]
       ]
     },
     "roe": {
-      "headers": ["Year", "ROE %", "Note"],
+      "headers": [
+        "Year",
+        "ROE %",
+        "Note"
+      ],
       "rows": [
-        ["2025 (TTM)", "Negative", "Shareholder deficit from buybacks"],
-        ["2024", "Negative", "Shareholder deficit"],
-        ["2023", "Negative", "Shareholder deficit"],
-        ["2022", "Negative", "Shareholder deficit"],
-        ["2021", "Negative", "Shareholder deficit"],
-        ["2020", "Negative", "Shareholder deficit"],
-        ["ROA Instead", "34.56%", "More meaningful for Domino's"],
-        ["Avg ROA (10yr)", "~32%", "Consistently high"]
+        [
+          "2025 (TTM)",
+          "Negative",
+          "Shareholder deficit from buybacks"
+        ],
+        [
+          "2024",
+          "Negative",
+          "Shareholder deficit"
+        ],
+        [
+          "2023",
+          "Negative",
+          "Shareholder deficit"
+        ],
+        [
+          "2022",
+          "Negative",
+          "Shareholder deficit"
+        ],
+        [
+          "2021",
+          "Negative",
+          "Shareholder deficit"
+        ],
+        [
+          "2020",
+          "Negative",
+          "Shareholder deficit"
+        ],
+        [
+          "ROA Instead",
+          "34.56%",
+          "More meaningful for Domino's"
+        ],
+        [
+          "Avg ROA (10yr)",
+          "~32%",
+          "Consistently high"
+        ]
       ]
     },
     "debt": {
-      "headers": ["Year", "Net Debt ($B)", "EBITDA ($M)", "Net Debt/EBITDA"],
+      "headers": [
+        "Year",
+        "Net Debt ($B)",
+        "EBITDA ($M)",
+        "Net Debt/EBITDA"
+      ],
       "rows": [
-        ["2025 (TTM)", "~5.0", "1,055", "4.7x"],
-        ["2024", "~4.8", "1,020", "4.7x"],
-        ["2023", "~4.5", "945", "4.8x"],
-        ["2022", "~4.2", "880", "4.8x"],
-        ["2021", "~4.5", "775", "5.8x"],
-        ["2020", "~4.3", "695", "6.2x"]
+        [
+          "2025 (TTM)",
+          "~5.0",
+          "1,055",
+          "4.7x"
+        ],
+        [
+          "2024",
+          "~4.8",
+          "1,020",
+          "4.7x"
+        ],
+        [
+          "2023",
+          "~4.5",
+          "945",
+          "4.8x"
+        ],
+        [
+          "2022",
+          "~4.2",
+          "880",
+          "4.8x"
+        ],
+        [
+          "2021",
+          "~4.5",
+          "775",
+          "5.8x"
+        ],
+        [
+          "2020",
+          "~4.3",
+          "695",
+          "6.2x"
+        ]
       ]
     },
     "margins": {
-      "headers": ["Year", "Gross %", "Operating %", "Net %"],
+      "headers": [
+        "Year",
+        "Gross %",
+        "Operating %",
+        "Net %"
+      ],
       "rows": [
-        ["2025 (TTM)", "37.2%", "18.5%", "12.2%"],
-        ["2024", "37.8%", "19.2%", "12.8%"],
-        ["2023", "37.5%", "18.8%", "12.3%"],
-        ["2022", "37.1%", "18.1%", "11.7%"],
-        ["2021", "37.9%", "17.5%", "10.9%"],
-        ["2020", "38.2%", "16.8%", "9.2%"]
+        [
+          "2025 (TTM)",
+          "37.2%",
+          "18.5%",
+          "12.2%"
+        ],
+        [
+          "2024",
+          "37.8%",
+          "19.2%",
+          "12.8%"
+        ],
+        [
+          "2023",
+          "37.5%",
+          "18.8%",
+          "12.3%"
+        ],
+        [
+          "2022",
+          "37.1%",
+          "18.1%",
+          "11.7%"
+        ],
+        [
+          "2021",
+          "37.9%",
+          "17.5%",
+          "10.9%"
+        ],
+        [
+          "2020",
+          "38.2%",
+          "16.8%",
+          "9.2%"
+        ]
       ]
     }
   },
-  
   "qualitativeAnalysis": {
     "moat": [
       "Primary Moat: FRANCHISE NETWORK + BRAND + DIGITAL PLATFORM",
@@ -113,7 +333,6 @@
       "Competitive Dynamics: Domino's wins on speed + tech, loses on quality perception"
     ]
   },
-  
   "businessQuality": {
     "criteria": [
       {
@@ -142,7 +361,6 @@
       }
     ]
   },
-  
   "managementQuality": {
     "criteria": [
       {
@@ -165,7 +383,6 @@
       }
     ]
   },
-  
   "financialHealth": {
     "criteria": [
       {
@@ -200,27 +417,85 @@
       }
     ]
   },
-  
   "intrinsicValueCalculation": {
     "inputs": {
-      "headers": ["Input", "Value", "Justification"],
+      "headers": [
+        "Input",
+        "Value",
+        "Justification"
+      ],
       "rows": [
-        ["Current FCF", "$509M", "TTM March 2026"],
-        ["Growth Rate (Yrs 1-10)", "7%", "Conservative: Below historical 10% due to maturity"],
-        ["Terminal Growth", "3%", "GDP + population growth"],
-        ["Discount Rate", "10%", "Buffett's standard rate"],
-        ["Shares Outstanding", "33.6M", "Current (heavily bought back)"]
+        [
+          "Current FCF",
+          "$509M",
+          "TTM March 2026"
+        ],
+        [
+          "Growth Rate (Yrs 1-10)",
+          "7%",
+          "Conservative: Below historical 10% due to maturity"
+        ],
+        [
+          "Terminal Growth",
+          "3%",
+          "GDP + population growth"
+        ],
+        [
+          "Discount Rate",
+          "10%",
+          "Buffett's standard rate"
+        ],
+        [
+          "Shares Outstanding",
+          "33.6M",
+          "Current (heavily bought back)"
+        ]
       ]
     },
     "projections": {
-      "headers": ["Year", "FCF ($M)", "Discount Factor", "Present Value ($M)"],
+      "headers": [
+        "Year",
+        "FCF ($M)",
+        "Discount Factor",
+        "Present Value ($M)"
+      ],
       "rows": [
-        ["1", "545", "÷ 1.10¹", "495"],
-        ["2", "583", "÷ 1.10²", "482"],
-        ["3", "623", "÷ 1.10³", "468"],
-        ["5", "714", "÷ 1.10⁵", "443"],
-        ["10", "1,002", "÷ 1.10¹⁰", "386"],
-        ["Sum", "", "", "4,685"]
+        [
+          "1",
+          "545",
+          "÷ 1.10¹",
+          "495"
+        ],
+        [
+          "2",
+          "583",
+          "÷ 1.10²",
+          "482"
+        ],
+        [
+          "3",
+          "623",
+          "÷ 1.10³",
+          "468"
+        ],
+        [
+          "5",
+          "714",
+          "÷ 1.10⁵",
+          "443"
+        ],
+        [
+          "10",
+          "1,002",
+          "÷ 1.10¹⁰",
+          "386"
+        ],
+        [
+          "Sum",
+          "",
+          "",
+          "4,685"
+        ]
       ]
     },
     "terminalValue": [
@@ -246,37 +521,134 @@
       "Conservative intrinsic value: $425/share"
     ],
     "scenarios": {
-      "headers": ["Scenario", "Assumptions", "Intrinsic Value", "Margin of Safety", "Buy?"],
+      "headers": [
+        "Scenario",
+        "Assumptions",
+        "Intrinsic Value",
+        "Margin of Safety",
+        "Buy?"
+      ],
       "rows": [
-        ["Base Case", "7% growth, 3% terminal", "$425", "+11% (fair value)", "MAYBE"],
-        ["Conservative", "5% growth, 2.5% terminal", "$350", "-8% (overvalued)", "NO"],
-        ["Optimistic", "9% growth, 3.5% terminal", "$520", "+27% (undervalued)", "YES"]
+        [
+          "Base Case",
+          "7% growth, 3% terminal",
+          "$425",
+          "+11% (fair value)",
+          "MAYBE"
+        ],
+        [
+          "Conservative",
+          "5% growth, 2.5% terminal",
+          "$350",
+          "-8% (overvalued)",
+          "NO"
+        ],
+        [
+          "Optimistic",
+          "9% growth, 3.5% terminal",
+          "$520",
+          "+27% (undervalued)",
+          "YES"
+        ]
       ]
     }
   },
-  
   "scorecard": {
     "scores": {
-      "headers": ["Category", "Criteria", "Score", "Pass/Fail"],
+      "headers": [
+        "Category",
+        "Criteria",
+        "Score",
+        "Pass/Fail"
+      ],
       "rows": [
-        ["Business Quality", "Simple and understandable", "9/10", "PASS"],
-        ["Business Quality", "Durable competitive moat", "8/10", "PASS"],
-        ["Business Quality", "Consistent operating history", "10/10", "PASS"],
-        ["Business Quality", "Favorable long-term prospects", "8/10", "PASS"],
-        ["Management", "Rational capital allocation", "7/10", "PASS"],
-        ["Management", "Honest and transparent", "9/10", "PASS"],
-        ["Management", "Resists institutional imperative", "8/10", "PASS"],
-        ["Financial Health", "ROE >15% (use ROA)", "8/10", "PASS"],
-        ["Financial Health", "Strong profit margins", "9/10", "PASS"],
-        ["Financial Health", "Low debt levels", "5/10", "WARNING"],
-        ["Financial Health", "Consistent FCF", "9/10", "PASS"],
-        ["Financial Health", "Capital light business", "10/10", "PASS"],
-        ["Valuation", "Margin of safety >30%", "5/10", "WARNING"],
-        ["**TOTAL**", "", "**95/130**", "73%"]
+        [
+          "Business Quality",
+          "Simple and understandable",
+          "9/10",
+          "PASS"
+        ],
+        [
+          "Business Quality",
+          "Durable competitive moat",
+          "8/10",
+          "PASS"
+        ],
+        [
+          "Business Quality",
+          "Consistent operating history",
+          "10/10",
+          "PASS"
+        ],
+        [
+          "Business Quality",
+          "Favorable long-term prospects",
+          "8/10",
+          "PASS"
+        ],
+        [
+          "Management",
+          "Rational capital allocation",
+          "7/10",
+          "PASS"
+        ],
+        [
+          "Management",
+          "Honest and transparent",
+          "9/10",
+          "PASS"
+        ],
+        [
+          "Management",
+          "Resists institutional imperative",
+          "8/10",
+          "PASS"
+        ],
+        [
+          "Financial Health",
+          "ROE >15% (use ROA)",
+          "8/10",
+          "PASS"
+        ],
+        [
+          "Financial Health",
+          "Strong profit margins",
+          "9/10",
+          "PASS"
+        ],
+        [
+          "Financial Health",
+          "Low debt levels",
+          "5/10",
+          "WARNING"
+        ],
+        [
+          "Financial Health",
+          "Consistent FCF",
+          "9/10",
+          "PASS"
+        ],
+        [
+          "Financial Health",
+          "Capital light business",
+          "10/10",
+          "PASS"
+        ],
+        [
+          "Valuation",
+          "Margin of safety >30%",
+          "5/10",
+          "WARNING"
+        ],
+        [
+          "**TOTAL**",
+          "",
+          "**105/130**",
+          "81%"
+        ]
       ]
     }
   },
-  
   "finalVerdict": {
     "summary": "Domino's is a textbook 'royalty business' that Buffett would admire: capital-light franchise model, wide moat from scale and brand, 15+ years of consistent profitability (22% EPS CAGR), and excellent ROA (35%). Management is competent and transparent. However, the company has levered up aggressively (net debt $5B, 4.7x EBITDA) to fund shareholder returns, creating financial risk. At $378, the stock trades near fair value with only 11% margin of safety in base case. Buffett would likely PASS due to excessive leverage, but modern value investors may find the franchise economics compelling at current price. HOLD/WATCH - great business, fair price, but debt is concerning.",
     "biggestRisk": "Franchisee financial distress cascades into store closures and brand damage. Recent reports mention franchisee bankruptcies (2025-2026). If labor costs, food inflation, and third-party delivery competition squeeze franchisee margins further, Domino's could face: (1) Slower store growth (hurts royalty revenue), (2) Supply chain volume decline (hurts margin), (3) Brand perception damage from inconsistent quality. With $5B net debt, Domino's has limited financial flexibility if franchisee crisis accelerates. FCF could drop 30-40% in a severe downturn, making debt burden unsustainable.",

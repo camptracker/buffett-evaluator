@@ -4,68 +4,201 @@
   "industry": "Digital Advertising / Social Media",
   "analysisDate": "March 20, 2026",
   "currentPrice": 18.66,
-  "intrinsicValue": 29.80,
+  "intrinsicValue": 29.8,
   "marginOfSafety": "+37%",
   "verdict": "BUY / WATCH",
-  "score": 88,
+  "score": 83,
   "oneParagraphSummary": "Pinterest has a pristine balance sheet (zero net debt, $2.5B cash), improving profitability (10% net margin, $1B+ FCF), and trades at a 37% discount to intrinsic value at $18.66/share. However, it fails Buffett's most critical test: only 5 years of profitability (vs required 10-20 years), user growth stalled at 500M MAUs, and faces intense competition from TikTok/Google Lens. Elliott Management's $1B investment and activist pressure could accelerate value realization.",
-  
   "financialData": {
     "eps": {
-      "headers": ["Year", "EPS ($)", "YoY Growth"],
+      "headers": [
+        "Year",
+        "EPS ($)",
+        "YoY Growth"
+      ],
       "rows": [
-        ["2025 (TTM)", "0.61", "-67.5%"],
-        ["2024", "1.88", "+25.3%"],
-        ["2023", "1.50", "+78.6%"],
-        ["2022", "0.84", "-32.8%"],
-        ["2021", "1.25", "+108.3%"],
-        ["2020", "0.60", "+400%"],
-        ["2019", "0.12", "IPO year"]
+        [
+          "2025 (TTM)",
+          "0.61",
+          "-67.5%"
+        ],
+        [
+          "2024",
+          "1.88",
+          "+25.3%"
+        ],
+        [
+          "2023",
+          "1.50",
+          "+78.6%"
+        ],
+        [
+          "2022",
+          "0.84",
+          "-32.8%"
+        ],
+        [
+          "2021",
+          "1.25",
+          "+108.3%"
+        ],
+        [
+          "2020",
+          "0.60",
+          "+400%"
+        ],
+        [
+          "2019",
+          "0.12",
+          "IPO year"
+        ]
       ]
     },
     "fcf": {
-      "headers": ["Year", "FCF ($M)", "YoY Growth"],
+      "headers": [
+        "Year",
+        "FCF ($M)",
+        "YoY Growth"
+      ],
       "rows": [
-        ["2025 (TTM)", "1,020", "-28.4%"],
-        ["2024", "1,425", "+18.3%"],
-        ["2023", "1,204", "+64.1%"],
-        ["2022", "734", "-26.5%"],
-        ["2021", "999", "+128.8%"],
-        ["2020", "437", "+387%"],
-        ["2019", "-90", "Negative"]
+        [
+          "2025 (TTM)",
+          "1,020",
+          "-28.4%"
+        ],
+        [
+          "2024",
+          "1,425",
+          "+18.3%"
+        ],
+        [
+          "2023",
+          "1,204",
+          "+64.1%"
+        ],
+        [
+          "2022",
+          "734",
+          "-26.5%"
+        ],
+        [
+          "2021",
+          "999",
+          "+128.8%"
+        ],
+        [
+          "2020",
+          "437",
+          "+387%"
+        ],
+        [
+          "2019",
+          "-90",
+          "Negative"
+        ]
       ]
     },
     "roe": {
-      "headers": ["Year", "ROE %"],
+      "headers": [
+        "Year",
+        "ROE %"
+      ],
       "rows": [
-        ["2025 (TTM)", "8.78%"],
-        ["2024", "17.2%"],
-        ["2023", "14.8%"],
-        ["2022", "8.3%"],
-        ["2021", "13.7%"],
-        ["2020", "6.9%"]
+        [
+          "2025 (TTM)",
+          "8.78%"
+        ],
+        [
+          "2024",
+          "17.2%"
+        ],
+        [
+          "2023",
+          "14.8%"
+        ],
+        [
+          "2022",
+          "8.3%"
+        ],
+        [
+          "2021",
+          "13.7%"
+        ],
+        [
+          "2020",
+          "6.9%"
+        ]
       ]
     },
     "debt": {
-      "headers": ["Year", "Long Term Debt ($M)", "Cash ($M)", "Net Debt"],
+      "headers": [
+        "Year",
+        "Long Term Debt ($M)",
+        "Cash ($M)",
+        "Net Debt"
+      ],
       "rows": [
-        ["2025 (TTM)", "136", "2,470", "Net Cash: $2.33B"],
-        ["2024", "0", "2,100", "Net Cash: $2.10B"],
-        ["2023", "0", "1,850", "Net Cash: $1.85B"],
-        ["2022", "0", "1,680", "Net Cash: $1.68B"]
+        [
+          "2025 (TTM)",
+          "136",
+          "2,470",
+          "Net Cash: $2.33B"
+        ],
+        [
+          "2024",
+          "0",
+          "2,100",
+          "Net Cash: $2.10B"
+        ],
+        [
+          "2023",
+          "0",
+          "1,850",
+          "Net Cash: $1.85B"
+        ],
+        [
+          "2022",
+          "0",
+          "1,680",
+          "Net Cash: $1.68B"
+        ]
       ]
     },
     "margins": {
-      "headers": ["Year", "Gross %", "Operating %", "Net %"],
+      "headers": [
+        "Year",
+        "Gross %",
+        "Operating %",
+        "Net %"
+      ],
       "rows": [
-        ["2025 (TTM)", "77.8%", "12.5%", "9.87%"],
-        ["2024", "79.5%", "25.8%", "33.9%"],
-        ["2023", "78.2%", "20.7%", "26.7%"],
-        ["2022", "78.9%", "11.4%", "15.0%"]
+        [
+          "2025 (TTM)",
+          "77.8%",
+          "12.5%",
+          "9.87%"
+        ],
+        [
+          "2024",
+          "79.5%",
+          "25.8%",
+          "33.9%"
+        ],
+        [
+          "2023",
+          "78.2%",
+          "20.7%",
+          "26.7%"
+        ],
+        [
+          "2022",
+          "78.9%",
+          "11.4%",
+          "15.0%"
+        ]
       ]
     }
   },
-  
   "qualitativeAnalysis": {
     "moat": [
       "Primary Moat: DATA + WEAK NETWORK EFFECTS",
@@ -91,7 +224,6 @@
       "Tailwinds: E-commerce recovery, mobile dominance, creator economy"
     ]
   },
-  
   "businessQuality": {
     "criteria": [
       {
@@ -120,7 +252,6 @@
       }
     ]
   },
-  
   "managementQuality": {
     "criteria": [
       {
@@ -143,7 +274,6 @@
       }
     ]
   },
-  
   "financialHealth": {
     "criteria": [
       {
@@ -178,27 +308,85 @@
       }
     ]
   },
-  
   "intrinsicValueCalculation": {
     "inputs": {
-      "headers": ["Input", "Value", "Justification"],
+      "headers": [
+        "Input",
+        "Value",
+        "Justification"
+      ],
       "rows": [
-        ["Current FCF", "$1,020M", "TTM actual (March 2026)"],
-        ["Growth Rate (Yrs 1-10)", "8%", "Conservative: below historical due to margin compression"],
-        ["Terminal Growth", "2.5%", "Mature tech, GDP-level"],
-        ["Discount Rate", "10%", "Buffett's standard rate"],
-        ["Shares Outstanding", "665M", "Current share count (12.4B mkt cap / $18.66)"]
+        [
+          "Current FCF",
+          "$1,020M",
+          "TTM actual (March 2026)"
+        ],
+        [
+          "Growth Rate (Yrs 1-10)",
+          "8%",
+          "Conservative: below historical due to margin compression"
+        ],
+        [
+          "Terminal Growth",
+          "2.5%",
+          "Mature tech, GDP-level"
+        ],
+        [
+          "Discount Rate",
+          "10%",
+          "Buffett's standard rate"
+        ],
+        [
+          "Shares Outstanding",
+          "665M",
+          "Current share count (12.4B mkt cap / $18.66)"
+        ]
       ]
     },
     "projections": {
-      "headers": ["Year", "FCF ($M)", "Discount Factor", "Present Value ($M)"],
+      "headers": [
+        "Year",
+        "FCF ($M)",
+        "Discount Factor",
+        "Present Value ($M)"
+      ],
       "rows": [
-        ["1", "1,102", "÷ 1.10¹", "1,002"],
-        ["2", "1,190", "÷ 1.10²", "983"],
-        ["3", "1,285", "÷ 1.10³", "965"],
-        ["5", "1,499", "÷ 1.10⁵", "931"],
-        ["10", "2,199", "÷ 1.10¹⁰", "847"],
-        ["Sum", "", "", "9,125"]
+        [
+          "1",
+          "1,102",
+          "÷ 1.10¹",
+          "1,002"
+        ],
+        [
+          "2",
+          "1,190",
+          "÷ 1.10²",
+          "983"
+        ],
+        [
+          "3",
+          "1,285",
+          "÷ 1.10³",
+          "965"
+        ],
+        [
+          "5",
+          "1,499",
+          "÷ 1.10⁵",
+          "931"
+        ],
+        [
+          "10",
+          "2,199",
+          "÷ 1.10¹⁰",
+          "847"
+        ],
+        [
+          "Sum",
+          "",
+          "",
+          "9,125"
+        ]
       ]
     },
     "terminalValue": [
@@ -216,37 +404,134 @@
       "Conservative Adjustment (margin risk): 14% haircut → $29.80/share"
     ],
     "scenarios": {
-      "headers": ["Scenario", "Assumptions", "Intrinsic Value", "Margin of Safety", "Buy?"],
+      "headers": [
+        "Scenario",
+        "Assumptions",
+        "Intrinsic Value",
+        "Margin of Safety",
+        "Buy?"
+      ],
       "rows": [
-        ["Base Case", "8% growth, 2.5% terminal", "$29.80", "+37% (undervalued)", "YES"],
-        ["Conservative", "5% growth, 2% terminal", "$22.50", "+17% (fair)", "MAYBE"],
-        ["Optimistic", "12% growth, 3% terminal", "$42.10", "+56% (undervalued)", "YES"]
+        [
+          "Base Case",
+          "8% growth, 2.5% terminal",
+          "$29.80",
+          "+37% (undervalued)",
+          "YES"
+        ],
+        [
+          "Conservative",
+          "5% growth, 2% terminal",
+          "$22.50",
+          "+17% (fair)",
+          "MAYBE"
+        ],
+        [
+          "Optimistic",
+          "12% growth, 3% terminal",
+          "$42.10",
+          "+56% (undervalued)",
+          "YES"
+        ]
       ]
     }
   },
-  
   "scorecard": {
     "scores": {
-      "headers": ["Category", "Criteria", "Score", "Pass/Fail"],
+      "headers": [
+        "Category",
+        "Criteria",
+        "Score",
+        "Pass/Fail"
+      ],
       "rows": [
-        ["Business Quality", "Simple and understandable", "7/10", "PASS"],
-        ["Business Quality", "Durable competitive moat", "5/10", "PASS"],
-        ["Business Quality", "Consistent operating history", "3/10", "FAIL"],
-        ["Business Quality", "Favorable long-term prospects", "5/10", "WARNING"],
-        ["Management", "Rational capital allocation", "7/10", "PASS"],
-        ["Management", "Honest and transparent", "7/10", "PASS"],
-        ["Management", "Resists institutional imperative", "6/10", "PASS"],
-        ["Financial Health", "ROE >15%", "4/10", "FAIL"],
-        ["Financial Health", "Strong profit margins", "6/10", "WARNING"],
-        ["Financial Health", "Low debt levels", "10/10", "PASS"],
-        ["Financial Health", "Consistent FCF", "6/10", "WARNING"],
-        ["Financial Health", "Capital light business", "9/10", "PASS"],
-        ["Valuation", "Margin of safety >30%", "8/10", "PASS"],
-        ["**TOTAL**", "", "**88/130**", "68%"]
+        [
+          "Business Quality",
+          "Simple and understandable",
+          "7/10",
+          "PASS"
+        ],
+        [
+          "Business Quality",
+          "Durable competitive moat",
+          "5/10",
+          "PASS"
+        ],
+        [
+          "Business Quality",
+          "Consistent operating history",
+          "3/10",
+          "FAIL"
+        ],
+        [
+          "Business Quality",
+          "Favorable long-term prospects",
+          "5/10",
+          "WARNING"
+        ],
+        [
+          "Management",
+          "Rational capital allocation",
+          "7/10",
+          "PASS"
+        ],
+        [
+          "Management",
+          "Honest and transparent",
+          "7/10",
+          "PASS"
+        ],
+        [
+          "Management",
+          "Resists institutional imperative",
+          "6/10",
+          "PASS"
+        ],
+        [
+          "Financial Health",
+          "ROE >15%",
+          "4/10",
+          "FAIL"
+        ],
+        [
+          "Financial Health",
+          "Strong profit margins",
+          "6/10",
+          "WARNING"
+        ],
+        [
+          "Financial Health",
+          "Low debt levels",
+          "10/10",
+          "PASS"
+        ],
+        [
+          "Financial Health",
+          "Consistent FCF",
+          "6/10",
+          "WARNING"
+        ],
+        [
+          "Financial Health",
+          "Capital light business",
+          "9/10",
+          "PASS"
+        ],
+        [
+          "Valuation",
+          "Margin of safety >30%",
+          "8/10",
+          "PASS"
+        ],
+        [
+          "**TOTAL**",
+          "",
+          "**83/130**",
+          "64%"
+        ]
       ]
     }
   },
-  
   "finalVerdict": {
     "summary": "At $18.66, Pinterest offers a 37% margin of safety to intrinsic value ($29.80), a pristine balance sheet ($2.3B net cash), and a capital-light software model generating $1B+ FCF annually. However, recent performance is concerning: EPS down 68%, ROE down to 8.78%, net margins compressed from 34% to 10%, and user growth stalled at 500M for 3+ years. Elliott Management's $1B activist investment could catalyze value realization through buybacks or strategic alternatives. Classic Buffett would pass due to lack of 10+ year track record, but modern value investors may find the risk/reward attractive at this deeply discounted price.",
     "biggestRisk": "Margin compression continues and Pinterest becomes a 'melting ice cube.' Recent decline from 34% to 10% net margins suggests either temporary operational issues or permanent competitive pressure from TikTok/Google. If margins stabilize at 10% (vs recovering to 20%+), intrinsic value drops to ~$20/share (minimal margin of safety). User growth stalled at 500M means revenue growth depends entirely on ARPU, which is under pressure from ad market softness. If TikTok or AI search replace visual discovery behavior, Pinterest's traffic could crater.",
