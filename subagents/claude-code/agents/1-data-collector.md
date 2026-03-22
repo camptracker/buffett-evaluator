@@ -162,7 +162,7 @@ Extract ALL data from local 10-K HTML files.
 
 ## Output File Structure
 
-Write your output to: `evaluations/PINS/agent1.json`
+Write your output to: `[OUTPUT_FILE]`
 
 **File Path Documentation:**
 
@@ -190,8 +190,8 @@ For EVERY piece of data, record:
     "cik": "0001506293"
   },
   "data": {
-    "company": "Pinterest",
-    "ticker": "PINS",
+    "company": "[COMPANY]",
+    "ticker": "[TICKER]",
     "cik": "0001506293",
     "currentPrice": 0.00,
     "currentPriceSource": "8K-Q4-2024.htm, earnings release",
@@ -299,7 +299,7 @@ For EVERY piece of data, record:
 
 4. **Calculate metrics** (YoY growth, ratios, etc.)
 
-5. **Write JSON** to output file: `evaluations/PINS/agent1.json`
+5. **Write JSON** to output file: `[OUTPUT_FILE]`
 
 6. **Print status** to stdout
 
@@ -339,7 +339,7 @@ Before writing the output file, verify:
 Only print status messages like:
 ```
 ✅ Agent 1 (Data Collector) complete
-📄 Output: evaluations/PINS/agent1.json
+📄 Output: [OUTPUT_FILE]
 📊 Collected: 6 years financial data from local files
 🗂️  Files read: 10K-2020.htm through 10K-2025.htm, 4× 8-K earnings
 ```
