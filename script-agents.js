@@ -204,6 +204,26 @@ function renderAgent1(data) {
         });
     }
     
+    // Notes section (important caveats)
+    if (data.notes) {
+        html += '<h3>Important Notes</h3>';
+        html += '<div class="notes-section" style="background: #fffaf0; padding: 1rem; border-radius: 6px; border-left: 4px solid #ed8936;">';
+        for (const [key, value] of Object.entries(data.notes)) {
+            if (typeof value === 'string') {
+                const formattedKey = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+                html += `<p style="margin: 0.5rem 0;"><strong>${formattedKey}:</strong> ${value}</p>`;
+            } else if (typeof value === 'object') {
+                const formattedKey = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+                html += `<p style="margin: 0.5rem 0;"><strong>${formattedKey}:</strong></p><ul style="margin-left: 1.5rem;">`;
+                for (const [subKey, subValue] of Object.entries(value)) {
+                    html += `<li>${subKey}: ${subValue}</li>`;
+                }
+                html += '</ul>';
+            }
+        }
+        html += '</div>';
+    }
+    
     html += '</div>';
     content.innerHTML = html;
 }
@@ -270,6 +290,7 @@ function renderAgent3(data) {
                     <strong>Reasoning:</strong>
                     <p>${criterion.reasoning}</p>
                 </div>
+                ${criterion.evidence ? renderEvidence(criterion.evidence) : ''}
                 ${criterion.examples ? renderExamples(criterion.examples) : ''}
                 <cite class="sec-ref">📄 ${criterion.secReference}</cite>
             </div>
@@ -423,11 +444,20 @@ function renderTable(headers, rows) {
     return html;
 }
 
-// Helper: Render metrics
+// Helper: Render metrics (handles nested objects)
 function renderMetrics(metrics) {
     let html = '<div class="metrics">';
     for (const [key, value] of Object.entries(metrics)) {
-        html += `<div class="metric-item"><strong>${key}:</strong> ${value}</div>`;
+        // Handle nested objects (e.g., yearlyROE with years as keys)
+        if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
+            html += `<div class="metric-item"><strong>${key}:</strong><ul style="margin-left: 1.5rem; margin-top: 0.5rem;">`;
+            for (const [subKey, subValue] of Object.entries(value)) {
+                html += `<li><strong>${subKey}:</strong> ${subValue}</li>`;
+            }
+            html += '</ul></div>';
+        } else {
+            html += `<div class="metric-item"><strong>${key}:</strong> ${value}</div>`;
+        }
     }
     html += '</div>';
     return html;
@@ -441,10 +471,53 @@ function renderExamples(examples) {
     return html;
 }
 
+// Helper: Render evidence (for Agent 3)
+function renderEvidence(evidence) {
+    let html = '<div class="evidence" style="margin: 1rem 0;"><strong>Evidence:</strong><ul style="margin-left: 1.5rem; margin-top: 0.5rem;">';
+    evidence.forEach(item => html += `<li style="margin-bottom: 0.5rem;">${item}</li>`);
+    html += '</ul></div>';
+    return html;
+}
+
 // Helper: Render DCF table
 function renderDCFTable(calc) {
-    // Implement based on intrinsicValueCalculation structure
-    return '<p>DCF details (to be implemented based on data structure)</p>';
+    let html = '';
+    
+    // DCF Inputs table
+    if (calc.inputs && calc.inputs.headers && calc.inputs.rows) {
+        html += '<h4 style="margin-top: 1.5rem;">DCF Inputs</h4>';
+        html += renderTable(calc.inputs.headers, calc.inputs.rows);
+    }
+    
+    // Projected FCF table
+    if (calc.projectedFCF && calc.projectedFCF.headers && calc.projectedFCF.rows) {
+        html += '<h4 style="margin-top: 1.5rem;">10-Year Projected Free Cash Flow</h4>';
+        html += renderTable(calc.projectedFCF.headers, calc.projectedFCF.rows);
+    }
+    
+    // Terminal Value details
+    if (calc.terminalValue) {
+        html += '<div style="margin-top: 1.5rem; padding: 1rem; background: #f7fafc; border-radius: 6px;">';
+        html += '<h4>Terminal Value Calculation</h4>';
+        for (const [key, value] of Object.entries(calc.terminalValue)) {
+            const formattedKey = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+            html += `<p style="margin: 0.5rem 0;"><strong>${formattedKey}:</strong> ${value}</p>`;
+        }
+        html += '</div>';
+    }
+    
+    // Summary metrics
+    if (calc.summary) {
+        html += '<div style="margin-top: 1.5rem; padding: 1rem; background: #fffaf0; border-left: 4px solid #ed8936; border-radius: 4px;">';
+        html += '<h4>Valuation Summary</h4>';
+        for (const [key, value] of Object.entries(calc.summary)) {
+            const formattedKey = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+            html += `<p style="margin: 0.5rem 0;"><strong>${formattedKey}:</strong> ${value}</p>`;
+        }
+        html += '</div>';
+    }
+    
+    return html || '<p>No DCF calculation details available</p>';
 }
 
 // Helper: Render scorecard (with mobile scroll wrapper)
