@@ -15,6 +15,56 @@ mkdir -p ../../evaluations
 
 ## 2. Evaluate a Company
 
+**NEW WORKFLOW (REQUIRED):** Download SEC files locally first, then run agents.
+
+### Step 1: Download SEC Filings (Chrome)
+
+```bash
+# Create company folder
+cd ~/Documents/buffett-evaluator/subagents/claude-code
+mkdir -p evaluations/[TICKER]/filings
+
+# Example for Pinterest (PINS):
+mkdir -p evaluations/PINS/filings
+```
+
+**Manual Download (Required):**
+
+1. **Open Chrome** and go to SEC EDGAR:
+   - Search: `https://www.sec.gov/cgi-bin/browse-edgar?company=[COMPANY]&CIK=&type=10-K`
+   - Example: https://www.sec.gov/cgi-bin/browse-edgar?company=pinterest&type=10-K
+
+2. **Download 10-K filings** (last 6 years):
+   - Click "Documents" for each year
+   - Click the main `.htm` file (e.g., `pins-20251231.htm`)
+   - Save As → `evaluations/[TICKER]/filings/10K-YYYY.htm`
+   - Repeat for 2020-2025
+
+3. **Download earnings reports** (optional, for current price):
+   - Search for `type=8-K` (quarterly earnings)
+   - Download 2-4 recent quarterly earnings
+   - Save as `evaluations/[TICKER]/filings/8K-Q4-2024.htm`
+
+**Why manual download?**
+- SEC.gov blocks automated scraping (403 Forbidden errors)
+- Chrome bypasses anti-bot protections
+- One-time download (~5 min), reusable for all agents
+
+### Step 2: Configure Company
+
+```bash
+# Create config.json
+cat > config.json << 'EOF'
+{
+  "company": "Pinterest",
+  "ticker": "PINS",
+  "outputDir": "evaluations/PINS"
+}
+EOF
+```
+
+### Step 3: Run Agents on Local Files
+
 ### Option A: Deterministic Evaluation (Recommended)
 
 ```bash
@@ -105,11 +155,23 @@ jq '{company, ticker, score: .totalScore, verdict}' ../../evaluations/AAPL/final
 ## 5. Workflow Diagram
 
 ```
+Chrome Download (manual, 5 min)
+    ↓
+evaluations/[TICKER]/filings/
+    ├─ 10K-2020.htm
+    ├─ 10K-2021.htm
+    ├─ 10K-2022.htm
+    ├─ 10K-2023.htm
+    ├─ 10K-2024.htm
+    ├─ 10K-2025.htm
+    └─ 8K-*.htm (earnings)
+    ↓
 config.json
     ↓
 ./run.sh
     ↓
 Agent 1: Data Collector (60-90 min)
+    [Reads local filings/*.htm files ONLY - no web scraping]
     ↓ agent1.json
     ├─→ Agent 2: Business Quality (20-30 min) → agent2.json
     ├─→ Agent 3: Management Quality (20-30 min) → agent3.json
@@ -127,6 +189,8 @@ convert-to-website.js
     ↓
 data/aapl.json
 ```
+
+**Key Change:** Agent 1 now reads from local `filings/` directory instead of fetching from SEC.gov. This avoids 403 Forbidden errors and enables reproducible evaluations.
 
 ## 6. Debugging
 
@@ -172,31 +236,37 @@ node ../../validate-data.js
 # Tesla evaluation from scratch
 cd ~/Documents/buffett-evaluator/subagents/claude-code
 
-# 1. Configure
-echo '{"company":"Tesla","ticker":"TSLA","outputDir":"../../evaluations/TSLA"}' > config.json
+# 1. Download SEC files (Chrome - manual)
+mkdir -p evaluations/TSLA/filings
+# Use Chrome to download 10-Ks from:
+# https://www.sec.gov/cgi-bin/browse-edgar?company=tesla&type=10-K
+# Save as: evaluations/TSLA/filings/10K-2020.htm through 10K-2025.htm
 
-# 2. Run evaluation (2-3 hours)
+# 2. Configure
+echo '{"company":"Tesla","ticker":"TSLA","outputDir":"evaluations/TSLA"}' > config.json
+
+# 3. Run evaluation (2-3 hours)
 ./run.sh
 
-# 3. Review output
-jq '.totalScore, .verdict, .marginOfSafety' ../../evaluations/TSLA/final.json
+# 4. Review output
+jq '.totalScore, .verdict, .marginOfSafety' evaluations/TSLA/final.json
 
 # Output:
 # 82
 # "WATCH"
 # "-5%"
 
-# 4. Convert to website
+# 5. Convert to website
 node convert-to-website.js TSLA
 
-# 5. Register in website
-# (Edit script.js manually to add tsla entry)
+# 6. Register in website
+# (Edit ../../script.js manually to add tsla entry)
 
-# 6. Validate
+# 7. Validate
 cd ../..
 node validate-data.js
 
-# 7. Deploy
+# 8. Deploy
 git add -A && git commit -m "Add Tesla evaluation" && git push
 
 # Done! Check https://camptracker.github.io/buffett-evaluator/
